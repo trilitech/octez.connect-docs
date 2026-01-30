@@ -295,8 +295,8 @@ The end result should look like this:
 <TabItem value="beacon">
 
 ```ts
-import { DAppClient, BeaconEvent } from "@airgap/beacon-dapp";
-import { NetworkType } from "@airgap/beacon-types";
+import { DAppClient, BeaconEvent } from "@tezos-x/octez.connect-dapp";
+import { NetworkType } from "@tezos-x/octez.connect-types";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
 const channel = new BroadcastChannel("beacon-test");
@@ -358,9 +358,9 @@ dAppClient.requestPermissions();
 <TabItem value="taquito">
 
 ```ts
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@airgap/beacon-dapp";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
+import { BeaconEvent } from "@tezos-x/octez.connect-dapp";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
 const channel = new BroadcastChannel("beacon-test");

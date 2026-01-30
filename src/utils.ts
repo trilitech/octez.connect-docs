@@ -1,8 +1,8 @@
 import * as beacon from "./node_modules/octez.connect-sdk/dist/cjs";
 import * as ts from "typescript";
 
-import * as taquito from "@taquito/taquito";
-import * as taquitoWallet from "@taquito/beacon-wallet";
+import * as taquito from "@tezos-x/octez.js";
+import * as taquitoWallet from "@tezos-x/octez.js-beacon-wallet";
 
 function replaceAll(string: string, search: string, replace: string) {
   return string.split(search).join(replace);

@@ -18,8 +18,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "airgap-it", // Usually your GitHub org/user name.
-  projectName: "beacon-docs", // Usually your repo name.
+  organizationName: "trilitech", // Usually your GitHub org/user name.
+  projectName: "octez.connect-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -57,7 +57,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/airgap-it/beacon-docs/edit/main/src/",
+          editUrl: "https://github.com/trilitech/octez.connect-docs/edit/main/src/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -95,7 +95,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/airgap-it/beacon-sdk",
+            href: "https://github.com/trilitech/octez.connect-sdk",
             label: "GitHub",
             position: "right",
           },
@@ -113,7 +113,7 @@ const config = {
               },
               {
                 label: "Typedoc Reference",
-                href: "https://typedocs.walletbeacon.io",
+                href: "https://octez-connect.tezos.com",
               },
             ],
           },
@@ -122,7 +122,7 @@ const config = {
             items: [
               {
                 label: "Telegram",
-                href: "https://t.me/AirGap",
+                href: "https://t.me/tezos",
               },
               {
                 label: "Discord",
@@ -130,11 +130,11 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/airgap_it",
+                href: "https://twitter.com/tezos",
               },
               {
                 label: "Blog",
-                href: "https://medium.com/airgap-it",
+                href: "https://medium.com/tezos",
               },
             ],
           },
@@ -143,19 +143,19 @@ const config = {
             items: [
               {
                 label: "Beacon SDK",
-                href: "https://github.com/airgap-it/beacon-sdk",
+                href: "https://github.com/trilitech/octez.connect-sdk",
               },
               {
                 label: "Beacon Android SDK",
-                href: "https://github.com/airgap-it/beacon-android-sdk",
+                href: "https://github.com/trilitech/octez.connect-android-sdk",
               },
               {
                 label: "Beacon iOS SDK",
-                href: "https://github.com/airgap-it/beacon-ios-sdk",
+                href: "https://github.com/trilitech/octez.connect-ios-sdk",
               },
               {
                 label: "Beacon Node",
-                href: "https://github.com/airgap-it/beacon-node",
+                href: "https://github.com/trilitech/beacon-node",
               },
             ],
           },

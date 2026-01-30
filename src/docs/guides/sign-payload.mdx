@@ -42,8 +42,8 @@ console.log(`Signature: ${response.signature}`);
 
 ```ts live
 // taquito sign payload micheline
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -96,8 +96,8 @@ console.log(`Signature: ${response.signature}`);
 
 ```ts live
 // taquito sign payload operation
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -152,8 +152,8 @@ console.log(`Signature: ${response.signature}`);
 
 ```ts live
 // taquito sign payload raw
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

@@ -1,6 +1,6 @@
 /// START
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import {
   ColorMode,
   Network,

@@ -7,9 +7,9 @@ Since the release of `beacon-sdk` version 3.0, Beacon supports multiple blockcha
 
 Currently, 3 separate blockchain packages are available:
 
-- Substrate (@airgap/beacon-blockchain-substrate)
-- Tezos (@airgap/beacon-blockchain-tezos)
-- Tezos Sapling (@airgap/beacon-blockchain-tezos-sapling)
+- Substrate (@tezos-x/octez.connect-blockchain-substrate)
+- Tezos (@tezos-x/octez.connect-blockchain-tezos)
+- Tezos Sapling (@tezos-x/octez.connect-blockchain-tezos-sapling)
 
 ### Structure
 

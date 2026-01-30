@@ -3,8 +3,8 @@ import {
   BeaconEvent,
   defaultEventCallbacks,
 } from "../node_modules/octez.connect-sdk/dist/cjs";
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import Logger from "../Logger";
 /// END
 

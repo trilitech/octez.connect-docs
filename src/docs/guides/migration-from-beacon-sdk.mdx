@@ -1,0 +1,137 @@
+---
+title: Migrating from beacon-sdk
+sidebar_label: Migrating from beacon-sdk
+---
+
+# Migrating from beacon-sdk to octez.connect-sdk
+
+Since January 2026, the `beacon-sdk` packages have been renamed and moved to the `@tezos-x` namespace under `octez.connect`. This guide will help you migrate your project to the new package names.
+
+## Overview
+
+The migration involves:
+1.  Updating your `package.json` dependencies.
+2.  Updating import statements in your code.
+3.  Updating any local scripts or configurations referencing the old package names.
+
+## Package Mapping
+
+### Beacon SDK Packages
+
+| Old Package (`@airgap/*`) | New Package (`@tezos-x/*`) |
+| ------------------------- | -------------------------- |
+| `@airgap/beacon-sdk` | `@tezos-x/octez.connect-sdk` |
+| `@airgap/beacon-dapp` | `@tezos-x/octez.connect-dapp` |
+| `@airgap/beacon-wallet` | `@tezos-x/octez.connect-wallet` |
+| `@airgap/beacon-core` | `@tezos-x/octez.connect-core` |
+| `@airgap/beacon-types` | `@tezos-x/octez.connect-types` |
+| `@airgap/beacon-ui` | `@tezos-x/octez.connect-ui` |
+| `@airgap/beacon-utils` | `@tezos-x/octez.connect-utils` |
+| `@airgap/beacon-transport-matrix` | `@tezos-x/octez.connect-transport-matrix` |
+| `@airgap/beacon-transport-postmessage` | `@tezos-x/octez.connect-transport-postmessage` |
+| `@airgap/beacon-transport-walletconnect` | `@tezos-x/octez.connect-transport-walletconnect` |
+| `@airgap/beacon-blockchain-tezos` | `@tezos-x/octez.connect-blockchain-tezos` |
+| `@airgap/beacon-blockchain-tezos-sapling` | `@tezos-x/octez.connect-blockchain-tezos-sapling` |
+| `@airgap/beacon-blockchain-substrate` | `@tezos-x/octez.connect-blockchain-substrate` |
+
+### Taquito Packages (optional)
+
+If you are using Taquito with Beacon, you should also update to the `@tezos-x/octez.js` packages.
+
+| Old Package (`@taquito/*`) | New Package (`@tezos-x/*`) |
+| -------------------------- | -------------------------- |
+| `@taquito/taquito` | `@tezos-x/octez.js` |
+| `@taquito/beacon-wallet` | `@tezos-x/octez.js-beacon-wallet` |
+| `@taquito/signer` | `@tezos-x/octez.js-signer` |
+| `@taquito/rpc` | `@tezos-x/octez.js-rpc` |
+| `@taquito/utils` | `@tezos-x/octez.js-utils` |
+| `@taquito/michelson-encoder` | `@tezos-x/octez.js-michelson-encoder` |
+| `@taquito/michel-codec` | `@tezos-x/octez.js-michel-codec` |
+
+## Migration Script
+
+You can use the following script to automatically find and replace the package names in your codebase.
+
+**1. Create a file named `migrate-to-octez.sh`:**
+
+```bash
+#!/bin/bash
+set -e
+
+# Function to migrate a package pair
+migrate_package() {
+  local FROM="$1"
+  local TO="$2"
+  
+  echo "Migrating $FROM -> $TO"
+
+  # Find files containing the exact string (excluding binary, node_modules, git)
+  local FILES=$(git grep -lF "$FROM" || true)
+
+  if [ -z "$FILES" ]; then
+    return
+  fi
+
+  # Iterate and replace
+  for file in $FILES; do
+    # Check if text file to avoid corrupting binaries
+    if file -b --mime-type "$file" | grep -qE "text|json"; then
+       # Replace in place (Mac/Linux compatible sed)
+       if [[ "$OSTYPE" == "darwin"* ]]; then
+         sed -i '' "s|$FROM|$TO|g" "$file"
+       else
+         sed -i "s|$FROM|$TO|g" "$file"
+       fi
+       echo "  Patched $file"
+    fi
+  done
+}
+
+echo "Starting migration..."
+
+# --- Beacon Packages ---
+migrate_package "@airgap/beacon-sdk" "@tezos-x/octez.connect-sdk"
+migrate_package "@airgap/beacon-dapp" "@tezos-x/octez.connect-dapp"
+migrate_package "@airgap/beacon-wallet" "@tezos-x/octez.connect-wallet"
+migrate_package "@airgap/beacon-core" "@tezos-x/octez.connect-core"
+migrate_package "@airgap/beacon-types" "@tezos-x/octez.connect-types"
+migrate_package "@airgap/beacon-transport-matrix" "@tezos-x/octez.connect-transport-matrix"
+migrate_package "@airgap/beacon-transport-postmessage" "@tezos-x/octez.connect-transport-postmessage"
+migrate_package "@airgap/beacon-blockchain-tezos" "@tezos-x/octez.connect-blockchain-tezos"
+
+# --- Taquito Packages ---
+migrate_package "@taquito/taquito" "@tezos-x/octez.js"
+migrate_package "@taquito/beacon-wallet" "@tezos-x/octez.js-beacon-wallet"
+
+echo "Migration script finished."
+```
+
+**2. Make the script executable and run it:**
+
+```bash
+chmod +x migrate-to-octez.sh
+./migrate-to-octez.sh
+```
+
+**3. Install new dependencies:**
+
+After running the script, your `package.json` will be updated. Run the installation command to update your node modules and lockfile.
+
+```bash
+npm install
+# or
+yarn install
+```
+
+## Manual Verification
+
+After running the automated migration, please verify:
+1.  **Imports**: Check that your `import` statements now reference `@tezos-x/octez.connect-*`.
+2.  **Styles/CSS**: If you imported CSS from the old packages, check that the paths are still valid (folder structures generally remain similar, but check for any name changes).
+3.  **Local references**: If you had manual paths pointing to `node_modules/beacon-sdk`, update them to `node_modules/@tezos-x/octez.connect-sdk`.
+
+## Troubleshooting
+
+If you encounter issues:
+- **Clean install**: Delete `node_modules` and your lockfile (`package-lock.json` or `yarn.lock`) and reinstall.
+- **Check peer dependencies**: Ensure all related packages are updated to compatible versions.

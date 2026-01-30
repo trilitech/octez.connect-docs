@@ -27,7 +27,7 @@ npm install --save @tezos-x/octez.connect-sdk
   <TabItem value="taquito">
 
 ```bash
-npm install --save @taquito/taquito @taquito/beacon-wallet
+npm install --save @tezos-x/octez.js @tezos-x/octez.js-beacon-wallet
 ```
 
   </TabItem>
@@ -75,8 +75,8 @@ try {
 
 ```ts live
 // taquito permission request
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -149,8 +149,8 @@ if (activeAccount) {
 
 ```ts live
 // taquito get active account
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -233,8 +233,8 @@ if (!activeAccount) {
 
 ```ts live
 // taquito request operation with events
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
@@ -320,8 +320,8 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
   
     ```ts live
     // taquito destroy
-    import { TezosToolkit } from "@taquito/taquito";
-    import { BeaconWallet } from "@taquito/beacon-wallet";
+    import { TezosToolkit } from "@tezos-x/octez.js";
+    import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
     
     const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
     const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

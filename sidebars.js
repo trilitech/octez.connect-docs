@@ -112,12 +112,12 @@ module.exports = {
     {
       type: "link",
       label: "Changelog",
-      href: "https://github.com/airgap-it/beacon-sdk/releases",
+      href: "https://github.com/trilitech/octez.connect-sdk/releases",
     },
     {
       type: "link",
       label: "TypeDoc Reference",
-      href: "https://typedocs.walletbeacon.io",
+      href: "https://octez-connect.tezos.com",
     },
   ],
   wallet: [

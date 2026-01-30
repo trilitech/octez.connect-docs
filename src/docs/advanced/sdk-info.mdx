@@ -66,8 +66,8 @@ console.log(`Connected Peers:`, await dAppClient.getPeers());
 
 ```ts live
 // taquito sdk client
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -129,8 +129,8 @@ console.log("Own Metadata:", ownMetadata);
 
 ```ts live
 // taquito sdk connection
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

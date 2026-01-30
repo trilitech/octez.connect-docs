@@ -6,8 +6,8 @@ slug: /blockchains/usage
 Let's look at an example how a dApp can be initialized with support for a `substrate` based blockchain.
 
 ```ts
-import { DAppClient } from "@airgap/beacon-dapp";
-import { SubstrateBlockchain } from "@airgap/beacon-blockchain-substrate";
+import { DAppClient } from "@tezos-x/octez.connect-dapp";
+import { SubstrateBlockchain } from "@tezos-x/octez.connect-blockchain-substrate";
 
 const client = new DAppClient({
   name: "Example dApp",
@@ -43,8 +43,8 @@ client.getActiveAccount().then((activeAccount) => {
 On the wallet side, the blockchain doesn't explicitly have to be registered, it can be filtered by the `blockchainIdentifier` property.
 
 ```ts
-import { WalletClient } from "@airgap/beacon-wallet";
-import { BeaconMessageType } from "@airgap/beacon-types";
+import { WalletClient } from "@tezos-x/octez.connect-wallet";
+import { BeaconMessageType } from "@tezos-x/octez.connect-types";
 
 const client = new WalletClient({
   name: "Example Wallet", // Name of the Wallet

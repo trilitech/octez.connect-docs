@@ -147,8 +147,8 @@ try {
 ```ts live
 // taquito disable ui
 import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk";
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({
@@ -248,8 +248,8 @@ try {
 
 ```ts live
 // taquito request permission events
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
@@ -384,8 +384,8 @@ const dAppClient = new DAppClient({
 
 ```ts live
 // taquito request permission alert
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
