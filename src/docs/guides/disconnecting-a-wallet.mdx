@@ -49,7 +49,7 @@ dAppClient
 ```ts live
 // taquito disconnect wallet 2
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import Logger from "../Logger";
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -109,7 +109,7 @@ dAppClient
 ```ts live
 // taquito disconnect wallet
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

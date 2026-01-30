@@ -1,6 +1,6 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-beacon-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 /// END
 
 async () => {

@@ -41,7 +41,7 @@ If you are using Taquito with Beacon, you should also update to the `@tezos-x/oc
 | Old Package (`@taquito/*`) | New Package (`@tezos-x/*`) |
 | -------------------------- | -------------------------- |
 | `@taquito/taquito` | `@tezos-x/octez.js` |
-| `@taquito/beacon-wallet` | `@tezos-x/octez.js-beacon-wallet` |
+| `@taquito/beacon-wallet` | `@tezos-x/octez.js-dapp-wallet` |
 | `@taquito/signer` | `@tezos-x/octez.js-signer` |
 | `@taquito/rpc` | `@tezos-x/octez.js-rpc` |
 | `@taquito/utils` | `@tezos-x/octez.js-utils` |
@@ -101,7 +101,7 @@ migrate_package "@airgap/beacon-blockchain-tezos" "@tezos-x/octez.connect-blockc
 
 # --- Taquito Packages ---
 migrate_package "@taquito/taquito" "@tezos-x/octez.js"
-migrate_package "@taquito/beacon-wallet" "@tezos-x/octez.js-beacon-wallet"
+migrate_package "@taquito/beacon-wallet" "@tezos-x/octez.js-dapp-wallet"
 
 echo "Migration script finished."
 ```
