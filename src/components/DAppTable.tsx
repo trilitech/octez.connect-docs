@@ -56,7 +56,7 @@ const DAppTable = () => {
         {() => {
           const {
             SDK_VERSION,
-          } = require("../node_modules/beacon-sdk/dist/cjs");
+          } = require("../node_modules/octez.connect-sdk/dist/cjs");
           return (
             <>
               <p>

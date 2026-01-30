@@ -1,5 +1,5 @@
 /// START
-import { DAppClient } from "../node_modules/beacon-sdk/dist/cjs";
+import { DAppClient } from "../node_modules/octez.connect-sdk/dist/cjs";
 import Logger from "../Logger";
 /// END
 

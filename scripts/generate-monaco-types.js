@@ -2,7 +2,7 @@ const fs = require("fs");
 const getFilesRecursively = require("./get-files-in-folder");
 
 const files = getFilesRecursively(
-  "./node_modules/@airgap/"
+  "./node_modules/@tezos-x/"
 ).filter((file) => file.endsWith(".d.ts"));
 files.push(
   ...getFilesRecursively("./node_modules/@taquito/").filter((file) =>

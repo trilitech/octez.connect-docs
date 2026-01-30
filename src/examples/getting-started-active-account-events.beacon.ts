@@ -1,6 +1,6 @@
 /// START
 import Logger from "../Logger";
-import { BeaconEvent, DAppClient } from "../node_modules/beacon-sdk/dist/cjs";
+import { BeaconEvent, DAppClient } from "../node_modules/octez.connect-sdk/dist/cjs";
 /// END
 
 const getActiveAccountBeaconWithEvents = async (loggerFun: Function) => {

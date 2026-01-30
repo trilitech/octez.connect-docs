@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "npm run create-node-modules && npm run embed-code && docusaurus start",
-    "create-node-modules": "rm -rf src/node_modules && mkdir src/node_modules && cp -r node_modules/@airgap/beacon-sdk src/node_modules",
+    "create-node-modules": "rm -rf src/node_modules && mkdir src/node_modules && cp -r node_modules/@tezos-x/octez.connect-sdk src/node_modules",
     "prepare": "node scripts/fix-beacon-sdk.js",
     "build": "npm run create-node-modules && npm run embed-code && docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -23,7 +23,7 @@
     "embed-code": "npm run generate-monaco-types && npm run prettier && tsc --module es2015 --target es2015 --moduleResolution node --esModuleInterop true src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && rm -r docs && mv build-docs docs && npm run pretty-docs"
   },
   "dependencies": {
-    "@airgap/beacon-sdk": "^4.6.2",
+    "@tezos-x/octez.connect-sdk": "^0.9.0",
     "@docusaurus/core": "^3.9.1",
     "@docusaurus/plugin-client-redirects": "^3.9.1",
     "@docusaurus/preset-classic": "^3.9.1",

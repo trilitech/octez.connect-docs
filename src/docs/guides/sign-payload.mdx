@@ -22,7 +22,7 @@ This page provides some examples for signing payloads in different formats: HEX 
 
 ```ts live
 // beacon sign payload micheline
-import { DAppClient, SigningType } from "@airgap/beacon-sdk";
+import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -44,7 +44,7 @@ console.log(`Signature: ${response.signature}`);
 // taquito sign payload micheline
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { SigningType } from "@airgap/beacon-sdk";
+import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -78,7 +78,7 @@ console.log(`Signature: ${response.signature}`);
 
 ```ts live
 // beacon sign payload operation
-import { DAppClient, SigningType } from "@airgap/beacon-sdk";
+import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -98,7 +98,7 @@ console.log(`Signature: ${response.signature}`);
 // taquito sign payload operation
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { SigningType } from "@airgap/beacon-sdk";
+import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -134,7 +134,7 @@ Not all wallets support the `RAW` signing type. Additionally, the signatures can
 
 ```ts live
 // beacon sign payload raw
-import { DAppClient, SigningType } from "@airgap/beacon-sdk";
+import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -154,7 +154,7 @@ console.log(`Signature: ${response.signature}`);
 // taquito sign payload raw
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { SigningType } from "@airgap/beacon-sdk";
+import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

@@ -1,4 +1,4 @@
-import * as beacon from "./node_modules/beacon-sdk/dist/cjs";
+import * as beacon from "./node_modules/octez.connect-sdk/dist/cjs";
 import * as ts from "typescript";
 
 import * as taquito from "@taquito/taquito";
@@ -20,7 +20,7 @@ const removeImports = (code: string) => {
 
       const out = include ? l : undefined;
 
-      if (l.indexOf("@airgap/beacon-sdk") >= 0 || l.indexOf("@taquito") >= 0) {
+      if (l.indexOf("@tezos-x/octez.connect-sdk") >= 0 || l.indexOf("@taquito") >= 0) {
         include = true;
       }
 

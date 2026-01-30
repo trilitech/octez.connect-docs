@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // const content = fs.readFileSync(
-//     "./node_modules/@airgap/beacon-sdk/package.json",
+//     "./node_modules/@tezos-x/octez.connect-sdk/package.json",
 //     { encoding: "utf8" }
 //   );
 
@@ -9,19 +9,19 @@ const fs = require("fs");
 //     .split("dist/cjs/index.js")
 //     .join("./dist/walletbeacon.min.js");
 
-//   fs.writeFileSync("./node_modules/@airgap/beacon-sdk/package.json", newContent, {
+//   fs.writeFileSync("./node_modules/@tezos-x/octez.connect-sdk/package.json", newContent, {
 //     encoding: "utf8",
 //   });
 
 content = fs.readFileSync(
-  "./node_modules/@airgap/beacon-sdk/dist/walletbeacon.min.js",
+  "./node_modules/@tezos-x/octez.connect-sdk/dist/walletbeacon.min.js",
   { encoding: "utf8" }
 );
 
 const newContent = content;
 
 fs.writeFileSync(
-  "./node_modules/@airgap/beacon-sdk/dist/cjs/index.js",
+  "./node_modules/@tezos-x/octez.connect-sdk/dist/cjs/index.js",
   newContent,
   {
     encoding: "utf8",
@@ -30,5 +30,5 @@ fs.writeFileSync(
 
 try {
   // remove if exists
-  fs.rmdirSync("./node_modules/@airgap/beacon-sdk/dist/esm", { recursive: true });
+  fs.rmdirSync("./node_modules/@tezos-x/octez.connect-sdk/dist/esm", { recursive: true });
 } catch(_) {} 

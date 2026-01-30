@@ -19,7 +19,7 @@ The following page lists all the different options in Beacon to retrieve and dis
 
 ```ts live
 // beacon sdk version
-import { BEACON_VERSION, SDK_VERSION } from "@airgap/beacon-sdk";
+import { BEACON_VERSION, SDK_VERSION } from "@tezos-x/octez.connect-sdk";
 
 console.log("SDK Version", SDK_VERSION);
 console.log("Beacon Version", BEACON_VERSION);
@@ -31,7 +31,7 @@ console.log("Beacon Version", BEACON_VERSION);
 
 ```ts live
 // taquito sdk version
-import { BEACON_VERSION, SDK_VERSION } from "@airgap/beacon-sdk";
+import { BEACON_VERSION, SDK_VERSION } from "@tezos-x/octez.connect-sdk";
 
 console.log("SDK Version", SDK_VERSION);
 console.log("Beacon Version", BEACON_VERSION);
@@ -52,7 +52,7 @@ console.log("Beacon Version", BEACON_VERSION);
 
 ```ts live
 // beacon sdk client
-import { DAppClient } from "@airgap/beacon-sdk";
+import { DAppClient } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -93,7 +93,7 @@ console.log(`Connected Peers:`, await wallet.client.getPeers());
 
 ```ts live
 // beacon sdk connection
-import { DAppClient, NetworkType } from "@airgap/beacon-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -131,7 +131,7 @@ console.log("Own Metadata:", ownMetadata);
 // taquito sdk connection
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { DAppClient, NetworkType } from "@airgap/beacon-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

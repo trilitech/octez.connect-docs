@@ -20,7 +20,7 @@ Make sure the servers you use are whitelisted in the beacon network and federati
 
 ```ts live
 // beacon different node
-import { DAppClient, Regions } from "@airgap/beacon-sdk";
+import { DAppClient, Regions } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
@@ -45,7 +45,7 @@ try {
 // taquito different node
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { Regions } from "@airgap/beacon-sdk";
+import { Regions } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({

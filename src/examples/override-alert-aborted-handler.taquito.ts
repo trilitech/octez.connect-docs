@@ -9,7 +9,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "../node_modules/beacon-sdk/dist/cjs";
+} from "../node_modules/octez.connect-sdk/dist/cjs";
 import Logger from "../Logger";
 /// END
 

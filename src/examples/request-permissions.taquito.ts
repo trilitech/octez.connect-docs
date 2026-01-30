@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { PermissionScope } from "../node_modules/beacon-sdk/dist/cjs";
+import { PermissionScope } from "../node_modules/octez.connect-sdk/dist/cjs";
 /// END
 
 async () => {

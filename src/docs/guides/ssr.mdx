@@ -15,7 +15,7 @@ We'll show you how to configure the project for SSR and add a simple page that u
 First, ensure you have installed the Beacon SDK:
 
 ```bash
-npm install @airgap/beacon-sdk
+npm install @tezos-x/octez.connect-sdk
 ```
 
 Additionally, if you haven't already, install `webpack-node-externals` which is used in the Next.js configuration:
@@ -69,7 +69,7 @@ This code sets up a Beacon SDK client and adds a button that, when clicked, requ
 // page.tsx
 
 "use client";
-import { DAppClient, NetworkType } from "@airgap/beacon-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 import { useEffect, useState } from "react";
 
 export default function Home() {

@@ -55,7 +55,7 @@ The list below showcases all the events that are currently available for subscri
 
 ```ts live
 // beacon subscribe to event
-import { BeaconEvent, DAppClient } from "@airgap/beacon-sdk";
+import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
@@ -80,7 +80,7 @@ await dAppClient.requestPermissions();
 // taquito subscribe to event
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@airgap/beacon-sdk";
+import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

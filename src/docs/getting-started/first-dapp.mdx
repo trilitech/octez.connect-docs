@@ -20,7 +20,7 @@ Let's get started with your first dApp. You have to install the necessary depend
   <TabItem value="beacon">
 
 ```bash
-npm install --save @airgap/beacon-sdk
+npm install --save @tezos-x/octez.connect-sdk
 ```
 
   </TabItem>
@@ -50,7 +50,7 @@ Once created, you can send a permission request to prompt the user to connect to
 
 ```ts live
 // beacon permission request
-import { BeaconEvent, DAppClient } from "@airgap/beacon-sdk";
+import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -77,7 +77,7 @@ try {
 // taquito permission request
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@airgap/beacon-sdk";
+import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -126,7 +126,7 @@ If the following code returns an address, there is no need to send another permi
 
 ```ts live
 // beacon get active account
-import { DAppClient } from "@airgap/beacon-sdk";
+import { DAppClient } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -196,7 +196,7 @@ import {
   BeaconEvent,
   DAppClient,
   TezosOperationType,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -239,7 +239,7 @@ import {
   BeaconEvent,
   DAppClient,
   TezosOperationType,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -303,7 +303,7 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
 
     ```ts live
     // beacon destroy
-    import { DAppClient } from "@airgap/beacon-sdk";
+    import { DAppClient } from "@tezos-x/octez.connect-sdk";
 
     const dAppClient = new DAppClient({ name: "Beacon Docs" });
 

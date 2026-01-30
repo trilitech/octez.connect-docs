@@ -24,7 +24,7 @@ import {
   DAppClient,
   NetworkType,
   Network,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 class TzStatsBlockExplorer extends BlockExplorer {
   constructor(
@@ -71,7 +71,7 @@ const dAppClient = new DAppClient({
 <TabItem value="taquito">
 
 ```ts
-import { BlockExplorer, NetworkType, Network } from "@airgap/beacon-sdk";
+import { BlockExplorer, NetworkType, Network } from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 

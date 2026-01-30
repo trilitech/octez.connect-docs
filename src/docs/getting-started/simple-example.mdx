@@ -27,7 +27,7 @@ import {
   BeaconEvent,
   DAppClient,
   TezosOperationType,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -75,7 +75,7 @@ console.log("Operation Hash: ", response.transactionHash);
 // taquito simple example
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent, TezosOperationType } from "@airgap/beacon-sdk";
+import { BeaconEvent, TezosOperationType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" }); // Takes the same arguments as the DAppClient constructor

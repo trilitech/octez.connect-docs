@@ -1,6 +1,6 @@
 /// START
 import Logger from "../Logger";
-import { DAppClient } from "../node_modules/beacon-sdk/dist/cjs";
+import { DAppClient } from "../node_modules/octez.connect-sdk/dist/cjs";
 /// END
 
 const destroyBeacon = async (loggerFun: Function) => {

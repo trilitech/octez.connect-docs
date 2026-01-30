@@ -4,7 +4,7 @@ title: Getting Started
 
 First, you need to install the `beacon-sdk` package.
 
-`npm install --save @airgap/beacon-sdk`
+`npm install --save @tezos-x/octez.connect-sdk`
 
 After that you need to import the Beacon SDK in your code and initialize the WalletClient.
 
@@ -22,7 +22,7 @@ import {
   BeaconMessageType,
   PermissionScope,
   PermissionResponseInput,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const connectApp = async (): Promise<void> => {
   // Only ONE WalletClient should be created and reused everywhere.

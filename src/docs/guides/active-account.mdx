@@ -25,7 +25,7 @@ Here's how it works:
 
 ```ts live
 // beacon get active account with events
-import { BeaconEvent, DAppClient } from "@airgap/beacon-sdk";
+import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -51,7 +51,7 @@ try {
 // taquito get active account with events
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@airgap/beacon-sdk";
+import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

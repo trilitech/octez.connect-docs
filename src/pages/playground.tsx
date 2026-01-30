@@ -9,7 +9,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 import ErrorBoundary from "@docusaurus/ErrorBoundary";
 import DOMPurify from "dompurify";
 
-const defaultCode = `import { DAppClient, BeaconEvent } from "@airgap/beacon-sdk";
+const defaultCode = `import { DAppClient, BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -78,7 +78,7 @@ function Playground() {
   return (
     <BrowserOnly fallback={<></>}>
       {() => {
-        const { DAppClient } = require("@airgap/beacon-sdk");
+        const { DAppClient } = require("@tezos-x/octez.connect-sdk");
         const Monaco = require("@site/src/components/Monaco").default;
         const { copyShareUrl, runBeaconCode } = require("../utils");
 

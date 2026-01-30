@@ -3,7 +3,7 @@ import Logger from "../Logger";
 import {
   DAppClient,
   TezosOperationType,
-} from "../node_modules/beacon-sdk/dist/cjs";
+} from "../node_modules/octez.connect-sdk/dist/cjs";
 /// END
 
 const requestOperationBeacon = async (loggerFun: Function) => {

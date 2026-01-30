@@ -19,7 +19,7 @@ RequestPermissions helps dApps connect with users' wallets. This involves asking
 
 ```ts live
 // beacon permission request
-import { DAppClient, PermissionScope } from "@airgap/beacon-sdk";
+import { DAppClient, PermissionScope } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({ name: "Beacon Docs" });
 
@@ -46,7 +46,7 @@ try {
 // taquito permission request
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { PermissionScope } from "@airgap/beacon-sdk";
+import { PermissionScope } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

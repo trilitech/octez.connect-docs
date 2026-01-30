@@ -115,7 +115,7 @@ import {
   BeaconEvent,
   DAppClient,
   defaultEventCallbacks,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
@@ -146,7 +146,7 @@ try {
 
 ```ts live
 // taquito disable ui
-import { BeaconEvent, defaultEventCallbacks } from "@airgap/beacon-sdk";
+import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
@@ -204,7 +204,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
@@ -259,7 +259,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({
@@ -330,7 +330,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
     name: "Beacon Docs",
@@ -395,7 +395,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "@airgap/beacon-sdk";
+} from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
   const wallet = new BeaconWallet({

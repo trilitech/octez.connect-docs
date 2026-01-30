@@ -2,7 +2,7 @@
 import {
   BeaconEvent,
   defaultEventCallbacks,
-} from "../node_modules/beacon-sdk/dist/cjs";
+} from "../node_modules/octez.connect-sdk/dist/cjs";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";
