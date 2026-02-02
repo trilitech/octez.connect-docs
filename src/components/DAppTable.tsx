@@ -54,9 +54,7 @@ const DAppTable = () => {
     <>
       <BrowserOnly fallback={<></>}>
         {() => {
-          const {
-            SDK_VERSION,
-          } = require("../node_modules/octez.connect-sdk/dist/cjs");
+          const { SDK_VERSION } = require("@tezos-x/octez.connect-sdk");
           return (
             <>
               <p>

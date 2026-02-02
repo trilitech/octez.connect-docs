@@ -1,5 +1,5 @@
 /// START
-import { BeaconEvent, DAppClient } from "../node_modules/octez.connect-sdk/dist/cjs";
+import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 

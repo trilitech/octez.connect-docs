@@ -1,0 +1,490 @@
+build-examples/broadcast-request.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/broadcast-request.octez.connect.ts(2,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/broadcast-request.octez.connect.ts(7,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/broadcast-request.octez.connect.ts(13,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/broadcast-request.octez.connect.ts(15,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/broadcast-request.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/broadcast-request.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/broadcast-request.octez.js.ts(10,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/broadcast-request.octez.js.ts(16,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/broadcast-request.octez.js.ts(18,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/configuration.octez.connect.ts(1,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/configuration.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/connect-to-testnet.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/connect-to-testnet.octez.connect.ts(16,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/connect-to-testnet.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/connect-to-testnet.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/connect-to-testnet.octez.js.ts(18,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/custom-block-explorer.octez.connect.ts(6,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/custom-block-explorer.octez.connect.ts(7,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/custom-block-explorer.octez.connect.ts(44,36): error TS2339: Property 'getLinkForNetwork' does not exist on type 'TzStatsBlockExplorer'.
+build-examples/custom-block-explorer.octez.connect.ts(52,36): error TS2339: Property 'getLinkForNetwork' does not exist on type 'TzStatsBlockExplorer'.
+build-examples/custom-block-explorer.octez.connect.ts(64,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/custom-block-explorer.octez.connect.ts(65,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/custom-block-explorer.octez.connect.ts(66,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/custom-block-explorer.octez.connect.ts(68,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/custom-block-explorer.octez.js.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/custom-block-explorer.octez.js.ts(7,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/custom-block-explorer.octez.js.ts(8,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/custom-block-explorer.octez.js.ts(45,36): error TS2339: Property 'getLinkForNetwork' does not exist on type 'TzStatsBlockExplorer'.
+build-examples/custom-block-explorer.octez.js.ts(53,36): error TS2339: Property 'getLinkForNetwork' does not exist on type 'TzStatsBlockExplorer'.
+build-examples/custom-block-explorer.octez.js.ts(66,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/custom-block-explorer.octez.js.ts(67,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/custom-block-explorer.octez.js.ts(68,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/custom-block-explorer.octez.js.ts(70,1): error TS2552: Cannot find name 'logger'. Did you mean 'Logger'?
+build-examples/destroy.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/destroy.octez.connect.ts(2,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/destroy.octez.connect.ts(9,3): error TS2304: Cannot find name 'logger'.
+build-examples/destroy.octez.connect.ts(11,17): error TS2304: Cannot find name 'logger'.
+build-examples/destroy.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/destroy.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/destroy.octez.js.ts(11,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/destroy.octez.js.ts(13,1): error TS2304: Cannot find name 'logger'.
+build-examples/different-node.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/different-node.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/different-node.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/different-node.octez.connect.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/different-node.octez.connect.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/different-node.octez.connect.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/different-node.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/different-node.octez.js.ts(3,25): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/different-node.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/different-node.octez.js.ts(17,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/different-node.octez.js.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/different-node.octez.js.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/disable-all-ui.octez.connect.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/disable-all-ui.octez.connect.ts(6,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disable-all-ui.octez.connect.ts(23,1): error TS2304: Cannot find name 'logger'.
+build-examples/disable-all-ui.octez.connect.ts(24,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disable-all-ui.octez.connect.ts(25,1): error TS2304: Cannot find name 'logger'.
+build-examples/disable-all-ui.octez.connect.ts(27,1): error TS2304: Cannot find name 'logger'.
+build-examples/disable-all-ui.octez.js.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/disable-all-ui.octez.js.ts(6,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/disable-all-ui.octez.js.ts(7,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disable-all-ui.octez.js.ts(27,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disable-all-ui.octez.js.ts(28,17): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disable-all-ui.octez.js.ts(29,1): error TS2304: Cannot find name 'logger'.
+build-examples/disable-all-ui.octez.js.ts(31,1): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet-2.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disconnect-wallet-2.octez.connect.ts(2,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/disconnect-wallet-2.octez.connect.ts(11,3): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet-2.octez.connect.ts(13,17): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet-2.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/disconnect-wallet-2.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disconnect-wallet-2.octez.js.ts(11,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disconnect-wallet-2.octez.js.ts(13,1): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disconnect-wallet.octez.connect.ts(2,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/disconnect-wallet.octez.connect.ts(9,1): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/disconnect-wallet.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/disconnect-wallet.octez.js.ts(10,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disconnect-wallet.octez.js.ts(13,17): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/disconnect-wallet.octez.js.ts(14,1): error TS2304: Cannot find name 'logger'.
+build-examples/disconnect-wallet.octez.js.ts(16,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/example-advanced.octez.connect.ts(8,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/example-advanced.octez.connect.ts(24,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.connect.ts(31,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.connect.ts(35,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(46,23): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.connect.ts(47,3): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(50,3): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(51,3): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/example-advanced.octez.connect.ts(58,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.connect.ts(68,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(71,22): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.connect.ts(76,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(78,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.connect.ts(79,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/example-advanced.octez.connect.ts(84,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/example-advanced.octez.js.ts(8,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/example-advanced.octez.js.ts(9,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/example-advanced.octez.js.ts(27,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(34,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(38,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(50,15): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(51,3): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(53,3): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(54,3): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/example-advanced.octez.js.ts(61,14): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(69,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(72,22): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-advanced.octez.js.ts(77,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(79,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-advanced.octez.js.ts(80,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/example-advanced.octez.js.ts(85,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-high-performance-multiple-nodes.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/example-simple.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/example-simple.octez.connect.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/example-simple.octez.connect.ts(14,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.connect.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.connect.ts(21,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.connect.ts(22,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.connect.ts(28,20): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.connect.ts(38,3): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/example-simple.octez.js.ts(3,36): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/example-simple.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/example-simple.octez.js.ts(16,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.js.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.js.ts(23,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.js.ts(24,13): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.js.ts(25,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.js.ts(31,14): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/example-simple.octez.js.ts(39,1): error TS2304: Cannot find name 'logger'.
+build-examples/example-simple.octez.js.ts(41,1): error TS2304: Cannot find name 'logger'.
+build-examples/fa1.2-transfer.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/fa1.2-transfer.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/fa1.2-transfer.octez.js.ts(10,19): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa1.2-transfer.octez.js.ts(12,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa1.2-transfer.octez.js.ts(17,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa1.2-transfer.octez.js.ts(26,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa1.2-transfer.octez.js.ts(35,1): error TS2304: Cannot find name 'logger'.
+build-examples/fa1.2-transfer.octez.js.ts(37,1): error TS2304: Cannot find name 'logger'.
+build-examples/fa2-transfer.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/fa2-transfer.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/fa2-transfer.octez.js.ts(10,19): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa2-transfer.octez.js.ts(12,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa2-transfer.octez.js.ts(17,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa2-transfer.octez.js.ts(29,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/fa2-transfer.octez.js.ts(44,1): error TS2304: Cannot find name 'logger'.
+build-examples/fa2-transfer.octez.js.ts(46,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-active-account-events.octez.connect.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-active-account-events.octez.connect.ts(13,3): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.connect.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.connect.ts(19,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-active-account-events.octez.connect.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.connect.ts(22,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/getting-started-active-account-events.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-active-account-events.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-active-account-events.octez.js.ts(13,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.js.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.js.ts(18,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-active-account-events.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account-events.octez.js.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-active-account.octez.connect.ts(2,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-active-account.octez.connect.ts(7,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-active-account.octez.connect.ts(11,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account.octez.connect.ts(12,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/getting-started-active-account.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/getting-started-active-account.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-active-account.octez.js.ts(11,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-active-account.octez.js.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-active-account.octez.js.ts(16,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/getting-started-active-account.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-operation-request-events.octez.connect.ts(6,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-operation-request-events.octez.connect.ts(15,3): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.connect.ts(30,5): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.connect.ts(32,5): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.connect.ts(38,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request-events.octez.connect.ts(40,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request-events.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/getting-started-operation-request-events.octez.js.ts(7,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-operation-request-events.octez.js.ts(8,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-operation-request-events.octez.js.ts(20,3): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.js.ts(33,5): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.js.ts(35,5): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request-events.octez.js.ts(41,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request-events.octez.js.ts(43,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-operation-request.octez.connect.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-operation-request.octez.connect.ts(12,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.connect.ts(14,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request.octez.connect.ts(24,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.connect.ts(33,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request.octez.connect.ts(35,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/getting-started-operation-request.octez.js.ts(3,36): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-operation-request.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-operation-request.octez.js.ts(14,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.js.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.js.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request.octez.js.ts(26,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-operation-request.octez.js.ts(33,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-operation-request.octez.js.ts(35,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-permission-request.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-permission-request.octez.connect.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.connect.ts(20,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-permission-request.octez.connect.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.connect.ts(23,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/getting-started-permission-request.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/getting-started-permission-request.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/getting-started-permission-request.octez.js.ts(14,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.js.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.js.ts(19,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/getting-started-permission-request.octez.js.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/getting-started-permission-request.octez.js.ts(22,1): error TS2304: Cannot find name 'logger'.
+build-examples/info-client.octez.connect.ts(1,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/info-client.octez.connect.ts(2,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-client.octez.connect.ts(6,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-client.octez.connect.ts(6,37): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-client.octez.connect.ts(7,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-client.octez.connect.ts(7,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-client.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/info-client.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-client.octez.js.ts(10,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-client.octez.js.ts(10,37): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-client.octez.js.ts(11,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-client.octez.js.ts(11,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/info-connection.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-connection.octez.connect.ts(9,23): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(13,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(15,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(19,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(21,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(22,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(23,20): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(24,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(25,17): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(26,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(28,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(29,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(29,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(30,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(31,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.connect.ts(32,23): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.connect.ts(33,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/info-connection.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/info-connection.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-connection.octez.js.ts(11,23): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(15,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(17,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(21,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(23,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(24,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(25,20): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(26,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(27,17): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(28,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(30,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(31,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(31,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(32,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(33,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-connection.octez.js.ts(34,23): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/info-connection.octez.js.ts(35,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-version.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/info-version.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-version.octez.connect.ts(7,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-version.octez.connect.ts(8,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-version.octez.js.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/info-version.octez.js.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/info-version.octez.js.ts(7,3): error TS2304: Cannot find name 'logger'.
+build-examples/info-version.octez.js.ts(8,3): error TS2304: Cannot find name 'logger'.
+build-examples/network-custom-network.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-custom-network.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-custom-network.octez.connect.ts(18,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-custom-network.octez.connect.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-custom-network.octez.connect.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-custom-network.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/network-custom-network.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-custom-network.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-custom-network.octez.js.ts(20,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-custom-network.octez.js.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-custom-network.octez.js.ts(23,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-mainnet-with-url.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-mainnet-with-url.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-mainnet-with-url.octez.connect.ts(17,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-mainnet-with-url.octez.connect.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-mainnet-with-url.octez.connect.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-mainnet-with-url.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/network-mainnet-with-url.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-mainnet-with-url.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-mainnet-with-url.octez.js.ts(19,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-mainnet-with-url.octez.js.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-mainnet-with-url.octez.js.ts(22,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet-with-url.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-seoulnet-with-url.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-seoulnet-with-url.octez.connect.ts(14,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-seoulnet-with-url.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet-with-url.octez.connect.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet-with-url.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/network-seoulnet-with-url.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-seoulnet-with-url.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-seoulnet-with-url.octez.js.ts(16,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-seoulnet-with-url.octez.js.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet-with-url.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-seoulnet.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-seoulnet.octez.connect.ts(14,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-seoulnet.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet.octez.connect.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/network-seoulnet.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/network-seoulnet.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/network-seoulnet.octez.js.ts(16,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/network-seoulnet.octez.js.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/network-seoulnet.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.connect.ts(10,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/override-alert-aborted-handler.octez.connect.ts(11,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/override-alert-aborted-handler.octez.connect.ts(40,9): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.connect.ts(44,7): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.connect.ts(51,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.connect.ts(52,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/override-alert-aborted-handler.octez.connect.ts(53,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.connect.ts(55,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/override-alert-aborted-handler.octez.js.ts(11,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/override-alert-aborted-handler.octez.js.ts(12,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/override-alert-aborted-handler.octez.js.ts(42,9): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.js.ts(46,7): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.js.ts(55,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.js.ts(56,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/override-alert-aborted-handler.octez.js.ts(57,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-alert-aborted-handler.octez.js.ts(59,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.connect.ts(10,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/override-default-event.octez.connect.ts(11,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/override-default-event.octez.connect.ts(35,7): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.connect.ts(42,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.connect.ts(43,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/override-default-event.octez.connect.ts(44,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.connect.ts(46,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/override-default-event.octez.js.ts(11,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/override-default-event.octez.js.ts(12,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/override-default-event.octez.js.ts(37,7): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.js.ts(46,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.js.ts(47,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/override-default-event.octez.js.ts(48,1): error TS2304: Cannot find name 'logger'.
+build-examples/override-default-event.octez.js.ts(50,1): error TS2304: Cannot find name 'logger'.
+build-examples/read-previous-state.octez.connect.ts(1,28): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/read-previous-state.octez.connect.ts(5,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/read-previous-state.octez.connect.ts(10,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/read-previous-state.octez.connect.ts(12,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/read-previous-state.octez.connect.ts(14,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/read-previous-state.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/read-previous-state.octez.js.ts(9,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/read-previous-state.octez.js.ts(14,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/read-previous-state.octez.js.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/read-previous-state.octez.js.ts(18,1): error TS1108: A 'return' statement can only be used within a function body.
+build-examples/request-permissions.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/request-permissions.octez.connect.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/request-permissions.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/request-permissions.octez.js.ts(3,33): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/request-permissions.octez.js.ts(17,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/send-operation.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/send-operation.octez.connect.ts(8,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/send-operation.octez.connect.ts(14,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/send-operation.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/send-operation.octez.js.ts(3,36): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/send-operation.octez.js.ts(10,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/send-operation.octez.js.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-micheline.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-micheline.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-micheline.octez.connect.ts(10,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-micheline.octez.connect.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-micheline.octez.connect.ts(20,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-micheline.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/sign-payload-micheline.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-micheline.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-micheline.octez.js.ts(11,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-micheline.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-micheline.octez.js.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-operation.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-operation.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-operation.octez.connect.ts(10,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-operation.octez.connect.ts(15,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-operation.octez.connect.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-operation.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/sign-payload-operation.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-operation.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-operation.octez.js.ts(11,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-operation.octez.js.ts(16,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-operation.octez.js.ts(18,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-raw.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-raw.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-raw.octez.connect.ts(9,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-raw.octez.connect.ts(14,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-raw.octez.connect.ts(16,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-raw.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/sign-payload-raw.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/sign-payload-raw.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/sign-payload-raw.octez.js.ts(12,18): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/sign-payload-raw.octez.js.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/sign-payload-raw.octez.js.ts(19,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.connect.ts(1,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/simple-contract-call.octez.connect.ts(5,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/simple-contract-call.octez.connect.ts(10,25): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.connect.ts(14,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.connect.ts(16,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.connect.ts(17,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.connect.ts(26,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.connect.ts(42,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.connect.ts(44,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/simple-contract-call.octez.js.ts(3,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/simple-contract-call.octez.js.ts(11,19): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.js.ts(13,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.js.ts(18,21): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.js.ts(23,16): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/simple-contract-call.octez.js.ts(24,1): error TS2304: Cannot find name 'logger'.
+build-examples/simple-contract-call.octez.js.ts(26,1): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.connect.ts(4,8): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/subscribe-to-event.octez.connect.ts(5,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/subscribe-to-event.octez.connect.ts(11,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.connect.ts(13,3): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.connect.ts(13,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.connect.ts(16,1): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.connect.ts(19,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.connect.ts(21,1): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.js.ts(2,30): error TS2307: Cannot find module '@tezos-x/octez.js-dapp-wallet' or its corresponding type declarations.
+build-examples/subscribe-to-event.octez.js.ts(3,29): error TS2307: Cannot find module '@tezos-x/octez.connect-sdk' or its corresponding type declarations.
+build-examples/subscribe-to-event.octez.js.ts(4,20): error TS2307: Cannot find module '../Logger' or its corresponding type declarations.
+build-examples/subscribe-to-event.octez.js.ts(11,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.js.ts(13,3): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.js.ts(13,34): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.js.ts(16,1): error TS2304: Cannot find name 'logger'.
+build-examples/subscribe-to-event.octez.js.ts(19,1): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+build-examples/subscribe-to-event.octez.js.ts(21,1): error TS2304: Cannot find name 'logger'.
+src/examples/broadcast-request.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/configuration.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/connect-to-testnet.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/custom-block-explorer.octez.connect.ts(16,7): error TS2739: Type '{ mainnet: string; ghostnet: string; weeklynet: string; dailynet: string; seoulnet: string; parisnet: string; quebecnet: string; custom: string; delphinet: string; edonet: string; florencenet: string; ... 10 more ...; shadownet: string; }' is missing the following properties from type '{ mainnet: string; ghostnet: string; weeklynet: string; dailynet: string; delphinet: string; edonet: string; florencenet: string; granadanet: string; hangzhounet: string; ithacanet: string; jakartanet: string; ... 12 more ...; custom: string; }': tallinnnet, "tezlink-shadownet"
+src/examples/custom-block-explorer.octez.js.ts(8,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/custom-block-explorer.octez.js.ts(17,7): error TS2739: Type '{ mainnet: string; ghostnet: string; weeklynet: string; dailynet: string; seoulnet: string; parisnet: string; quebecnet: string; custom: string; delphinet: string; edonet: string; florencenet: string; ... 10 more ...; shadownet: string; }' is missing the following properties from type '{ mainnet: string; ghostnet: string; weeklynet: string; dailynet: string; delphinet: string; edonet: string; florencenet: string; granadanet: string; hangzhounet: string; ithacanet: string; jakartanet: string; ... 12 more ...; custom: string; }': tallinnnet, "tezlink-shadownet"
+src/examples/destroy.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/different-node.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/disable-all-ui.octez.js.ts(7,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/disconnect-wallet-2.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/disconnect-wallet.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/example-advanced.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/example-high-performance-multiple-nodes.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/example-simple.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/fa1.2-transfer.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/fa1.2-transfer.octez.js.ts(31,35): error TS2339: Property 'methods' does not exist on type 'ContractAbstraction<Wallet, DefaultMethodsObject<Wallet>, DefaultViews, DefaultContractViews, unknown>'.
+src/examples/fa2-transfer.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/fa2-transfer.octez.js.ts(34,35): error TS2339: Property 'methods' does not exist on type 'ContractAbstraction<Wallet, DefaultMethodsObject<Wallet>, DefaultViews, DefaultContractViews, unknown>'.
+src/examples/getting-started-active-account-events.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/getting-started-active-account.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/getting-started-operation-request-events.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/getting-started-operation-request.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/getting-started-permission-request.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/info-client.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/info-connection.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/network-custom-network.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/network-mainnet-with-url.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/network-seoulnet-with-url.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/network-seoulnet.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/override-alert-aborted-handler.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/override-default-event.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/read-previous-state.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/request-permissions.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/send-operation.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/sign-payload-micheline.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/sign-payload-operation.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/sign-payload-raw.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/simple-contract-call.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.
+src/examples/simple-contract-call.octez.js.ts(28,35): error TS2339: Property 'methods' does not exist on type 'ContractAbstraction<Wallet, DefaultMethodsObject<Wallet>, DefaultViews, DefaultContractViews, unknown>'.
+src/examples/subscribe-to-event.octez.js.ts(3,10): error TS2305: Module '"@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js"' has no exported member 'BeaconWallet'.

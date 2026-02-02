@@ -70,15 +70,13 @@ export class ExecuteExample {
     }
 
     window.addEventListener("error", function (e) {
-      e.preventDefault();
-      console.error("Error occurred: " + e.error.message);
-      this.location.reload();
+      const message = (e as any)?.error?.message ?? (e as any)?.message;
+      console.error("Error occurred:", message ?? e);
     });
 
     window.addEventListener("unhandledrejection", function (e) {
-      e.preventDefault();
-      console.error("Error occurred: " + e.reason.message);
-      this.location.reload();
+      const message = (e as any)?.reason?.message ?? (e as any)?.reason;
+      console.error("Unhandled rejection:", message ?? e);
     });
 
     this.wasHandlerInitialized = true;

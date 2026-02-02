@@ -10,6 +10,7 @@ Since January 2026, the `beacon-sdk` packages have been renamed and moved to the
 ## Overview
 
 The migration involves:
+
 1.  Updating your `package.json` dependencies.
 2.  Updating import statements in your code.
 3.  Updating any local scripts or configurations referencing the old package names.
@@ -18,35 +19,35 @@ The migration involves:
 
 ### Beacon SDK Packages
 
-| Old Package (`@airgap/*`) | New Package (`@tezos-x/*`) |
-| ------------------------- | -------------------------- |
-| `@airgap/beacon-sdk` | `@tezos-x/octez.connect-sdk` |
-| `@airgap/beacon-dapp` | `@tezos-x/octez.connect-dapp` |
-| `@airgap/beacon-wallet` | `@tezos-x/octez.connect-wallet` |
-| `@airgap/beacon-core` | `@tezos-x/octez.connect-core` |
-| `@airgap/beacon-types` | `@tezos-x/octez.connect-types` |
-| `@airgap/beacon-ui` | `@tezos-x/octez.connect-ui` |
-| `@airgap/beacon-utils` | `@tezos-x/octez.connect-utils` |
-| `@airgap/beacon-transport-matrix` | `@tezos-x/octez.connect-transport-matrix` |
-| `@airgap/beacon-transport-postmessage` | `@tezos-x/octez.connect-transport-postmessage` |
-| `@airgap/beacon-transport-walletconnect` | `@tezos-x/octez.connect-transport-walletconnect` |
-| `@airgap/beacon-blockchain-tezos` | `@tezos-x/octez.connect-blockchain-tezos` |
+| Old Package (`@airgap/*`)                 | New Package (`@tezos-x/*`)                        |
+| ----------------------------------------- | ------------------------------------------------- |
+| `@airgap/beacon-sdk`                      | `@tezos-x/octez.connect-sdk`                      |
+| `@airgap/beacon-dapp`                     | `@tezos-x/octez.connect-dapp`                     |
+| `@airgap/beacon-wallet`                   | `@tezos-x/octez.connect-wallet`                   |
+| `@airgap/beacon-core`                     | `@tezos-x/octez.connect-core`                     |
+| `@airgap/beacon-types`                    | `@tezos-x/octez.connect-types`                    |
+| `@airgap/beacon-ui`                       | `@tezos-x/octez.connect-ui`                       |
+| `@airgap/beacon-utils`                    | `@tezos-x/octez.connect-utils`                    |
+| `@airgap/beacon-transport-matrix`         | `@tezos-x/octez.connect-transport-matrix`         |
+| `@airgap/beacon-transport-postmessage`    | `@tezos-x/octez.connect-transport-postmessage`    |
+| `@airgap/beacon-transport-walletconnect`  | `@tezos-x/octez.connect-transport-walletconnect`  |
+| `@airgap/beacon-blockchain-tezos`         | `@tezos-x/octez.connect-blockchain-tezos`         |
 | `@airgap/beacon-blockchain-tezos-sapling` | `@tezos-x/octez.connect-blockchain-tezos-sapling` |
-| `@airgap/beacon-blockchain-substrate` | `@tezos-x/octez.connect-blockchain-substrate` |
+| `@airgap/beacon-blockchain-substrate`     | `@tezos-x/octez.connect-blockchain-substrate`     |
 
 ### Taquito Packages (optional)
 
 If you are using Taquito with Beacon, you should also update to the `@tezos-x/octez.js` packages.
 
-| Old Package (`@taquito/*`) | New Package (`@tezos-x/*`) |
-| -------------------------- | -------------------------- |
-| `@taquito/taquito` | `@tezos-x/octez.js` |
-| `@taquito/beacon-wallet` | `@tezos-x/octez.js-dapp-wallet` |
-| `@taquito/signer` | `@tezos-x/octez.js-signer` |
-| `@taquito/rpc` | `@tezos-x/octez.js-rpc` |
-| `@taquito/utils` | `@tezos-x/octez.js-utils` |
+| Old Package (`@taquito/*`)   | New Package (`@tezos-x/*`)            |
+| ---------------------------- | ------------------------------------- |
+| `@taquito/taquito`           | `@tezos-x/octez.js`                   |
+| `@taquito/beacon-wallet`     | `@tezos-x/octez.js-dapp-wallet`       |
+| `@taquito/signer`            | `@tezos-x/octez.js-signer`            |
+| `@taquito/rpc`               | `@tezos-x/octez.js-rpc`               |
+| `@taquito/utils`             | `@tezos-x/octez.js-utils`             |
 | `@taquito/michelson-encoder` | `@tezos-x/octez.js-michelson-encoder` |
-| `@taquito/michel-codec` | `@tezos-x/octez.js-michel-codec` |
+| `@taquito/michel-codec`      | `@tezos-x/octez.js-michel-codec`      |
 
 ## Migration Script
 
@@ -62,7 +63,7 @@ set -e
 migrate_package() {
   local FROM="$1"
   local TO="$2"
-  
+
   echo "Migrating $FROM -> $TO"
 
   # Find files containing the exact string (excluding binary, node_modules, git)
@@ -126,6 +127,7 @@ yarn install
 ## Manual Verification
 
 After running the automated migration, please verify:
+
 1.  **Imports**: Check that your `import` statements now reference `@tezos-x/octez.connect-*`.
 2.  **Styles/CSS**: If you imported CSS from the old packages, check that the paths are still valid (folder structures generally remain similar, but check for any name changes).
 3.  **Local references**: If you had manual paths pointing to `node_modules/beacon-sdk`, update them to `node_modules/@tezos-x/octez.connect-sdk`.
@@ -133,5 +135,6 @@ After running the automated migration, please verify:
 ## Troubleshooting
 
 If you encounter issues:
+
 - **Clean install**: Delete `node_modules` and your lockfile (`package-lock.json` or `yarn.lock`) and reinstall.
 - **Check peer dependencies**: Ensure all related packages are updated to compatible versions.

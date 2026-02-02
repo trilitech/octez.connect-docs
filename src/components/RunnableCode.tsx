@@ -7,7 +7,7 @@ import { ExecutionState } from "../ExecutionState";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const Child = ({ code }) => {
-  const { DAppClient } = require("../node_modules/octez.connect-sdk/dist/cjs");
+  const { DAppClient } = require("@tezos-x/octez.connect-sdk");
 
   const Monaco = require("./Monaco").default;
 

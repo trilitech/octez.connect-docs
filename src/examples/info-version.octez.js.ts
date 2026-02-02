@@ -1,8 +1,5 @@
 /// START
-import {
-  BEACON_VERSION,
-  SDK_VERSION,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+import { BEACON_VERSION, SDK_VERSION } from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 

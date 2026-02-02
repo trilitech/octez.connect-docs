@@ -38,7 +38,7 @@ console.log("transaction hash", response.transactionHash);
 ```ts live
 // taquito broadcast request
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

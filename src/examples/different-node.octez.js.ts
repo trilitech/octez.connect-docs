@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { Regions } from "../node_modules/octez.connect-sdk/dist/cjs";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { Regions } from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 

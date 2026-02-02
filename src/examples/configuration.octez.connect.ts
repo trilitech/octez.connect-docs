@@ -1,5 +1,5 @@
 /// START
-import { DAppClient } from "../node_modules/octez.connect-sdk/dist/cjs";
+import { DAppClient } from "@tezos-x/octez.connect-sdk";
 /// END
 
 async () => {

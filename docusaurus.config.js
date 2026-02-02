@@ -5,12 +5,12 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Beacon Docs",
+  title: "Octez Connect Docs",
   tagline: "Connecting dApps with wallets.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://docs.walletbeacon.io",
+  url: "https://octez.connect.tezos.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -26,6 +26,20 @@ const config = {
 
   plugins: [
     "docusaurus-node-polyfills",
+    function webpackFallbacks() {
+      return {
+        name: "webpack-fallbacks",
+        configureWebpack() {
+          return {
+            resolve: {
+              fallback: {
+                fs: false,
+              },
+            },
+          };
+        },
+      };
+    },
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -57,7 +71,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/trilitech/octez.connect-docs/edit/main/src/",
+          editUrl:
+            "https://github.com/trilitech/octez.connect-docs/edit/main/src/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -90,7 +105,7 @@ const config = {
           },
           { to: "playground/", label: "Playground", position: "right" },
           {
-            href: "https://debug.walletbeacon.io",
+            href: "https://debug.octez.connect.tezos.com",
             label: "Debug Wallet",
             position: "right",
           },
@@ -139,22 +154,22 @@ const config = {
             ],
           },
           {
-            title: "Beacon Components",
+            title: "Octez Connect Components",
             items: [
               {
-                label: "Beacon SDK",
+                label: "Octez Connect SDK",
                 href: "https://github.com/trilitech/octez.connect-sdk",
               },
               {
-                label: "Beacon Android SDK",
+                label: "Octez Connect Android SDK",
                 href: "https://github.com/trilitech/octez.connect-android-sdk",
               },
               {
-                label: "Beacon iOS SDK",
+                label: "Octez Connect iOS SDK",
                 href: "https://github.com/trilitech/octez.connect-ios-sdk",
               },
               {
-                label: "Beacon Node",
+                label: "Octez Connect Node",
                 href: "https://github.com/trilitech/beacon-node",
               },
             ],

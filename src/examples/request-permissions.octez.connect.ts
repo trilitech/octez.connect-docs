@@ -1,8 +1,5 @@
 /// START
-import {
-  DAppClient,
-  PermissionScope,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+import { DAppClient, PermissionScope } from "@tezos-x/octez.connect-sdk";
 /// END
 
 async () => {

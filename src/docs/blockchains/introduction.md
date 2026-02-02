@@ -94,8 +94,9 @@ export interface BlockchainRequestV3<T extends string = string>
 ```
 
 ```ts
-export interface BlockchainResponseV3<T extends string = string>
-  extends BlockchainMessage<T> {
+export interface BlockchainResponseV3<
+  T extends string = string,
+> extends BlockchainMessage<T> {
   blockchainIdentifier: T;
   type: BeaconMessageType.BlockchainResponse;
   // accountId is not present, because it can be fetched from the request

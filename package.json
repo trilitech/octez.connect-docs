@@ -1,12 +1,12 @@
 {
-  "name": "beacon-docs",
-  "version": "0.0.0",
+  "name": "octez.connect-docs",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "npm run create-node-modules && npm run embed-code && docusaurus start",
-    "create-node-modules": "rm -rf src/node_modules && mkdir src/node_modules && cp -r node_modules/@tezos-x/octez.connect-sdk src/node_modules",
-    "prepare": "node scripts/fix-beacon-sdk.js",
+    "create-node-modules": "rm -rf src/node_modules && mkdir -p src/node_modules/@tezos-x && cp -r node_modules/@tezos-x src/node_modules/",
+    "prepare": "node scripts/fix-octez.connect-sdk.js",
     "build": "npm run create-node-modules && npm run embed-code && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -20,21 +20,21 @@
     "generate-monaco-types": "node scripts/generate-monaco-types.js",
     "remove-folders": "rm -rf build-docs && rm -rf docs",
     "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
-    "embed-code": "npm run generate-monaco-types && npm run prettier && tsc --module es2015 --target es2015 --moduleResolution node --esModuleInterop true src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && rm -r docs && mv build-docs docs && npm run pretty-docs"
+    "embed-code": "npm run generate-monaco-types && npm run prettier && tsc --module es2015 --target es2015 --moduleResolution node --esModuleInterop true --allowJs true --skipLibCheck true src/examples/*.ts src/types/*.d.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && rm -r docs && mv build-docs docs && npm run pretty-docs"
   },
   "dependencies": {
-    "@tezos-x/octez.connect-sdk": "^0.9.0",
     "@docusaurus/core": "^3.9.1",
     "@docusaurus/plugin-client-redirects": "^3.9.1",
     "@docusaurus/preset-classic": "^3.9.1",
     "@docusaurus/theme-live-codeblock": "^3.9.1",
     "@mdx-js/react": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
-    "@tezos-x/octez.js-dapp-wallet": "^0.9.0",
+    "@tezos-x/octez.connect-sdk": "^0.9.0",
     "@tezos-x/octez.js": "^0.9.0",
+    "@tezos-x/octez.js-dapp-wallet": "^0.9.0",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.4",
-    "mermaid": "^11.0.0",
+    "mermaid": "^10.9.5",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

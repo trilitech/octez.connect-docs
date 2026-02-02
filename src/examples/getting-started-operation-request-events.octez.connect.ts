@@ -4,7 +4,7 @@ import {
   BeaconEvent,
   DAppClient,
   TezosOperationType,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+} from "@tezos-x/octez.connect-sdk";
 /// END
 
 const getOperationRequestBeaconWithEvents = async (loggerFun: Function) => {

@@ -1,10 +1,7 @@
 /// START
-import {
-  BeaconEvent,
-  defaultEventCallbacks,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 import Logger from "../Logger";
 /// END
 

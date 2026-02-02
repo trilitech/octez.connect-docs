@@ -8,7 +8,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+} from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 

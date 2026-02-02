@@ -1,6 +1,6 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 import Logger from "../Logger";
 /// END
 
@@ -25,7 +25,7 @@ const simpleContractCallTaquito = async (loggerFun: Function) => {
   const tokenId = "925";
 
   try {
-    const result = await contract.methods.set_color(tokenId).send();
+    const result = await (contract as any).methods.set_color(tokenId).send();
     logger.log("Result: ", result);
   } catch (error) {
     logger.log(

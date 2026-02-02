@@ -1,15 +1,17 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 import {
   BeaconEvent,
   defaultEventCallbacks,
   P2PPairingRequest,
   PostMessagePairingRequest,
-  NetworkType,
   WalletConnectPairingRequest,
+} from "@tezos-x/octez.connect-sdk";
+import type {
+  NetworkType,
   AnalyticsInterface,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+} from "@tezos-x/octez.connect-types";
 import Logger from "../Logger";
 /// END
 

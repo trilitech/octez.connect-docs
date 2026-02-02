@@ -3,9 +3,9 @@ import {
   BlockExplorer,
   NetworkType,
   Network,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+} from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 import Logger from "../Logger";
 /// END
 
@@ -15,29 +15,30 @@ const customBlockExplorerTaquito = async (loggerFun: Function) => {
   class TzStatsBlockExplorer extends BlockExplorer {
     constructor(
       public readonly rpcUrls: { [key in NetworkType]: string } = {
-        [NetworkType.MAINNET]: "https://tzstats.com/",
-        [NetworkType.GHOSTNET]: "https://ghost.tzstats.com/",
-        [NetworkType.WEEKLYNET]: "https://monday.tzstats.com/",
-        [NetworkType.DAILYNET]: "https://daily.tzstats.com/",
-        [NetworkType.SEOULNET]: "https://seoul.tzstats.com/",
-        [NetworkType.PARISNET]: "https://paris.tzstats.com/",
-        [NetworkType.QUEBECNET]: "https://quebec.tzstats.com/",
-        [NetworkType.CUSTOM]: "https://custom.tzstats.com/",
-        // Deprecated networks (no longer active)
-        [NetworkType.DELPHINET]: "https://tzstats.com/",
-        [NetworkType.EDONET]: "https://tzstats.com/",
-        [NetworkType.FLORENCENET]: "https://tzstats.com/",
-        [NetworkType.GRANADANET]: "https://tzstats.com/",
-        [NetworkType.HANGZHOUNET]: "https://tzstats.com/",
-        [NetworkType.ITHACANET]: "https://tzstats.com/",
-        [NetworkType.JAKARTANET]: "https://tzstats.com/",
-        [NetworkType.KATHMANDUNET]: "https://tzstats.com/",
-        [NetworkType.LIMANET]: "https://tzstats.com/",
-        [NetworkType.MUMBAINET]: "https://tzstats.com/",
-        [NetworkType.NAIROBINET]: "https://tzstats.com/",
-        [NetworkType.OXFORDNET]: "https://tzstats.com/",
-        [NetworkType.RIONET]: "https://tzstats.com/",
-        [NetworkType.SHADOWNET]: "https://tzstats.com/",
+        [NetworkType.MAINNET]: "https://tzkt.io",
+        [NetworkType.GHOSTNET]: "https://ghostnet.tzkt.io/",
+        [NetworkType.SHADOWNET]: "https://shadownet.tzkt.io/",
+        [NetworkType.SEOULNET]: "https://seoulnet.tzkt.io/",
+        [NetworkType.TALLINNNET]: "https://tallinnnet.tzkt.io/",
+        [NetworkType.WEEKLYNET]: "https://tzkt.io",
+        [NetworkType.DAILYNET]: "https://tzkt.io",
+        [NetworkType.DELPHINET]: "https://tzkt.io",
+        [NetworkType.EDONET]: "https://tzkt.io",
+        [NetworkType.FLORENCENET]: "https://tzkt.io",
+        [NetworkType.GRANADANET]: "https://tzkt.io",
+        [NetworkType.HANGZHOUNET]: "https://tzkt.io",
+        [NetworkType.ITHACANET]: "https://tzkt.io",
+        [NetworkType.JAKARTANET]: "https://tzkt.io",
+        [NetworkType.KATHMANDUNET]: "https://tzkt.io",
+        [NetworkType.LIMANET]: "https://tzkt.io",
+        [NetworkType.MUMBAINET]: "https://tzkt.io",
+        [NetworkType.NAIROBINET]: "https://tzkt.io",
+        [NetworkType.OXFORDNET]: "https://tzkt.io",
+        [NetworkType.PARISNET]: "https://tzkt.io",
+        [NetworkType.QUEBECNET]: "https://tzkt.io",
+        [NetworkType.RIONET]: "https://tzkt.io",
+        [NetworkType.TEZLINK_SHADOWNET]: "https://tzkt.io",
+        [NetworkType.CUSTOM]: "https://tzkt.io",
       },
     ) {
       super(rpcUrls);

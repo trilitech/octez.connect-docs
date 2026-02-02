@@ -1,8 +1,5 @@
 /// START
-import {
-  DAppClient,
-  TezosOperationType,
-} from "../node_modules/octez.connect-sdk/dist/cjs";
+import { DAppClient, TezosOperationType } from "@tezos-x/octez.connect-sdk";
 /// END
 
 async () => {

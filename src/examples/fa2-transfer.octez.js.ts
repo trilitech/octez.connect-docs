@@ -1,6 +1,6 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
 import Logger from "../Logger";
 /// END
 
@@ -31,7 +31,7 @@ const fa2TransferTaquito = async (loggerFun: Function) => {
   // In this case the parameters are [from, to, amount].
   // This will prepare the contract call and send the request to the connected wallet.
   try {
-    const result = await contract.methods
+    const result = await (contract as any).methods
       .transfer([
         {
           from_: address,
