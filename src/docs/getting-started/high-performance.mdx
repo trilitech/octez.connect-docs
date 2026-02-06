@@ -74,11 +74,11 @@ try {
 
 ## Reduce number of requests made to RPCs
 
-Whenever doing a call in taquito, it internally has to fetch data from the chain. Under normal circumstances, those requests are not a big deal. But if a high number of users are using your dApp at the same time, those requests can become a problem for the RPCs.
+Whenever doing a call in octez.js, it internally has to fetch data from the chain. Under normal circumstances, those requests are not a big deal. But if a high number of users are using your dApp at the same time, those requests can become a problem for the RPCs.
 
-### Use octez.connect without taquito
+### Use octez.connect without octez.js
 
-When `octez.connect` is used without taquito, no connection to any RPC is required. So if your dApp offers only simple functionality (eg. only calling the `mint` entrypoint with one parameter), it is more performant to construct the contract call yourself and send it to the octez.connect Network direcly, without going through taquito first.
+When `octez.connect` is used without octez.js, no connection to any RPC is required. So if your dApp offers only simple functionality (eg. only calling the `mint` entrypoint with one parameter), it is more performant to construct the contract call yourself and send it to the octez.connect Network direcly, without going through octez.js first.
 
 ```ts
 const result = await dAppClient.requestOperation({
@@ -100,9 +100,9 @@ const result = await dAppClient.requestOperation({
 
 See a full example [here](/guides/simple-contract-call)
 
-### Use Caching with taquito
+### Use Caching with octez.js
 
-Taquito offers a couple of optional features to reduce the number of network requests.
+octez.js offers a couple of optional features to reduce the number of network requests.
 
 #### Enable caching
 
@@ -114,7 +114,7 @@ const rpc = new RpcClientCache(new RpcClient(RPC_URL));
 this.tezos = new TezosToolkit(rpc);
 ```
 
-More information in the official [Taquito RPC Caching Docs](https://tezostaquito.io/docs/rpc-cache)
+More information in the official [octez.js RPC Caching Docs](https://octez-js.tezos.com/docs/rpc-cache)
 
 #### Provide contract data locally
 
@@ -131,7 +131,7 @@ const Tezos = new TezosToolkit(RPC_URL);
 Tezos.addExtension(contractsLibrary);
 ```
 
-More information in the official [Taquito Contracts Library Docs](https://tezostaquito.io/docs/contracts-library)
+More information in the official [octez.js Contracts Library Docs](https://octez-js.tezos.com/docs/contracts-library)
 
 #### Local Packing
 
@@ -143,7 +143,7 @@ const Tezos = new TezosToolkit(RPC_URL);
 Tezos.setPackerProvider(new MichelCodecPacker());
 ```
 
-More information in the official [Taquito Local Packing Docs](https://tezostaquito.io/docs/maps_bigmaps/#local-packing-for-big-maps)
+More information in the official [octez.js Local Packing Docs](https://octez-js.tezos.com/docs/maps_bigmaps/#local-packing-for-big-maps)
 
 ## Provide fee and gas estimates
 
