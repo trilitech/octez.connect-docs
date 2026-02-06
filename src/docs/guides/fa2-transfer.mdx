@@ -5,22 +5,22 @@ title: FA2 Transfer
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-The FA2 Transfer feature in the Beacon SDK is designed for handling token transfers using the FA2 standard. FA2 is a multi-asset interface, enabling a wide range of token types and configurations, including fungible, non-fungible, and multi-asset tokens.
+The FA2 Transfer feature in the octez.connect SDK is designed for handling token transfers using the FA2 standard. FA2 is a multi-asset interface, enabling a wide range of token types and configurations, including fungible, non-fungible, and multi-asset tokens.
 
 <Tabs
   groupId="beaconOrTaquitoFA2"
   defaultValue="taquito"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
 
 ```ts
-// Complex contract calls should be done with Taquito.
-// It is possible to do them without taquito, but then you have to construct the parameters yourself.
-// See the "Simple Contract Call" page for an example without Taquito.
+// Complex contract calls should be done with octez.js.
+// It is possible to do them without octez.js, but then you have to construct the parameters yourself.
+// See the "Simple Contract Call" page for an example without octez.js.
 ```
 
 </TabItem>

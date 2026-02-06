@@ -3,7 +3,7 @@ import TabItem from "@theme/TabItem";
 
 # Subscribe to `ACTIVE_ACCOUNT_SET` Advanced Example
 
-Beacon provides developers the ability to subscribe to its internal state, as shown on the dedicated page. Since version 4.2.0, subscribing to `ACTIVE_ACCOUNT_SET` has become mandatory. This page provides a custom example with user validation by requesting the wallet to sign a payload.
+octez.connect provides developers the ability to subscribe to its internal state, as shown on the dedicated page. Since version 4.2.0, subscribing to `ACTIVE_ACCOUNT_SET` has become mandatory. This page provides a custom example with user validation by requesting the wallet to sign a payload.
 
 ## Before Starting
 
@@ -27,8 +27,8 @@ After initializing your `dAppClient` instance, you need to subscribe to `ACTIVE_
   groupId="beaconOrTaquitoSAAE1"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
 
@@ -69,8 +69,8 @@ Sometimes `requestPermissions` may not be enough, and you want to ensure the use
   groupId="beaconOrTaquitoSAAE2"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
 
@@ -135,7 +135,7 @@ wallet.client.subscribeToEvent(
 
 ## Multi-tab Synchronization
 
-While the example above works for single-page dApps, it may become problematic in a multi-tab setup. Beacon emits an event to keep each tab synced with the internal state. Therefore, if your dApp needs multiple tabs support, the above approach may cause issues. Each tab will send a **sign_payload** request to the wallet, which is not intended and may lead to request rejection if a certain threshold is reached.
+While the example above works for single-page dApps, it may become problematic in a multi-tab setup. octez.connect emits an event to keep each tab synced with the internal state. Therefore, if your dApp needs multiple tabs support, the above approach may cause issues. Each tab will send a **sign_payload** request to the wallet, which is not intended and may lead to request rejection if a certain threshold is reached.
 
 To address this, we need to implement multi-tab synchronization. There are multiple ways to achieve this; for simplicity, we use `broadcast-channel`.
 
@@ -219,8 +219,8 @@ Now, inside the handler, check whether the current tab has the leadership. If no
   groupId="beaconOrTaquitoSAAE4"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
 <TabItem value="beacon">
@@ -288,8 +288,8 @@ The end result should look like this:
   groupId="beaconOrTaquitoSAAE5"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
 <TabItem value="beacon">

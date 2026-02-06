@@ -13,8 +13,8 @@ Let's get started with your first dApp. You have to install the necessary depend
   groupId="beaconOrTaquito1"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
@@ -35,15 +35,15 @@ npm install --save @tezos-x/octez.js @tezos-x/octez.js-dapp-wallet
 
 ## Setup
 
-You can then import the `beacon-sdk` package and create a `DAppClient` instance. This instance will be used throughout your dApp to interact with the users wallet.
+You can then import the `octez.connect-sdk` package and create a `DAppClient` instance. This instance will be used throughout your dApp to interact with the users wallet.
 Once created, you can send a permission request to prompt the user to connect to his wallet.
 
 <Tabs
   groupId="beaconOrTaquito2"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
@@ -118,8 +118,8 @@ If the following code returns an address, there is no need to send another permi
   groupId="beaconOrTaquito3"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
@@ -172,7 +172,7 @@ if (activeAccount) {
 
 </TabItem>
 </Tabs>
-The `beacon-sdk` is now fully set up and ready to receive operation requests.
+The `octez.connect` SDK is now fully set up and ready to receive operation requests.
 
 ## Operation Request
 
@@ -184,8 +184,8 @@ Remember, each operation request should be constructed carefully, considering th
   groupId="beaconOrTaquito6"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
@@ -287,7 +287,7 @@ Please refer to our dedicated [page](/guides/disconnecting-a-wallet) on how to d
 
 This function is designed to be called as the final action of `dAppClient` when it is no longer needed.
 
-The destroy function is used to clean up resources and remove all Beacon values from storage.
+The destroy function is used to clean up resources and remove all octez.connect-sdk values from storage.
 
 Once this function is executed, the current instance of `dAppClient` becomes unusable.
 
@@ -295,8 +295,8 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
   groupId="beaconOrTaquito7"
   defaultValue="beacon"
   values={[
-    { label: "Beacon", value: "beacon" },
-    { label: "Taquito", value: "taquito" },
+    { label: "octez.connect", value: "beacon" },
+    { label: "octez.js", value: "taquito" },
   ]}
 >
   <TabItem value="beacon">
@@ -340,4 +340,4 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
 
 ## User Interaction Best Practice
 
-Take a look a the [best practice](/getting-started/best-practices) for recommendations on Beacon user interface components.
+Take a look a the [best practice](/getting-started/best-practices) for recommendations on octez.connect user interface components.
