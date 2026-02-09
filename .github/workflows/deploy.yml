@@ -23,6 +23,9 @@ jobs:
       group: deploy-preview
       cancel-in-progress: false
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Deploy
         uses: ./.github/actions/deploy-s3-cloudfront
         with:
@@ -41,6 +44,9 @@ jobs:
       group: deploy-production
       cancel-in-progress: false
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Deploy
         uses: ./.github/actions/deploy-s3-cloudfront
         with:
