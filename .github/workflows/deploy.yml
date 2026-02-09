@@ -1,48 +1,57 @@
-name: deploy
+name: Deploy Octez Docs
 
 on:
-  pull_request:
-    branches: [main]
   push:
-    branches: [main]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  checks:
-    if: github.event_name != 'push'
+  deploy-preview:
+    name: Deploy to Preview
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    environment: Preview
+    concurrency:
+      group: deploy-preview
+      cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        uses: ./.github/actions/deploy-s3-cloudfront
         with:
-          node-version: '22.x'
-      - name: Test Build
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
-  gh-release:
-    if: github.event_name != 'pull_request'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          s3-bucket-name: ${{ vars.S3_BUCKET_NAME }}
+          cloudfront-distribution-id: ${{ secrets.CLOUDFRONT_ID }}
+
+  deploy-production:
+    name: Deploy to Production
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: Production
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        uses: ./.github/actions/deploy-s3-cloudfront
         with:
-          node-version: '22.x'
-      - name: Build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm ci
-          npm run build
-          cd build
-          git config --global user.email "support+actions@github.com"
-          git config --global user.name "github-actions-bot"
-          git init
-          git add -A
-          git commit -m 'chore(docs): including latest changes'
-          git push -f https://git:${GITHUB_TOKEN}@github.com/trilitech/octez.connect-docs.git master:gh-pages
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          s3-bucket-name: ${{ vars.S3_BUCKET_NAME }}
+          cloudfront-distribution-id: ${{ secrets.CLOUDFRONT_ID }}
