@@ -25,13 +25,13 @@ The shift to using the event subscription method is crucial for several reasons:
 
 <Tabs
   groupId="octezConnectOrOctezJsMigration1"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
     ```typescript
     // Old usage
@@ -39,7 +39,7 @@ The shift to using the event subscription method is crucial for several reasons:
     ```
 
   </TabItem>
-  <TabItem value="octez-js">
+  <TabItem value="octez.js">
 
     ```typescript
     // Old usage
@@ -55,13 +55,13 @@ Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event
 
 <Tabs
   groupId="octezConnectOrOctezJsMigration2"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
     ```typescript
     // New method
     dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -70,7 +70,7 @@ Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event
     });
     ```
   </TabItem>
-  <TabItem value="octez-js">
+  <TabItem value="octez.js">
     ```typescript
     // New method
     wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -89,13 +89,13 @@ The end result should look something like this:
 
 <Tabs
   groupId="octezConnectOrOctezJsMigration3"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon get active account with events
@@ -113,7 +113,7 @@ const permissions = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
-  <TabItem value="octez-js">
+  <TabItem value="octez.js">
 
 ```ts live
 // taquito permission request

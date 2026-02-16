@@ -11,20 +11,20 @@ Let's get started with your first dApp. You have to install the necessary depend
 
 <Tabs
   groupId="octezConnectOrOctezJs1"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
 ```bash
 npm install --save @tezos-x/octez.connect-sdk
 ```
 
   </TabItem>
-  <TabItem value="octez-js">
+  <TabItem value="octez.js">
 
 ```bash
 npm install --save @tezos-x/octez.js @tezos-x/octez.js-dapp-wallet
@@ -40,13 +40,13 @@ Once created, you can send a permission request to prompt the user to connect to
 
 <Tabs
   groupId="octezConnectOrOctezJs2"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon permission request
@@ -71,7 +71,7 @@ try {
 
 </TabItem>
 
-<TabItem value="octez-js">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito permission request
@@ -116,13 +116,13 @@ If the following code returns an address, there is no need to send another permi
 
 <Tabs
   groupId="octezConnectOrOctezJs3"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon get active account
@@ -145,7 +145,7 @@ if (activeAccount) {
 
 </TabItem>
 
-<TabItem value="octez-js">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito get active account
@@ -182,13 +182,13 @@ Remember, each operation request should be constructed carefully, considering th
 
 <Tabs
   groupId="octezConnectOrOctezJs6"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon request operation with events
@@ -229,7 +229,7 @@ if (!activeAccount) {
 
 </TabItem>
 
-<TabItem value="octez-js">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito request operation with events
@@ -293,13 +293,13 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
 
 <Tabs
   groupId="octezConnectOrOctezJs7"
-  defaultValue="octez-connect"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "octez-connect" },
-    { label: "octez.js", value: "octez-js" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="octez-connect">
+  <TabItem value="octez.connect">
 
     ```ts live
     // beacon destroy
@@ -316,7 +316,7 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
     ```
 
   </TabItem>
-  <TabItem value="octez-js">
+  <TabItem value="octez.js">
   
     ```ts live
     // taquito destroy
