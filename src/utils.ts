@@ -2,7 +2,7 @@ import * as beacon from "@tezos-x/octez.connect-sdk";
 import * as ts from "typescript";
 
 import * as taquito from "@tezos-x/octez.js";
-import * as taquitoWallet from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import * as taquitoWallet from "@tezos-x/octez.js-dapp-wallet";
 
 function replaceAll(string: string, search: string, replace: string) {
   return string.split(search).join(replace);

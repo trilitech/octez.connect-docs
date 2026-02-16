@@ -5,7 +5,7 @@ import {
   Network,
 } from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import Logger from "../Logger";
 /// END
 
