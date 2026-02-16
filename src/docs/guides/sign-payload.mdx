@@ -11,14 +11,14 @@ This page provides some examples for signing payloads in different formats: HEX 
 ## HEX Prefixed With 05
 
 <Tabs
-  groupId="beaconOrTaquitoSP1"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsSP1"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon sign payload micheline
@@ -38,7 +38,7 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito sign payload micheline
@@ -67,14 +67,14 @@ console.log(`Signature: ${response.signature}`);
 ## HEX Prefixed With 03
 
 <Tabs
-  groupId="beaconOrTaquitoSP2"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsSP2"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon sign payload operation
@@ -92,7 +92,7 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito sign payload operation
@@ -123,14 +123,14 @@ Not all wallets support the `RAW` signing type. Additionally, the signatures can
 :::
 
 <Tabs
-  groupId="beaconOrTaquitoSP3"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsSP3"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon sign payload raw
@@ -148,7 +148,7 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito sign payload raw

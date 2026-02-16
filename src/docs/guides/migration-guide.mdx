@@ -24,14 +24,14 @@ The shift to using the event subscription method is crucial for several reasons:
 `requestPermissions()` still returns an active account. However, be aware that it might not capture subsequent account changes made in the wallet.
 
 <Tabs
-  groupId="beaconOrTaquitoMigration1"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsMigration1"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
     ```typescript
     // Old usage
@@ -39,7 +39,7 @@ The shift to using the event subscription method is crucial for several reasons:
     ```
 
   </TabItem>
-  <TabItem value="taquito">
+  <TabItem value="octez-js">
 
     ```typescript
     // Old usage
@@ -54,14 +54,14 @@ The shift to using the event subscription method is crucial for several reasons:
 Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event is triggered whenever there is a change in the active account, allowing your dApp to stay updated.
 
 <Tabs
-  groupId="beaconOrTaquitoMigration2"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsMigration2"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
     ```typescript
     // New method
     dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -70,7 +70,7 @@ Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event
     });
     ```
   </TabItem>
-  <TabItem value="taquito">
+  <TabItem value="octez-js">
     ```typescript
     // New method
     wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -88,14 +88,14 @@ Adapt your dApp's logic to handle updates from both `requestPermissions` and the
 The end result should look something like this:
 
 <Tabs
-  groupId="beaconOrTaquitoMigration3"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsMigration3"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon get active account with events
@@ -113,7 +113,7 @@ const permissions = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
-  <TabItem value="taquito">
+  <TabItem value="octez-js">
 
 ```ts live
 // taquito permission request

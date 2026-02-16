@@ -100,14 +100,14 @@ On Android, there is one link for all mobile apps because the device lets you ch
 You can overwrite all of the default UI elements by doing the following.
 
 <Tabs
-  groupId="beaconOrTaquitoUE1"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsUE1"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon disable ui
@@ -142,7 +142,7 @@ try {
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito disable ui
@@ -184,14 +184,14 @@ You can also add your own logic to specific events and still keep the original b
 The same can be achieved without overwriting the default event handler by [subscribing to an event](/guides/subscribe-to-event). This method is preferred, if possible.
 
 <Tabs
-  groupId="beaconOrTaquitoUE2"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsUE2"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon request permission events
@@ -244,7 +244,7 @@ try {
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito request permission events
@@ -310,14 +310,14 @@ If the dApp interprets the "closing" of the alert as an abort, and a few seconds
 If you still want to be notified of the closing of the pairing window, you can do it in the following way, while keeping the default behaviour.
 
 <Tabs
-  groupId="beaconOrTaquitoUE3"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsUE3"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon request permission alert
@@ -380,7 +380,7 @@ const dAppClient = new DAppClient({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito request permission alert

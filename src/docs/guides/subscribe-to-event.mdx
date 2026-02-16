@@ -44,14 +44,14 @@ The list below showcases all the events that are currently available for subscri
 ### Example
 
 <Tabs
-  groupId="beaconOrTaquitoSTE"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsSTE"
+  defaultValue="octez-connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts live
 // beacon subscribe to event
@@ -74,7 +74,7 @@ await dAppClient.requestPermissions();
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez-js">
 
 ```ts live
 // taquito subscribe to event

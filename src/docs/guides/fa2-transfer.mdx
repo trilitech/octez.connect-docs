@@ -8,14 +8,14 @@ import TabItem from "@theme/TabItem";
 The FA2 Transfer feature in the octez.connect SDK is designed for handling token transfers using the FA2 standard. FA2 is a multi-asset interface, enabling a wide range of token types and configurations, including fungible, non-fungible, and multi-asset tokens.
 
 <Tabs
-  groupId="beaconOrTaquitoFA2"
-  defaultValue="taquito"
+  groupId="octezConnectOrOctezJsFA2"
+  defaultValue="octez-js"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez-connect" },
+    { label: "octez.js", value: "octez-js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez-connect">
 
 ```ts
 // Complex contract calls should be done with octez.js.
@@ -25,7 +25,7 @@ The FA2 Transfer feature in the octez.connect SDK is designed for handling token
 
 </TabItem>
 
-  <TabItem value="taquito">
+  <TabItem value="octez-js">
 
 ```ts live
 // taquito fa2 transfer
