@@ -10,7 +10,7 @@ To enable this feature, please refer to the [performance metrics page](/guides/m
 
 octez.connect includes a bug reporting feature, designed to gather and transmit user generated issue. This document outlines the structure and usage of the bug reporting system.
 
-<DynamicImage src="/img/bug_report_alert.png" alt="Beacon Pairing" />
+<DynamicImage src="/img/bug_report_alert.png" alt="octez.connect Pairing" />
 
 ## Bug Report Object
 
@@ -26,7 +26,7 @@ Here is an overview of each field in the bug report object sent:
     steps: string, // [User generated] A step-by-step guide on how to reproduce the bug. This is crucial for developers to understand and fix the issue. Clear and precise steps can significantly speed up the debugging process.
     os: string, // The operating system of the user's device. This information is vital as some bugs are OS-specific.
     browser: string, // The browser on which the bug was encountered. Browser-specific bugs are common, and this information helps in pinpointing such issues.
-    localStorage: string, // A stringified version of the user's Beacon local storage data. Beacon's local storage often contains user settings and other information that could be relevant in understanding the bug.
+    localStorage: string, // A stringified version of the user's octez.connect local storage data. octez.connect's local storage often contains user settings and other information that could be relevant in understanding the bug.
     wcStorage: string // A stringified version of the user's WalletConnect storage data.
 }
 ```

@@ -52,7 +52,7 @@ do {
         with: .init(
             name: "MyApp",
             blockchains: [Substrate.factory, Tezos.factory], // set support for Substrate and Tezos blockchains
-            connections: [try Transport.P2P.Matrix.connection()] // use Matrix to communicate with the Beacon network
+            connections: [try Transport.P2P.Matrix.connection()] // use Matrix to communicate with the octez.connect network
         )
     ) { result in
     // highlight-end

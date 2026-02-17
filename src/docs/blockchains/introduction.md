@@ -44,7 +44,7 @@ export interface BlockchainMessage<T extends string = string> {
 
 #### Permission Message
 
-One core concept of Beacon is that as a first step (after establishing the connection), the dApp needs to request permissions to receive information about accounts and execute certain actions.
+One core concept of octez.connect is that as a first step (after establishing the connection), the dApp needs to request permissions to receive information about accounts and execute certain actions.
 
 For this reason, there are two messages, `PermissionRequest` and `PermissionResponse`, that are used to do the permission management.
 

@@ -8,9 +8,9 @@ import TOCInline from "@theme/TOCInline";
 
 <TOCInline toc={toc} />
 
-## How to install Beacon iOS SDK
+## How to install octez.connect iOS SDK
 
-To add Beacon iOS SDK into your project add the dependencies:
+To add octez.connect iOS SDK into your project add the dependencies:
 
 [![stable](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?label=stable&sort=semver)](https://github.com/airgap-it/beacon-ios-sdk)
 [![latest](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?color=orange&include_prereleases&label=latest)](https://github.com/airgap-it/beacon-ios-sdk)
@@ -32,7 +32,7 @@ dependencies: [
 ],
 ```
 
-Or in Xcode open the `Add Package Dependency` window (as described in [the official guide](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)) and enter the `Beacon iOS SDK` GitHub repository URL
+Or in Xcode open the `Add Package Dependency` window (as described in [the official guide](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)) and enter the `octez.connect iOS SDK` GitHub repository URL
 
 ```
 https://github.com/airgap-it/beacon-ios-sdk
@@ -79,11 +79,11 @@ Core packages are the basis for other packages. They are required for the SDK to
 
 ### Client
 
-Client packages ship with Beacon implementations for different parts of the network.
+Client packages ship with octez.connect implementations for different parts of the network.
 
 | Module               | Description                       | Dependencies | Required by |
 | -------------------- | --------------------------------- | ------------ | ----------- |
-| `BeaconClientWallet` | Beacon implementation for wallets | `BeaconCore` | ✖️          |
+| `BeaconClientWallet` | octez.connect implementation for wallets | `BeaconCore` | ✖️          |
 
 ### Blockchain
 
@@ -96,8 +96,8 @@ Blockchain packages provide support for different blockchains.
 
 ### Transport
 
-Transport packages provide various interfaces used to establish connection between Beacon clients.
+Transport packages provide various interfaces used to establish connection between octez.connect clients.
 
 | Module                     | Description                                                                              | Dependencies | Required by |
 | -------------------------- | ---------------------------------------------------------------------------------------- | ------------ | ----------- |
-| `BeaconTransportP2PMatrix` | Beacon P2P implementation which uses [Matrix](https://matrix.org/) for the communication | `BeaconCore` | ✖️          |
+| `BeaconTransportP2PMatrix` | octez.connect P2P implementation which uses [Matrix](https://matrix.org/) for the communication | `BeaconCore` | ✖️          |
