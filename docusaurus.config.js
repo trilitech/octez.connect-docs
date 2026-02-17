@@ -175,7 +175,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Papers AG - Open Source MIT License`,
+        copyright: `Copyright © ${new Date().getFullYear()} Trilitech - Open Source MIT License`,
       },
       prism: {
         additionalLanguages: ["kotlin", "groovy", "swift", "ruby"],
