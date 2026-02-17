@@ -10,7 +10,7 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://octez.connect.tezos.com",
+  url: "https://octez-connect.tezos.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -86,7 +86,7 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: "Beacon Logo",
+          alt: "octez.connect Logo",
           src: "img/logo.svg",
           srcDark: "img/logo-white.svg",
         },
@@ -158,7 +158,7 @@ const config = {
             items: [
               {
                 label: "Octez Connect SDK",
-                href: "https://github.com/trilitech/octez.connect-sdk",
+                href: "https://github.com/trilitech/octez.connect",
               },
               {
                 label: "Octez Connect Android SDK",
