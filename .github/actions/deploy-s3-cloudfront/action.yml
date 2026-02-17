@@ -17,24 +17,48 @@ inputs:
   cloudfront-distribution-id:
     description: 'CloudFront Distribution ID'
     required: true
+  deploy-empty:
+    description: 'Deploy an empty page instead of the docs site'
+    required: false
+    default: 'false'
 
 runs:
   using: "composite"
   steps:
 
     - name: Setup Node.js
+      if: inputs.deploy-empty != 'true'
       uses: actions/setup-node@v4
       with:
         node-version: '22'
         cache: 'npm'
 
     - name: Install Dependencies
+      if: inputs.deploy-empty != 'true'
       shell: bash
       run: npm ci
 
     - name: Build
+      if: inputs.deploy-empty != 'true'
       shell: bash
       run: npm run build
+
+    - name: Create empty page
+      if: inputs.deploy-empty == 'true'
+      shell: bash
+      run: |
+        mkdir -p build
+        cat > build/index.html << 'EOF'
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Octez Connect</title>
+        </head>
+        <body></body>
+        </html>
+        EOF
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
