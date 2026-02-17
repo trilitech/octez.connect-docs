@@ -58,7 +58,7 @@ const DAppTable = () => {
           return (
             <>
               <p>
-                The most recent version of the beacon-sdk is{" "}
+                The most recent version of the octez.connect-sdk is{" "}
                 <b>{SDK_VERSION}</b>.
               </p>
               <table>

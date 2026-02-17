@@ -11,14 +11,14 @@ import TabItem from "@theme/TabItem";
 ## Mainnet With Custom RPC
 
 <Tabs
-  groupId="beaconOrTaquitoN1"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsN1"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon mainnet network
@@ -37,12 +37,12 @@ const result = await dAppClient.requestPermissions({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito mainnet network
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -65,14 +65,14 @@ const result = await wallet.client.requestPermissions({
 ## Testnet
 
 <Tabs
-  groupId="beaconOrTaquitoN2"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsN2"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon seoulnet network
@@ -93,12 +93,12 @@ const result = await dAppClient.requestPermissions({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito seoulnet network
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -123,14 +123,14 @@ const result = await wallet.client.requestPermissions({
 ## Testnet With Custom RPC
 
 <Tabs
-  groupId="beaconOrTaquitoN3"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsN3"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon seoulnet network with RPC
@@ -152,12 +152,12 @@ const result = await dAppClient.requestPermissions({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito seoulnet network with RPC
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -183,14 +183,14 @@ const result = await wallet.client.requestPermissions({
 ## Custom Network
 
 <Tabs
-  groupId="beaconOrTaquitoN4"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsN4"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon custom network
@@ -213,12 +213,12 @@ const result = await dAppClient.requestPermissions({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito custom network
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

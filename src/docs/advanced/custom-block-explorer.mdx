@@ -9,14 +9,14 @@ The `Custom Block Explorer` feature in octez.connect SDK allows developers to in
 This is particularly useful for applications that require specific functionalities or presentation styles offered by certain block explorers, or for those who wish to provide a more seamless user experience by integrating a block explorer directly into the app interface.
 
 <Tabs
-  groupId="beaconOrTaquitoCBE"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsCBE"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts
 import {
@@ -68,7 +68,7 @@ const dAppClient = new DAppClient({
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts
 import {
@@ -77,7 +77,7 @@ import {
   Network,
 } from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 
 class TzStatsBlockExplorer extends BlockExplorer {
   constructor(

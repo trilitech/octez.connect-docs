@@ -3,7 +3,7 @@ title: Introduction
 slug: /blockchains/introduction
 ---
 
-Since the release of `beacon-sdk` version 3.0, octez.connect supports multiple blockchains.
+Since the release of `octez.connect-sdk` version 3.0, octez.connect supports multiple blockchains.
 
 Currently, 3 separate blockchain packages are available:
 

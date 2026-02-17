@@ -9,14 +9,14 @@ You can configure the dApp or Wallet to connect to a different octez.connect nod
 Make sure the servers you use are whitelisted in the octez.connect network and federation is working correctly.
 
 <Tabs
-  groupId="beaconOrTaquitoDN"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsDN"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon different node
@@ -39,12 +39,12 @@ try {
 ```
 
 </TabItem>
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito different node
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { Regions } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

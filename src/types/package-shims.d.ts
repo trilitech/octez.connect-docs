@@ -1,9 +1,9 @@
 declare module "@tezos-x/octez.js-dapp-wallet" {
-  export * from "@tezos-x/octez.js-dapp-wallet/dist/types/octez.js-beacon-wallet";
+  export * from "@tezos-x/octez.js-dapp-wallet/dist/types/octez.js-dapp-wallet";
 }
 
-declare module "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js" {
-  export * from "@tezos-x/octez.js-dapp-wallet/dist/types/octez.js-beacon-wallet";
+declare module "@tezos-x/octez.js-dapp-wallet" {
+  export * from "@tezos-x/octez.js-dapp-wallet/dist/types/octez.js-dapp-wallet";
 }
 
 declare module "@tezos-x/octez.connect-sdk" {

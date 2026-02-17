@@ -8,14 +8,14 @@ import TabItem from "@theme/TabItem";
 RequestPermissions helps dApps connect with users' wallets. This involves asking for and getting the user's permission to access certain wallet features, which is needed for any actions the dApp wants to perform with the user's account.
 
 <Tabs
-  groupId="beaconOrTaquitoRP"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsRP"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon permission request
@@ -40,12 +40,12 @@ try {
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito permission request
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { PermissionScope } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

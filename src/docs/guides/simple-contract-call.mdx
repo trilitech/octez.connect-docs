@@ -14,14 +14,14 @@ The `octez.connect` SDK itself does not do any type checking on the parameters y
 The wallet will process and validate the operation. If there are any errors, they have to be displayed in the wallet. `run_operation` errors can optionally be sent back to the dApp as well.
 
 <Tabs
-  groupId="beaconOrTaquitoSCC"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsSCC"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon simple contract call
@@ -73,12 +73,12 @@ try {
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito simple contract call
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs" });

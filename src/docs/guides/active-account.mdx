@@ -14,14 +14,14 @@ Here's how it works:
 > It's important to implement this subscription so your dApp can react to account changes in real-time. This ensures your application always interacts with the correct account.
 
 <Tabs
-  groupId="beaconOrTaquitoAA2"
-  defaultValue="beacon"
+  groupId="octezConnectOrOctezJsAA2"
+  defaultValue="octez.connect"
   values={[
-    { label: "octez.connect", value: "beacon" },
-    { label: "octez.js", value: "taquito" },
+    { label: "octez.connect", value: "octez.connect" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
-  <TabItem value="beacon">
+  <TabItem value="octez.connect">
 
 ```ts live
 // beacon get active account with events
@@ -45,12 +45,12 @@ try {
 ```
 
 </TabItem>
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
 // taquito get active account with events
 import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet/dist/octez.js-beacon-wallet.es6.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
