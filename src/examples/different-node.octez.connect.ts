@@ -9,7 +9,7 @@ const differentNodeBeacon = async (loggerFun: Function) => {
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
     matrixNodes: {
-      [Regions.EUROPE_WEST]: ["beacon-node-0.papers.tech:8448"],
+      [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
     },
   });
 

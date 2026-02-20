@@ -5,13 +5,13 @@ This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern 
 ## Installation
 
 ```console
-yarn install
+npm install
 ```
 
 ## Local Development
 
 ```console
-yarn start
+npm run start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
@@ -19,7 +19,7 @@ This command starts a local development server and open up a browser window. Mos
 ## Build
 
 ```console
-yarn build
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
@@ -34,7 +34,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 # Adding a new dApp to the list
 
-To add a new dApp to [this list](https://docs.walletbeacon.io/dapps), you have to add a new entry to `src/data/dapps.json`. At the end of the file, add the following object:
+To add a new dApp to [this list](https://octez-connect.tezos.com/dapps/), you have to add a new entry to `src/data/dapps.json`. At the end of the file, add the following object:
 
 ```
     {
@@ -51,6 +51,6 @@ To add a new dApp to [this list](https://docs.walletbeacon.io/dapps), you have t
     }
 ```
 
-Then run the script to fetch the latest beacon version of all dApps: `node scripts/fetch-sdk-versions-from-dapps.js`
+Then run the script to fetch the latest version of all dApps: `node scripts/fetch-sdk-versions-from-dapps.js`
 
 Note: Depending on the dApp, it might be necessary to add custom logic to `scripts/fetch-sdk-versions-from-dapps.js` to detect the SDK version.

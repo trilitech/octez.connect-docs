@@ -12,7 +12,7 @@ const differentNodeTaquito = async (loggerFun: Function) => {
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
     matrixNodes: {
-      [Regions.EUROPE_WEST]: ["beacon-node-0.papers.tech:8448"],
+      [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
     },
   });
 
