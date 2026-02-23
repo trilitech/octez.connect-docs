@@ -5,7 +5,7 @@ sidebar_label: Migrating from beacon-sdk
 
 # Migrating from beacon-sdk to octez.connect-sdk
 
-Since January 2026, the `beacon-sdk` packages have been renamed and moved to the `@tezos-x` namespace under `octez.connect`. This guide will help you migrate your project to the new package names.
+During February 2026, the `beacon-sdk` packages have been renamed and moved to the `@tezos-x` namespace under `octez.connect`. This guide will help you migrate your project to the new package names.
 
 ## Overview
 
@@ -34,20 +34,6 @@ The migration involves:
 | `@airgap/beacon-blockchain-tezos`         | `@tezos-x/octez.connect-blockchain-tezos`         |
 | `@airgap/beacon-blockchain-tezos-sapling` | `@tezos-x/octez.connect-blockchain-tezos-sapling` |
 | `@airgap/beacon-blockchain-substrate`     | `@tezos-x/octez.connect-blockchain-substrate`     |
-
-### Taquito Packages (optional)
-
-If you are using Taquito with Beacon, you should also update to the `@tezos-x/octez.js` packages.
-
-| Old Package (`@taquito/*`)   | New Package (`@tezos-x/*`)            |
-| ---------------------------- | ------------------------------------- |
-| `@taquito/taquito`           | `@tezos-x/octez.js`                   |
-| `@taquito/beacon-wallet`     | `@tezos-x/octez.js-dapp-wallet`       |
-| `@taquito/signer`            | `@tezos-x/octez.js-signer`            |
-| `@taquito/rpc`               | `@tezos-x/octez.js-rpc`               |
-| `@taquito/utils`             | `@tezos-x/octez.js-utils`             |
-| `@taquito/michelson-encoder` | `@tezos-x/octez.js-michelson-encoder` |
-| `@taquito/michel-codec`      | `@tezos-x/octez.js-michel-codec`      |
 
 ## Migration Script
 
@@ -99,10 +85,6 @@ migrate_package "@airgap/beacon-types" "@tezos-x/octez.connect-types"
 migrate_package "@airgap/beacon-transport-matrix" "@tezos-x/octez.connect-transport-matrix"
 migrate_package "@airgap/beacon-transport-postmessage" "@tezos-x/octez.connect-transport-postmessage"
 migrate_package "@airgap/beacon-blockchain-tezos" "@tezos-x/octez.connect-blockchain-tezos"
-
-# --- Taquito Packages ---
-migrate_package "@taquito/taquito" "@tezos-x/octez.js"
-migrate_package "@taquito/beacon-wallet" "@tezos-x/octez.js-dapp-wallet"
 
 echo "Migration script finished."
 ```
