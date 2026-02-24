@@ -112,7 +112,7 @@ module.exports = {
     {
       type: "link",
       label: "Changelog",
-      href: "https://github.com/trilitech/octez.connect-sdk/releases",
+      href: "https://github.com/trilitech/octez.connect/releases",
     },
     {
       type: "link",
