@@ -11,11 +11,11 @@ This page provides some examples for signing payloads in different formats: HEX 
 ## HEX Prefixed With 05
 
 <Tabs
-  groupId="octezConnectOrOctezJsSP1"
+  groupId="octezConnectOrTaquitoSP1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -38,12 +38,12 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sign payload micheline
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -67,11 +67,11 @@ console.log(`Signature: ${response.signature}`);
 ## HEX Prefixed With 03
 
 <Tabs
-  groupId="octezConnectOrOctezJsSP2"
+  groupId="octezConnectOrTaquitoSP2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -92,12 +92,12 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sign payload operation
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -119,15 +119,15 @@ console.log(`Signature: ${response.signature}`);
 ## RAW
 
 :::warning
-Not all wallets support the `RAW` signing type. Additionally, the signatures can be different depending on the wallet that was used. For the preferred way of signing arbitrary data, please check the docs here: https://octez-js.tezos.com/docs/signing/#generating-a-signature-with-beacon-sdk
+Not all wallets support the `RAW` signing type. Additionally, the signatures can be different depending on the wallet that was used. For the preferred way of signing arbitrary data, please check the docs here: https://taquito.io/docs/signing/#generating-a-signature-with-beacon-sdk
 :::
 
 <Tabs
-  groupId="octezConnectOrOctezJsSP3"
+  groupId="octezConnectOrTaquitoSP3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -148,12 +148,12 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sign payload raw
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import { SigningType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");

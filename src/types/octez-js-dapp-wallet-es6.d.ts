@@ -1,3 +1,3 @@
-declare module "@tezos-x/octez.js-dapp-wallet" {
-  export * from "@tezos-x/octez.js-dapp-wallet/dist/types/octez.js-dapp-wallet";
+declare module "@taquito/beacon-wallet" {
+  export * from "@taquito/beacon-wallet/dist/types/taquito-beacon-wallet";
 }

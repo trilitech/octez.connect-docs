@@ -100,11 +100,11 @@ On Android, there is one link for all mobile apps because the device lets you ch
 You can overwrite all of the default UI elements by doing the following.
 
 <Tabs
-  groupId="octezConnectOrOctezJsUE1"
+  groupId="octezConnectOrTaquitoUE1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -142,13 +142,13 @@ try {
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito disable ui
 import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk";
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({
@@ -184,11 +184,11 @@ You can also add your own logic to specific events and still keep the original b
 The same can be achieved without overwriting the default event handler by [subscribing to an event](/guides/subscribe-to-event). This method is preferred, if possible.
 
 <Tabs
-  groupId="octezConnectOrOctezJsUE2"
+  groupId="octezConnectOrTaquitoUE2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -244,12 +244,12 @@ try {
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito request permission events
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
@@ -310,11 +310,11 @@ If the dApp interprets the "closing" of the alert as an abort, and a few seconds
 If you still want to be notified of the closing of the pairing window, you can do it in the following way, while keeping the default behaviour.
 
 <Tabs
-  groupId="octezConnectOrOctezJsUE3"
+  groupId="octezConnectOrTaquitoUE3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -380,12 +380,12 @@ const dAppClient = new DAppClient({
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito request permission alert
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet }  from "@tezos-x/octez.js-dapp-wallet";;
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet }  from "@taquito/beacon-wallet";;
 import {
   BeaconEvent,
   DAppClient,

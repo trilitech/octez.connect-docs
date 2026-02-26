@@ -14,11 +14,11 @@ The following example will show:
 5. How to "disconnect" a wallet
 
 <Tabs
-  groupId="octezConnectOrOctezJsAE"
+  groupId="octezConnectOrTaquitoAE"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -102,12 +102,12 @@ await dAppClient.clearActiveAccount();
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito advanced example
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   ColorMode,
   Network,

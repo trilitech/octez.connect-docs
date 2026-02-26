@@ -1,8 +1,8 @@
 import * as beacon from "@tezos-x/octez.connect-sdk";
 import * as ts from "typescript";
 
-import * as taquito from "@tezos-x/octez.js";
-import * as taquitoWallet from "@tezos-x/octez.js-dapp-wallet";
+import * as taquito from "@taquito/taquito";
+import * as taquitoWallet from "@taquito/beacon-wallet";
 
 function replaceAll(string: string, search: string, replace: string) {
   return string.split(search).join(replace);
@@ -27,7 +27,7 @@ const rewriteImportsForRunner = (code: string) => {
     }
 
     match = trimmed.match(
-      /^import\s+\{([^}]+)\}\s+from\s+["']@tezos-x\/octez\.js["'];?\s*$/,
+      /^import\s+\{([^}]+)\}\s+from\s+["']@taquito\/taquito["'];?\s*$/,
     );
     if (match) {
       rewritten.push(`const { ${match[1].trim()} } = taquito;`);
@@ -35,7 +35,7 @@ const rewriteImportsForRunner = (code: string) => {
     }
 
     match = trimmed.match(
-      /^import\s+\{([^}]+)\}\s+from\s+["']@tezos-x\/octez\.js-dapp-wallet\/dist\/octez\.js-beacon-wallet\.es6\.js["'];?\s*$/,
+      /^import\s+\{([^}]+)\}\s+from\s+["']@taquito\/beacon-wallet["'];?\s*$/,
     );
     if (match) {
       rewritten.push(`const { ${match[1].trim()} } = taquitoWallet;`);
