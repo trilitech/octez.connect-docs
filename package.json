@@ -32,6 +32,8 @@
     "@tezos-x/octez.connect-sdk": "1.0.0",
     "@taquito/taquito": "24.1.0-beta.0",
     "@taquito/beacon-wallet": "24.1.0-beta.0",
+    "@taquito/rpc": "24.1.0-beta.0",
+    "@taquito/contracts-library": "24.1.0-beta.0",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.4",
     "mermaid": "^10.9.5",

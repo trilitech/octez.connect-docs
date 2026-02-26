@@ -3108,6 +3108,17 @@
     crypto-browserify "^3.12.1"
     util "^0.12.5"
 
+"@taquito/contracts-library@24.1.0-beta.0":
+  version "24.1.0-beta.0"
+  resolved "https://registry.npmjs.org/@taquito/contracts-library/-/contracts-library-24.1.0-beta.0.tgz"
+  integrity sha512-hfzc6kX4aVUhaTXUrc7WHIrTYYPFhiHdnU9pXoN17aTdOf74537J376HeGPb75H4BwFwjYexUY2Jk660O9RXvg==
+  dependencies:
+    "@taquito/core" "^24.1.0-beta.0"
+    "@taquito/rpc" "^24.1.0-beta.0"
+    "@taquito/taquito" "^24.1.0-beta.0"
+    "@taquito/utils" "^24.1.0-beta.0"
+    bignumber.js "^9.1.2"
+
 "@taquito/core@^24.1.0-beta.0":
   version "24.1.0-beta.0"
   resolved "https://registry.npmjs.org/@taquito/core/-/core-24.1.0-beta.0.tgz"
@@ -3153,7 +3164,7 @@
     bignumber.js "^9.1.2"
     fast-json-stable-stringify "^2.1.0"
 
-"@taquito/rpc@^24.1.0-beta.0":
+"@taquito/rpc@^24.1.0-beta.0", "@taquito/rpc@24.1.0-beta.0":
   version "24.1.0-beta.0"
   resolved "https://registry.npmjs.org/@taquito/rpc/-/rpc-24.1.0-beta.0.tgz"
   integrity sha512-xm9B3ZFQl6oii1eZZWl2o/bjKCJe/kKy48udYatWX3CK6EjB+RhfC55luMjK/jC8F/zlJ31A2BDADxcWlOT2EA==
