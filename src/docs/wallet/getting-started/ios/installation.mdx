@@ -81,8 +81,8 @@ Core packages are the basis for other packages. They are required for the SDK to
 
 Client packages ship with octez.connect implementations for different parts of the network.
 
-| Module               | Description                       | Dependencies | Required by |
-| -------------------- | --------------------------------- | ------------ | ----------- |
+| Module               | Description                              | Dependencies | Required by |
+| -------------------- | ---------------------------------------- | ------------ | ----------- |
 | `BeaconClientWallet` | octez.connect implementation for wallets | `BeaconCore` | ✖️          |
 
 ### Blockchain
@@ -98,6 +98,6 @@ Blockchain packages provide support for different blockchains.
 
 Transport packages provide various interfaces used to establish connection between octez.connect clients.
 
-| Module                     | Description                                                                              | Dependencies | Required by |
-| -------------------------- | ---------------------------------------------------------------------------------------- | ------------ | ----------- |
+| Module                     | Description                                                                                     | Dependencies | Required by |
+| -------------------------- | ----------------------------------------------------------------------------------------------- | ------------ | ----------- |
 | `BeaconTransportP2PMatrix` | octez.connect P2P implementation which uses [Matrix](https://matrix.org/) for the communication | `BeaconCore` | ✖️          |

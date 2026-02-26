@@ -147,7 +147,7 @@ Client modules ship with octez.connect implementations for different parts of th
 
 | Module                  | Description                                                                                                                                | Dependencies                    | Required by             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- | ----------------------- |
-| `:client-wallet`        | octez.connect implementation for wallets                                                                                                          | `:core`                         | `:client-wallet-compat` |
+| `:client-wallet`        | octez.connect implementation for wallets                                                                                                   | `:core`                         | `:client-wallet-compat` |
 | `:client-wallet-compat` | Provides a supplementary interface for `:client-wallet` for use without [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) | `:core` <br /> `:client-wallet` | ✖️                      |
 
 ### Blockchain
@@ -163,8 +163,8 @@ Blockchain modules provide support for different blockchains.
 
 Transport modules provide various interfaces used to establish connection between octez.connect clients.
 
-| Module                  | Description                                                                              | Dependencies | Required by |
-| ----------------------- | ---------------------------------------------------------------------------------------- | ------------ | ----------- |
+| Module                  | Description                                                                                     | Dependencies | Required by |
+| ----------------------- | ----------------------------------------------------------------------------------------------- | ------------ | ----------- |
 | `:transport-p2p-matrix` | octez.connect P2P implementation which uses [Matrix](https://matrix.org/) for the communication | `:core`      | ✖️          |
 
 ## Proguard and R8

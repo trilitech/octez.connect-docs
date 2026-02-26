@@ -110,7 +110,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/trilitech/octez.connect-sdk",
+            href: "https://github.com/trilitech/octez.connect",
             label: "GitHub",
             position: "right",
           },
