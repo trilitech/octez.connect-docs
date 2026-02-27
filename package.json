@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "npm run create-node-modules && npm run embed-code && docusaurus start",
-    "create-node-modules": "rm -rf src/node_modules && mkdir -p src/node_modules/@tezos-x && cp -r node_modules/@tezos-x src/node_modules/ && mkdir -p src/node_modules/@taquito && cp -r node_modules/@taquito src/node_modules/",
+    "create-node-modules": "rm -rf src/node_modules && mkdir -p src/node_modules/@tezos-x && cp -r node_modules/@tezos-x src/node_modules/ && mkdir -p src/node_modules/@taquito && cp -r node_modules/@taquito src/node_modules/ && mkdir -p src/node_modules/@airgap && cp -r node_modules/@airgap src/node_modules/",
     "prepare": "node scripts/fix-octez.connect-sdk.js",
     "build": "npm run create-node-modules && npm run embed-code && docusaurus build",
     "swizzle": "docusaurus swizzle",
