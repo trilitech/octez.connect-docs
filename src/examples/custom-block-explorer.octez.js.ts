@@ -1,9 +1,5 @@
 /// START
-import {
-  BlockExplorer,
-  NetworkType,
-  Network,
-} from "@tezos-x/octez.connect-sdk";
+import { BlockExplorer, NetworkType, Network } from "@airgap/beacon-dapp";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";

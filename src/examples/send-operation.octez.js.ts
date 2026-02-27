@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { TezosOperationType } from "@tezos-x/octez.connect-sdk";
+import { TezosOperationType } from "@airgap/beacon-dapp";
 /// END
 
 async () => {

@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
+import { BeaconEvent } from "@airgap/beacon-dapp";
 import Logger from "../Logger";
 /// END
 

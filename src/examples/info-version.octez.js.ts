@@ -1,5 +1,5 @@
 /// START
-import { BEACON_VERSION, SDK_VERSION } from "@tezos-x/octez.connect-sdk";
+import { BEACON_VERSION, SDK_VERSION } from "@airgap/beacon-dapp";
 import Logger from "../Logger";
 /// END
 

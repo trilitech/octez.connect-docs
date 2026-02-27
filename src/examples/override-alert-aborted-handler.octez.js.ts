@@ -7,7 +7,7 @@ import {
   P2PPairingRequest,
   PostMessagePairingRequest,
   WalletConnectPairingRequest,
-} from "@tezos-x/octez.connect-sdk";
+} from "@airgap/beacon-dapp";
 import type {
   NetworkType,
   AnalyticsInterface,

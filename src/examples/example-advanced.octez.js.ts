@@ -6,7 +6,7 @@ import {
   Network,
   NetworkType,
   TezosOperationType,
-} from "@tezos-x/octez.connect-sdk";
+} from "@airgap/beacon-dapp";
 import Logger from "../Logger";
 /// END
 
