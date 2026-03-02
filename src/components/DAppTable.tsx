@@ -58,15 +58,13 @@ const DAppTable = () => {
           return (
             <>
               <p>
-                The most recent version of the octez.connect-sdk is{" "}
+                The most recent version of octez.connect-sdk is{" "}
                 <b>{SDK_VERSION}</b>.
               </p>
               <table>
                 <thead>
                   <tr>
                     <th>dApp</th>
-                    <th>SDK Version</th>
-                    <th>Last Updated</th>
                     <th>Source Code</th>
                   </tr>
                 </thead>
@@ -76,16 +74,6 @@ const DAppTable = () => {
                       <td>
                         <a href={dApp.url}>{dApp.name}</a>
                       </td>
-                      <td>
-                        {dApp.sdkVersion}{" "}
-                        {dApp.sdkVersion === SDK_VERSION ||
-                        sdkVersions.recommended.includes(dApp.sdkVersion)
-                          ? "✅"
-                          : sdkVersions.outdated.includes(dApp.sdkVersion)
-                            ? "❌"
-                            : ""}
-                      </td>
-                      <td>{getDate(dApp.lastUpdate)}</td>
                       <td>
                         {dApp.sourceCode ? (
                           <a href={dApp.sourceCode}>Source Code</a>
