@@ -87,8 +87,8 @@ const config = {
       navbar: {
         logo: {
           alt: "octez.connect Logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo-white.svg",
+          src: "img/logo.png",
+          srcDark: "img/logo-white.png",
         },
         items: [
           {
