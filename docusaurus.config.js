@@ -24,6 +24,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  scripts: [{ src: "/js/force-light.js", type: "text/javascript" }],
+
   plugins: [
     "docusaurus-node-polyfills",
     function webpackFallbacks() {
@@ -84,11 +86,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         logo: {
           alt: "octez.connect Logo",
           src: "img/logo.svg",
-          srcDark: "img/logo-white.svg",
         },
         items: [
           {
@@ -108,6 +114,7 @@ const config = {
             href: "https://debug.octez.connect.tezos.com",
             label: "Debug Wallet",
             position: "right",
+            className: "button_link",
           },
           {
             href: "https://github.com/trilitech/octez.connect",
