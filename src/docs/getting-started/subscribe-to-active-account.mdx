@@ -24,11 +24,11 @@ Be aware that calling one of the functions listed below will also trigger `ACTIV
 After initializing your `dAppClient` instance, you need to subscribe to `ACTIVE_ACCOUNT_SET` as shown below:
 
 <Tabs
-  groupId="octezConnectOrOctezJsSAAE1"
+  groupId="octezConnectOrTaquitoSAAE1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 
@@ -45,7 +45,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -66,11 +66,11 @@ The handler should be as concise as possible. Ideally, it should just globally u
 Sometimes `requestPermissions` may not be enough, and you want to ensure the user who has synced with the wallet is authorized. A common way to accomplish this is by sending a _sign_payload_ request to the wallet.
 
 <Tabs
-  groupId="octezConnectOrOctezJsSAAE2"
+  groupId="octezConnectOrTaquitoSAAE2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 
@@ -100,7 +100,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts
 wallet.client.subscribeToEvent(
@@ -148,7 +148,7 @@ The following example is designed to be as simple as possible to help developers
 Run the following command:
 
 <Tabs
-  groupId="octezConnectOrOctezJsSAAE3"
+  groupId="octezConnectOrTaquitoSAAE3"
   defaultValue="npm"
   values={[
     { label: "NPM", value: "npm" },
@@ -216,11 +216,11 @@ channel.onmessage = async (message: any) => {
 Now, inside the handler, check whether the current tab has the leadership. If not, do not send a `sign_payload` request.
 
 <Tabs
-  groupId="octezConnectOrOctezJsSAAE4"
+  groupId="octezConnectOrTaquitoSAAE4"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 <TabItem value="octez.connect">
@@ -249,7 +249,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts
 wallet.client.subscribeToEvent(
@@ -285,17 +285,17 @@ wallet.client.subscribeToEvent(
 The end result should look like this:
 
 <Tabs
-  groupId="octezConnectOrOctezJsSAAE5"
+  groupId="octezConnectOrTaquitoSAAE5"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 <TabItem value="octez.connect">
 
 ```ts
-import { DAppClient, BeaconEvent } from "@tezos-x/octez.connect-dapp";
+import { DAppClient, BeaconEvent } from "@tezos-x/octez.connect-sdk";
 import { NetworkType } from "@tezos-x/octez.connect-types";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
@@ -355,12 +355,12 @@ dAppClient.requestPermissions();
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-dapp";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
+import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
 const channel = new BroadcastChannel("beacon-test");

@@ -24,11 +24,11 @@ The shift to using the event subscription method is crucial for several reasons:
 `requestPermissions()` still returns an active account. However, be aware that it might not capture subsequent account changes made in the wallet.
 
 <Tabs
-  groupId="octezConnectOrOctezJsMigration1"
+  groupId="octezConnectOrTaquitoMigration1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -39,7 +39,7 @@ The shift to using the event subscription method is crucial for several reasons:
     ```
 
   </TabItem>
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
 
     ```typescript
     // Old usage
@@ -54,11 +54,11 @@ The shift to using the event subscription method is crucial for several reasons:
 Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event is triggered whenever there is a change in the active account, allowing your dApp to stay updated.
 
 <Tabs
-  groupId="octezConnectOrOctezJsMigration2"
+  groupId="octezConnectOrTaquitoMigration2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -70,7 +70,7 @@ Next, implement an event listener for BeaconEvent.ACTIVE_ACCOUNT_SET. This event
     });
     ```
   </TabItem>
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
     ```typescript
     // New method
     wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -88,11 +88,11 @@ Adapt your dApp's logic to handle updates from both `requestPermissions` and the
 The end result should look something like this:
 
 <Tabs
-  groupId="octezConnectOrOctezJsMigration3"
+  groupId="octezConnectOrTaquitoMigration3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -113,12 +113,12 @@ const permissions = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
 
 ```ts live
 // taquito permission request
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

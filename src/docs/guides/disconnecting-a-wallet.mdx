@@ -21,11 +21,11 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-  groupId="octezConnectOrOctezJsDAW2"
+  groupId="octezConnectOrTaquitoDAW2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 <TabItem value="octez.connect">
@@ -44,12 +44,12 @@ dAppClient
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito disconnect wallet 2
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -79,11 +79,11 @@ This method ensures that all data linked to the active account is removed, and t
 > Note: Only for WalletConnect, `clearActiveAccount` will also resets all transport references behaving similarly to `disconnect`
 
 <Tabs
-  groupId="octezConnectOrOctezJsDAW2"
+  groupId="octezConnectOrTaquitoDAW2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
 <TabItem value="octez.connect">
@@ -104,12 +104,12 @@ dAppClient
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito disconnect wallet
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

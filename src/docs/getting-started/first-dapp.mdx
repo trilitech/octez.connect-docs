@@ -10,11 +10,11 @@ import TabItem from "@theme/TabItem";
 Let's get started with your first dApp. You have to install the necessary dependencies.
 
 <Tabs
-  groupId="octezConnectOrOctezJs1"
+  groupId="octezConnectOrTaquito1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -24,10 +24,10 @@ npm install --save @tezos-x/octez.connect-sdk
 ```
 
   </TabItem>
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
 
 ```bash
-npm install --save @tezos-x/octez.js @tezos-x/octez.js-dapp-wallet
+npm install --save @taquito/taquito @taquito/beacon-wallet
 ```
 
   </TabItem>
@@ -39,11 +39,11 @@ You can then import the `octez.connect-sdk` package and create a `DAppClient` in
 Once created, you can send a permission request to prompt the user to connect to his wallet.
 
 <Tabs
-  groupId="octezConnectOrOctezJs2"
+  groupId="octezConnectOrTaquito2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -71,12 +71,12 @@ try {
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito permission request
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
@@ -115,11 +115,11 @@ This code should be run after the page is loaded to get the users address and sh
 If the following code returns an address, there is no need to send another permission request, unless you want to pair a different account.
 
 <Tabs
-  groupId="octezConnectOrOctezJs3"
+  groupId="octezConnectOrTaquito3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -145,12 +145,12 @@ if (activeAccount) {
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito get active account
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -181,11 +181,11 @@ If the user has already granted permissions and is connected, you can directly s
 Remember, each operation request should be constructed carefully, considering the specific action you want the user to authorize, like transferring tokens or interacting with a smart contract.
 
 <Tabs
-  groupId="octezConnectOrOctezJs6"
+  groupId="octezConnectOrTaquito6"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -229,12 +229,12 @@ if (!activeAccount) {
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito request operation with events
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
@@ -292,11 +292,11 @@ The destroy function is used to clean up resources and remove all octez.connect-
 Once this function is executed, the current instance of `dAppClient` becomes unusable.
 
 <Tabs
-  groupId="octezConnectOrOctezJs7"
+  groupId="octezConnectOrTaquito7"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -316,12 +316,12 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
     ```
 
   </TabItem>
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
   
     ```ts live
     // taquito destroy
-    import { TezosToolkit } from "@tezos-x/octez.js";
-    import { BeaconWallet }  from "@tezos-x/octez.js-dapp-wallet";;
+    import { TezosToolkit } from "@taquito/taquito";
+    import { BeaconWallet }  from "@taquito/beacon-wallet";;
     
     const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
     const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });

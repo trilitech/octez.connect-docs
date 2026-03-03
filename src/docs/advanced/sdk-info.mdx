@@ -8,11 +8,11 @@ import TabItem from "@theme/TabItem";
 The following page lists all the different options in octez.connect to retrieve and display information about the SDK.
 
 <Tabs
-  groupId="octezConnectOrOctezJsSI1"
+  groupId="octezConnectOrTaquitoSI1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -27,7 +27,7 @@ console.log("Beacon Version", BEACON_VERSION);
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sdk version
@@ -41,11 +41,11 @@ console.log("Beacon Version", BEACON_VERSION);
 </Tabs>
 
 <Tabs
-  groupId="octezConnectOrOctezJsSI2"
+  groupId="octezConnectOrTaquitoSI2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -62,12 +62,12 @@ console.log(`Connected Peers:`, await dAppClient.getPeers());
 
 </TabItem>
 
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sdk client
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
@@ -82,11 +82,11 @@ console.log(`Connected Peers:`, await wallet.client.getPeers());
 </Tabs>
 
 <Tabs
-  groupId="octezConnectOrOctezJsSI3"
+  groupId="octezConnectOrTaquitoSI3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -125,12 +125,12 @@ console.log("Own Metadata:", ownMetadata);
 ```
 
 </TabItem>
-<TabItem value="octez.js">
+<TabItem value="taquito">
 
 ```ts live
 // taquito sdk connection
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
