@@ -117,6 +117,11 @@ const config = {
             className: "button_link",
           },
           {
+            href: "https://docs.tezos.com/overview/resources#documentation-map",
+            label: "Doc map",
+            position: "right",
+          },
+          {
             href: "https://github.com/trilitech/octez.connect",
             label: "GitHub",
             position: "right",
