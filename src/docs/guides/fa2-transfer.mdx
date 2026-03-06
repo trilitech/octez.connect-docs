@@ -8,29 +8,29 @@ import TabItem from "@theme/TabItem";
 The FA2 Transfer feature in the octez.connect SDK is designed for handling token transfers using the FA2 standard. FA2 is a multi-asset interface, enabling a wide range of token types and configurations, including fungible, non-fungible, and multi-asset tokens.
 
 <Tabs
-  groupId="octezConnectOrOctezJsFA2"
-  defaultValue="octez.js"
+  groupId="octezConnectOrTaquitoFA2"
+  defaultValue="taquito"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "octez.js", value: "octez.js" },
+    { label: "taquito", value: "taquito" },
   ]}
 >
   <TabItem value="octez.connect">
 
 ```ts
-// Complex contract calls should be done with octez.js.
-// It is possible to do them without octez.js, but then you have to construct the parameters yourself.
-// See the "Simple Contract Call" page for an example without octez.js.
+// Complex contract calls should be done with taquito.
+// It is possible to do them without taquito, but then you have to construct the parameters yourself.
+// See the "Simple Contract Call" page for an example without taquito.
 ```
 
 </TabItem>
 
-  <TabItem value="octez.js">
+  <TabItem value="taquito">
 
 ```ts live
 // taquito fa2 transfer
-import { TezosToolkit } from "@tezos-x/octez.js";
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { TezosToolkit } from "@taquito/taquito";
+import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
 const wallet = new BeaconWallet({ name: "Beacon Docs" });

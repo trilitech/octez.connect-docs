@@ -36,6 +36,7 @@ const config = {
             resolve: {
               fallback: {
                 fs: false,
+                module: false,
               },
             },
           };
