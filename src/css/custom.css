@@ -8,26 +8,26 @@
 
 /* GT Eesti Display — custom font (static/fonts/) */
 @font-face {
-  font-family: 'GT Eesti Display';
-  src: url('/fonts/GT-Eesti-Display-Light.woff2') format('woff2');
+  font-family: "GT Eesti Display";
+  src: url("/fonts/GT-Eesti-Display-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
-  font-family: 'GT Eesti Display';
-  src: url('/fonts/GT-Eesti-Display-Light.woff2') format('woff2');
+  font-family: "GT Eesti Display";
+  src: url("/fonts/GT-Eesti-Display-Light.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'GT Eesti Display';
-  src: url('/fonts/GT-Eesti-Display-Regular.woff2') format('woff2');
+  font-family: "GT Eesti Display";
+  src: url("/fonts/GT-Eesti-Display-Regular.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'GT Eesti Display';
-  src: url('/fonts/GT-Eesti-Display-Medium.woff2') format('woff2');
+  font-family: "GT Eesti Display";
+  src: url("/fonts/GT-Eesti-Display-Medium.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
 }
@@ -252,7 +252,7 @@ aside {
 
 aside .menu,
 .theme-doc-sidebar-container .menu {
-  padding: .5rem 0 .5rem .5rem !important;
+  padding: 0.5rem 0 0.5rem 0.5rem !important;
   background-color: #ffffff;
 }
 
@@ -292,7 +292,8 @@ aside .menu__link {
 }
 
 aside .menu__list .menu__list .menu__link {
-  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+  padding: var(--ifm-menu-link-padding-vertical)
+    var(--ifm-menu-link-padding-horizontal);
 }
 
 aside .menu__link:hover {
