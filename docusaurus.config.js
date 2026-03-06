@@ -24,6 +24,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  scripts: [{ src: "/js/force-light.js", type: "text/javascript" }],
+
   plugins: [
     "docusaurus-node-polyfills",
     function webpackFallbacks() {
@@ -85,11 +87,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         logo: {
           alt: "octez.connect Logo",
-          src: "img/logo.png",
-          srcDark: "img/logo-white.png",
+          src: "img/logo.svg",
         },
         items: [
           {
@@ -108,6 +114,12 @@ const config = {
           {
             href: "https://debug.octez.connect.tezos.com",
             label: "Debug Wallet",
+            position: "right",
+            className: "button_link",
+          },
+          {
+            href: "https://docs.tezos.com/overview/resources#documentation-map",
+            label: "Doc map",
             position: "right",
           },
           {
