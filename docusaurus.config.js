@@ -105,7 +105,7 @@ const config = {
           },
           { to: "playground/", label: "Playground", position: "right" },
           {
-            href: "https://debug.octez.connect.tezos.com",
+            href: "https://debug.octez-connect.tezos.com",
             label: "Debug Wallet",
             position: "right",
           },
