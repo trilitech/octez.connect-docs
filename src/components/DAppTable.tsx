@@ -1,4 +1,4 @@
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import React from "react";
 
 import data from "../data/dapps.json";
@@ -26,8 +26,12 @@ const isGreater = (a: any, b: any) => {
 };
 
 const DAppTable = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const latestSdkVersion =
+    (siteConfig.customFields as any)?.octezConnectSdkVersion ?? "unknown";
+
   const sdkVersions = {
-    recommended: ["4.4.0"],
+    recommended: ["4.8.3"],
     outdated: [
       "2.3.13",
       "2.3.12",
@@ -52,43 +56,46 @@ const DAppTable = () => {
 
   return (
     <>
-      <BrowserOnly fallback={<></>}>
-        {() => {
-          const { SDK_VERSION } = require("@tezos-x/octez.connect-sdk");
-          return (
-            <>
-              <p>
-                The most recent version of octez.connect-sdk is{" "}
-                <b>{SDK_VERSION}</b>.
-              </p>
-              <table>
-                <thead>
-                  <tr>
-                    <th>dApp</th>
-                    <th>Source Code</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.dapps.sort(isGreater).map((dApp, i) => (
-                    <tr key={i}>
-                      <td>
-                        <a href={dApp.url}>{dApp.name}</a>
-                      </td>
-                      <td>
-                        {dApp.sourceCode ? (
-                          <a href={dApp.sourceCode}>Source Code</a>
-                        ) : (
-                          ""
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </>
-          );
-        }}
-      </BrowserOnly>
+      <p>
+        The most recent version of the octez.connect-sdk is{" "}
+        <b>{latestSdkVersion}</b>.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>dApp</th>
+            <th>SDK Version</th>
+            <th>Last Updated</th>
+            <th>Source Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.dapps.sort(isGreater).map((dApp, i) => (
+            <tr key={i}>
+              <td>
+                <a href={dApp.url}>{dApp.name}</a>
+              </td>
+              <td>
+                {dApp.sdkVersion}{" "}
+                {dApp.sdkVersion === latestSdkVersion ||
+                sdkVersions.recommended.includes(dApp.sdkVersion)
+                  ? "✅"
+                  : sdkVersions.outdated.includes(dApp.sdkVersion)
+                    ? "❌"
+                    : ""}
+              </td>
+              <td>{getDate(dApp.lastUpdate)}</td>
+              <td>
+                {dApp.sourceCode ? (
+                  <a href={dApp.sourceCode}>Source Code</a>
+                ) : (
+                  ""
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <p>Last check: {getDate(data.lastCheck)}</p>
     </>
   );
