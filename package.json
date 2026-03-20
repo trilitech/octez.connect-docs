@@ -29,10 +29,10 @@
     "@docusaurus/theme-live-codeblock": "^3.9.1",
     "@mdx-js/react": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
-    "@taquito/beacon-wallet": "24.1.0-beta.0",
-    "@taquito/contracts-library": "24.1.0-beta.0",
-    "@taquito/rpc": "24.1.0-beta.0",
-    "@taquito/taquito": "24.1.0-beta.0",
+    "@taquito/beacon-wallet": "24.2.0",
+    "@taquito/contracts-library": "24.2.0",
+    "@taquito/rpc": "24.2.0",
+    "@taquito/taquito": "24.2.0",
     "@tezos-x/octez.connect-sdk": "5.0.0-beta.5",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.4",
@@ -65,7 +65,7 @@
     "node": ">=22"
   },
   "overrides": {
-    "@tezos-x/octez.connect-transport-postmessage": "5.0.0-beta.4",
-    "@tezos-x/octez.connect-wallet": "5.0.0-beta.4"
+    "@tezos-x/octez.connect-transport-postmessage": "5.0.0-beta.5",
+    "@tezos-x/octez.connect-wallet": "5.0.0-beta.5"
   }
 }
