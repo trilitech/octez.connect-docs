@@ -55,4 +55,3 @@ jobs:
           aws-region: us-east-1
           s3-bucket-name: ${{ vars.S3_BUCKET_NAME }}
           cloudfront-distribution-id: ${{ secrets.CLOUDFRONT_ID }}
-          deploy-empty: 'true'
