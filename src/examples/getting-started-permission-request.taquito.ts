@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@airgap/beacon-dapp";
+import { BeaconEvent } from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 
@@ -14,10 +14,13 @@ const requestPermissionsTaquito = async (loggerFun: Function) => {
   Tezos.setWalletProvider(wallet);
 
   // Listen for all the active account changes
-  wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
-    // An active account has been set, update the dApp UI
-    logger.log(`${BeaconEvent.ACTIVE_ACCOUNT_SET} triggered: `, account);
-  });
+  wallet.client.subscribeToEvent(
+    BeaconEvent.ACTIVE_ACCOUNT_SET as any,
+    (account) => {
+      // An active account has been set, update the dApp UI
+      logger.log(`${BeaconEvent.ACTIVE_ACCOUNT_SET} triggered: `, account);
+    },
+  );
 
   try {
     logger.log("Requesting permissions...");
