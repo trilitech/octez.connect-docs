@@ -9,7 +9,7 @@ import {
   NetworkType,
   WalletConnectPairingRequest,
   AnalyticsInterface,
-} from "@airgap/beacon-dapp";
+} from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 

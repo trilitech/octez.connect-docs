@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { SigningType } from "@airgap/beacon-dapp";
+import { SigningType } from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 

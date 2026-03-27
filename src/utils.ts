@@ -27,7 +27,7 @@ const rewriteImportsForRunner = (code: string) => {
     }
 
     match = trimmed.match(
-      /^import\s+\{([^}]+)\}\s+from\s+["']@airgap\/beacon-dapp["'];?\s*$/,
+      /^import\s+\{([^}]+)\}\s+from\s+["']@tezos-x\/octez\.connect-dapp["'];?\s*$/,
     );
     if (match) {
       rewritten.push(`const { ${match[1].trim()} } = beacon;`);

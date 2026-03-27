@@ -1,5 +1,8 @@
 /// START
-import { BeaconEvent, defaultEventCallbacks } from "@airgap/beacon-dapp";
+import {
+  BeaconEvent,
+  defaultEventCallbacks,
+} from "@tezos-x/octez.connect-dapp";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";

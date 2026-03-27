@@ -5,7 +5,7 @@ import {
   BeaconEvent,
   DAppClient,
   TezosOperationType,
-} from "@airgap/beacon-dapp";
+} from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 
@@ -19,10 +19,15 @@ const getOperationRequestTaquitoWithEvents = async (loggerFun: Function) => {
 
   // Listen for all the active account changes
   wallet.client.subscribeToEvent(
-    BeaconEvent.ACTIVE_ACCOUNT_SET,
-    async (account) => {
+    BeaconEvent.ACTIVE_ACCOUNT_SET as any,
+    async () => {
+      const account = await wallet.client.getActiveAccount();
       // An active account has been set, update the dApp UI
       logger.log(`${BeaconEvent.ACTIVE_ACCOUNT_SET} triggered: `, account);
+
+      if (!account) {
+        return;
+      }
 
       // At this point we are connected to an account.
       // Let's send a simple transaction to the wallet that sends 1 mutez to ourselves.

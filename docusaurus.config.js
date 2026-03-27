@@ -1,6 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 const path = require("path");
+const rootPackageJson = require("./package.json");
 import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
@@ -8,6 +9,11 @@ const config = {
   title: "Octez Connect Docs",
   tagline: "Connecting dApps with wallets.",
   favicon: "img/favicon.ico",
+
+  customFields: {
+    octezConnectSdkVersion:
+      rootPackageJson?.dependencies?.["@tezos-x/octez.connect-sdk"],
+  },
 
   // Set the production url of your site here
   url: "https://octez-connect.tezos.com",

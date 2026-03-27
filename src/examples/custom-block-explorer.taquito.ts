@@ -1,5 +1,9 @@
 /// START
-import { BlockExplorer, NetworkType, Network } from "@airgap/beacon-dapp";
+import {
+  BlockExplorer,
+  NetworkType,
+  Network,
+} from "@tezos-x/octez.connect-dapp";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";
@@ -61,8 +65,10 @@ const customBlockExplorerTaquito = async (loggerFun: Function) => {
   const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+    // NOTE: Taquito's BeaconWallet is typed against @airgap/beacon-dapp.
+    // We avoid importing @airgap/* directly in docs/examples.
     blockExplorer: new TzStatsBlockExplorer(),
-  });
+  } as any);
 
   try {
     logger.log("Requesting permissions...");
