@@ -147,7 +147,7 @@ const config = {
               },
               {
                 label: "Typedoc Reference",
-                href: "https://octez-connect.tezos.com",
+                href: "https://typedocs.octez-connect.tezos.com",
               },
             ],
           },

@@ -117,7 +117,7 @@ module.exports = {
     {
       type: "link",
       label: "TypeDoc Reference",
-      href: "https://octez-connect.tezos.com",
+      href: "https://typedocs.octez-connect.tezos.com",
     },
   ],
   wallet: [
