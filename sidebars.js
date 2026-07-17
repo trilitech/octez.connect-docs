@@ -47,6 +47,8 @@ module.exports = {
         "guides/metrics",
         "guides/bug-report",
         "guides/migration-guide",
+        "guides/migration-from-beacon-sdk",
+        "guides/migration-v4-to-v5",
         "guides/ssr",
         "guides/failed-to-connect",
         "guides/how-to-contribute",

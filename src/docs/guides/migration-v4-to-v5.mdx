@@ -1,0 +1,227 @@
+---
+title: Migrating from v4.8.6 to v5 (multi-network)
+sidebar_label: Migrating v4.8.6 → v5
+---
+
+# Migrating from v4.8.6 to octez.connect v5
+
+**Headline:** v5 adds **multi-network support** — a single pairing can grant a
+dApp accounts on several Tezos networks at once (e.g. mainnet + ghostnet), and
+operations can target a specific network by its CAIP‑2 chain id. This is the
+main reason to upgrade.
+
+:::note Package names are unchanged
+This is **not** a rename migration — both v4.8.6 and v5 use the
+`@tezos-x/octez.connect-*` packages, so your imports stay the same. (If you are
+coming from the old `@airgap/beacon-*` packages, see
+[Migrating from beacon-sdk](./migration-from-beacon-sdk.mdx) first.) For many
+apps, upgrading is a version bump plus the short list of edits below.
+:::
+
+## Backward compatibility
+
+v5 is designed to be **as backward compatible as possible**. Capability is
+negotiated through a **peer‑version handshake** (each peer advertises its
+protocol version at pairing time), and multi-network is opt‑in, so nothing
+regresses for peers that don't support it. Existing paired sessions survive the
+upgrade — persisted account identifiers are unchanged for single‑network
+(legacy) accounts.
+
+| dApp    | Wallet  | Result |
+| ------- | ------- | ------ |
+| v4.8.6  | v5      | ✅ Works — the v5 wallet serves the old dApp with the classic single‑account flow. |
+| v5      | v4.8.6  | ✅ Works — the v5 dApp detects a pre‑v4 wallet via `peer.version` and uses the legacy single‑network flow. |
+| v5      | v5      | ✅ Full multi-network. |
+| v4.8.6  | v4.8.6  | ✅ Unchanged. |
+
+:::tip Graceful degradation
+By default, a v5 dApp that requests multiple networks from a **v4.8.6 wallet**
+receives a **single** account (the wallet's configured network) with no error.
+If your dApp *requires* multi-network, set `requiredMinimumVersion: '4'` (see
+below) so an old wallet is rejected cleanly with `VersionUnsupportedBeaconError`
+instead of silently degrading.
+:::
+
+## The minimum upgrade (no new features)
+
+Bump every `@tezos-x/octez.connect-*` dependency from `4.8.6` to `5.0.0-beta.x`,
+then apply the edits below. These are breaking changes independent of
+multi-network — you must handle them even if you never touch a second network.
+
+### dApp
+
+| Change | What to do |
+| ------ | ---------- |
+| **WalletConnect is now opt‑in.** In v4.8.6 the WC transport was built automatically (with a shared default `projectId`). In v5 it is enabled **only** when you pass `walletConnectOptions`. | If you offer WalletConnect wallets (e.g. Kukai), pass `walletConnectOptions: { projectId: 'YOUR_ID' }` to `DAppClient`. Omitting it now means no WC pairing at all (no error — it just isn't offered). Get a `projectId` from WalletConnect Cloud. |
+| **`DAppClientOptions.disclaimerText` removed** → replaced by `termsAndConditionsUrl` (plus new optional `privacyPolicyUrl`). | Rename the option. |
+| **`DAppClientOptions.requestTimeoutMs` removed** and the built‑in per‑request timeout is gone. | If you relied on requests auto‑rejecting after a timeout, wrap your calls in your own timeout (`Promise.race` / `AbortController`). |
+| **`disconnect()` and `removeAllPeers()` dropped their options arguments;** the types `DAppClientDisconnectOptions` and `DAppClientRemoveAllPeersOptions` are removed. | Call `disconnect()` / `removeAllPeers(sendDisconnectToPeers)` without an options object; delete those type imports. |
+| **`PeerUnreachableBeaconError` removed.** | Remove any `import` / `instanceof` of it. |
+| **Tezos blockchain identifier is `'tezos'`, not `'xtz'`.** | Use `'tezos'` for `blockchains.get('tezos')` and `addBlockchain(new TezosBlockchain())`. |
+
+### Wallet
+
+| Change | What to do |
+| ------ | ---------- |
+| **`WalletClient.subscribeToDisconnect()` / `unsubscribeFromDisconnect()` removed** (and the `DisconnectListener` type). | Remove those registrations — disconnects are handled internally now; there is no public replacement. |
+| **`WalletClient.connect()` now filters to a request‑type allowlist.** Your message callback no longer fires for response‑type messages echoed back by the relay. | Usually desirable; only act if you depended on seeing echoed responses. |
+| **Tezos blockchain identifier is `'tezos'`, not `'xtz'`.** | Register / look up the Tezos handler under `'tezos'`. |
+
+### Runtime
+
+- **WalletConnect bumped `2.18.0` → `2.23.6`.** The SDK bundles it (not a peer
+  dependency), so no action is needed unless you install `@walletconnect/*`
+  yourself — then move your copy to `2.23.x` to avoid duplicates.
+- Node/npm engine requirements are **unchanged** from v4.8.6
+  (`node >= 22.12`, `npm >= 11`).
+- Deep imports into `@tezos-x/octez.connect-core` moved from
+  `dist/cjs/index.js` to `dist/cjs/src/index.js` (and the esm/types
+  equivalents). Package‑name imports are unaffected; only hard‑coded deep file
+  paths break.
+
+:::warning Kukai iOS + WalletConnect
+The `4.8`‑stable line pins WalletConnect to `2.18.0` for Kukai iOS
+compatibility. **v5 deliberately stays on `2.23.x`** (required for
+multi-network) — do **not** pin v5 back to `2.18.0`. Re‑verify Kukai iOS
+pairing against `2.23.6`.
+:::
+
+## Opting into multi-network
+
+### dApp
+
+```ts
+import { DAppClient, NetworkType } from '@tezos-x/octez.connect-sdk'
+import { TezosBlockchain } from '@tezos-x/octez.connect-blockchain-tezos'
+
+const client = new DAppClient({
+  name: 'My dApp',
+  network: { type: NetworkType.MAINNET },
+  walletConnectOptions: { projectId: 'YOUR_ID' }, // only if you want WC
+  // Optional: require a multi-network-capable wallet (rejects v4.8.6 wallets
+  // with VersionUnsupportedBeaconError instead of degrading to one account).
+  requiredMinimumVersion: '4'
+})
+
+// REQUIRED before requesting multi-network permissions — the fanout parser
+// needs the Tezos blockchain handler registered:
+client.addBlockchain(new TezosBlockchain())
+
+// Ask for several networks at once (CAIP-2 chain ids):
+await client.requestPermissions({
+  networks: [
+    { chainId: 'tezos:NetXdQprcVkpaWU7' }, // mainnet
+    { chainId: 'tezos:NetXnHfVqm9iesp9' }  // ghostnet
+  ]
+})
+
+// One account is materialised per granted network; each carries network.chainId:
+const accounts = await client.getAccounts()
+
+// Target a specific network on an operation (CAIP-2 string):
+await client.requestOperation({
+  network: 'tezos:NetXnHfVqm9iesp9',
+  operationDetails: [ /* ... */ ]
+})
+```
+
+Key points:
+
+- **`addBlockchain(new TezosBlockchain())` is required** before requesting
+  multi-network permissions — the fanout parser throws without it. (The
+  single-network flow does not need it.)
+- `requestPermissions({ networks })` is **additive** — omit `networks` and the
+  behaviour is exactly as before (one account).
+- `requestOperation({ network })` takes a **CAIP‑2 string** (`tezos:NetID`). On
+  a multi-network session it is **required** (omitting it throws
+  `NetworksUnsupportedBeaconError`); on a single-network/legacy session it is
+  optional.
+- New error types to handle (all exported from
+  `@tezos-x/octez.connect-core` and the umbrella SDK): `NetworksUnsupportedBeaconError`,
+  `VersionUnsupportedBeaconError`, `InvalidRequiredMinimumVersionError`,
+  `InvalidBeaconVersionError`.
+
+### Wallet
+
+To support multi-network, read the optional `message.networks` array on a
+permission request and return an `accounts` map keyed by CAIP‑2 chain id;
+otherwise respond exactly as before (the dApp handles the single-account case).
+
+```ts
+// Incoming PermissionRequest may carry:
+//   networks?: { chainId: string; rpcUrl?: string; name?: string }[]
+if (Array.isArray(message.networks) && message.networks.length > 0) {
+  response.accounts = {}
+  for (const n of message.networks) {
+    response.accounts[n.chainId] = {
+      publicKey, // per-network key/address
+      address,
+      name: n.name // optional label for your UI
+    }
+  }
+}
+await client.respond(response)
+```
+
+Also note: `OperationRequest.network` is now a `Network` object **or** a CAIP‑2
+string. On the multi-network path it arrives as a string, so discriminate with
+`typeof`:
+
+```ts
+const net =
+  typeof request.network === 'string'
+    ? resolveNetworkFromCaip2(request.network) // your mapping
+    : request.network
+```
+
+A wallet that ignores `message.networks` stays fully compatible — it returns a
+single account and the dApp treats the session as single-network.
+
+## Everything else that changed in v5
+
+### New capabilities
+
+| Area | Change | Benefit |
+| ---- | ------ | ------- |
+| Multi-network | `networks` request, per-network `accounts` fanout, CAIP‑2 operation routing | One pairing spans several chains; fewer pairing round‑trips. |
+| Version negotiation | `peer.version` handshake, `requiredMinimumVersion`, strict version parsing (`BEACON_VERSION` `3`→`4`) | dApps can require capabilities and reject incompatible wallets with a clear, typed error. |
+| WalletConnect opt‑in | The WC transport now defaults **off** and is enabled only via `walletConnectOptions` | No unwanted WC provider/crypto shims loaded when you don't use WC; predictable behaviour in restricted environments. |
+| Structured errors & diagnostics | New error‑code modules (`BEACON_ERROR_CODES`), `gatherDiagnostics`, `buildErrorContext`, `ErrorContext`, `DiagnosticSnapshot` | Programmatic error discrimination and better bug reports. |
+| Wallet list | Now downloaded from a **pinned** release and shipped as JSON (a new exported subpath `@tezos-x/octez.connect-ui/data/*.json`); v4.8.6 generated it at build | Reproducible builds; import the list directly. |
+
+### Costs / things to watch
+
+- **WalletConnect becomes opt‑in** — the most likely silent regression. Apps
+  that relied on the implicit default `projectId` lose WC until they pass
+  `walletConnectOptions`.
+- **A few removed options/APIs** (`disclaimerText`, `requestTimeoutMs`,
+  `disconnect`/`removeAllPeers` options, `subscribeToDisconnect`,
+  `PeerUnreachableBeaconError`) require small edits — see above.
+- **No built‑in request timeout** anymore — add your own if you need one.
+- **WalletConnect 2.23.x** — re‑verify wallets sensitive to the relay version
+  (notably Kukai iOS).
+- **`addBlockchain(new TezosBlockchain())` is a new precondition** for the
+  multi-network response path (throws if missing).
+
+## Quick reference
+
+**New `DAppClientOptions`:** `requiredMinimumVersion` (decimal‑integer string in
+`[1, BEACON_VERSION]`; default `'2'` = accept any wallet).
+`disableWalletConnect` already existed in v4.8.6 — it is not new; only its
+interaction with the WC opt‑in default changed.
+
+**New request/response types** (`@tezos-x/octez.connect-types`):
+`RequestPermissionNetwork` (`chainId` / `rpcUrl?` / `name?`),
+`PermissionResponseAccount` / `PermissionResponseAccounts`,
+`RequestPermissionInput.networks?`, `RequestOperationInput.network?`,
+`Network.chainId?`, and `OperationRequest.network` widened to a `Network` object
+or CAIP‑2 string.
+
+**Removed (breaking):** `DAppClientOptions.disclaimerText`,
+`DAppClientOptions.requestTimeoutMs`, `DAppClientDisconnectOptions`,
+`DAppClientRemoveAllPeersOptions`, `PeerUnreachableBeaconError`,
+`WalletClient.subscribeToDisconnect` / `unsubscribeFromDisconnect`.
+
+**Changed defaults / behaviour:** WalletConnect opt‑in; `BEACON_VERSION` `3`→`4`;
+Tezos identifier `'xtz'`→`'tezos'`; no built‑in request timeout; WalletConnect
+`2.18.0`→`2.23.6`.
