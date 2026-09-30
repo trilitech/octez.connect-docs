@@ -1,12 +1,19 @@
 /// START
 import Logger from "../Logger";
-import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  DAppClient,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 /// END
 
 const getActiveAccountBeaconWithEvents = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
   // Listen for all the active account changes
   dAppClient.subscribeToEvent(
     BeaconEvent.ACTIVE_ACCOUNT_SET,
@@ -21,7 +28,7 @@ const getActiveAccountBeaconWithEvents = async (loggerFun: Function) => {
     const permissions = await dAppClient.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
 
   /// END

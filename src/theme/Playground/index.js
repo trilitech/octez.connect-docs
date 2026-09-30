@@ -171,6 +171,19 @@ export default function Playground({ children, transformCode, ...props }) {
                 >
                   Clear Output
                 </button>
+                <p className="margin-top--sm margin-bottom--none">
+                  <small>
+                    Examples run on Shadownet. Get test tez from the{" "}
+                    <a
+                      href="https://faucet.shadownet.teztnets.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Shadownet faucet
+                    </a>
+                    .
+                  </small>
+                </p>
               </BrowserWindow>
             </>
           );

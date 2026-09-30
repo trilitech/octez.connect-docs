@@ -6,17 +6,20 @@ import Logger from "../Logger";
 const infoConnectionBeacon = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   const addressLink = await dAppClient.blockExplorer.getAddressLink(
     "tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ",
-    { type: NetworkType.MAINNET },
+    { type: NetworkType.SHADOWNET },
   );
   logger.log("Address Link", addressLink);
 
   const txLink = await dAppClient.blockExplorer.getTransactionLink(
     "onzCRJhQ9zPC38TLGhBTghCW7WAJpfUJ2NpwbbQKbW6LeEL8RfK",
-    { type: NetworkType.MAINNET },
+    { type: NetworkType.SHADOWNET },
   );
   logger.log("Transaction Link", txLink);
 

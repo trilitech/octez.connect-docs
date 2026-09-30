@@ -32,10 +32,10 @@ import infoVersionBeacon from "./examples/info-version.octez.connect";
 import infoVersionTaquito from "./examples/info-version.taquito";
 import networkCustomBeacon from "./examples/network-custom-network.octez.connect";
 import networkCustomTaquito from "./examples/network-custom-network.taquito";
-import networkSeoulnetWithRpcBeacon from "./examples/network-seoulnet-with-url.octez.connect";
-import networkSeoulnetWithRpcTaquito from "./examples/network-seoulnet-with-url.taquito";
-import networkSeoulnetBeacon from "./examples/network-seoulnet.octez.connect";
-import networkSeoulnetTaquito from "./examples/network-seoulnet.taquito";
+import networkShadownetWithRpcBeacon from "./examples/network-shadownet-with-url.octez.connect";
+import networkShadownetWithRpcTaquito from "./examples/network-shadownet-with-url.taquito";
+import networkShadownetBeacon from "./examples/network-shadownet.octez.connect";
+import networkShadownetTaquito from "./examples/network-shadownet.taquito";
 import networkMainnetWithUrlBeacon from "./examples/network-mainnet-with-url.octez.connect";
 import networkMainnetWithUrlTaquito from "./examples/network-mainnet-with-url.taquito";
 import overrideAlertAbortedBeacon from "./examples/override-alert-aborted-handler.octez.connect";
@@ -175,17 +175,17 @@ export class ExecuteExample {
       case "taquito mainnet network":
         await networkMainnetWithUrlTaquito(updateLogs);
         break;
-      case "beacon seoulnet network":
-        await networkSeoulnetBeacon(updateLogs);
+      case "beacon shadownet network":
+        await networkShadownetBeacon(updateLogs);
         break;
-      case "taquito seoulnet network":
-        await networkSeoulnetTaquito(updateLogs);
+      case "taquito shadownet network":
+        await networkShadownetTaquito(updateLogs);
         break;
-      case "beacon seoulnet network with RPC":
-        await networkSeoulnetWithRpcBeacon(updateLogs);
+      case "beacon shadownet network with RPC":
+        await networkShadownetWithRpcBeacon(updateLogs);
         break;
-      case "taquito seoulnet network with RPC":
-        await networkSeoulnetWithRpcTaquito(updateLogs);
+      case "taquito shadownet network with RPC":
+        await networkShadownetWithRpcTaquito(updateLogs);
         break;
       case "beacon custom network":
         await networkCustomBeacon(updateLogs);

@@ -1,13 +1,16 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { TezosOperationType } from "@tezos-x/octez.connect-dapp";
+import { NetworkType, TezosOperationType } from "@tezos-x/octez.connect-dapp";
 /// END
 
 async () => {
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-  const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   Tezos.setWalletProvider(wallet);
 

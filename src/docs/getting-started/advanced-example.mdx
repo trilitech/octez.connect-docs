@@ -33,8 +33,8 @@ import {
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 
-// Set the network (Mainnet is default)
-const network: Network = { type: NetworkType.MAINNET };
+// Set the network (Mainnet is the default; these docs use Shadownet)
+const network: Network = { type: NetworkType.SHADOWNET };
 
 // Create a new DAppClient instance
 const dAppClient = new DAppClient({
@@ -115,10 +115,10 @@ import {
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 
-// Set the network (Mainnet is default)
-const network: Network = { type: NetworkType.MAINNET };
+// Set the network (Mainnet is the default; these docs use Shadownet)
+const network: Network = { type: NetworkType.SHADOWNET };
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs",
   network: network,

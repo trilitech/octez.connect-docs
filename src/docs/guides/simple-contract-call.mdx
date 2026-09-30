@@ -25,10 +25,17 @@ The wallet will process and validate the operation. If there are any errors, the
 
 ```ts live
 // beacon simple contract call
-import { DAppClient, TezosOperationType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  TezosOperationType,
+} from "@tezos-x/octez.connect-sdk";
 
 // Create a new DAppClient instance
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const activeAccount = await dAppClient.getActiveAccount();
 if (activeAccount) {
@@ -80,8 +87,12 @@ try {
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs" });
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

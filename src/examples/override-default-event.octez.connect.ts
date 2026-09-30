@@ -17,6 +17,7 @@ const overrideDefaultEventBeacon = async (loggerFun: Function) => {
   /// START
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
     eventHandlers: {
       [BeaconEvent.PAIR_INIT]: {
         // Every BeaconEvent can be overriden by passing a handler here.
@@ -48,7 +49,7 @@ const overrideDefaultEventBeacon = async (loggerFun: Function) => {
     const permissions = await dAppClient.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
   /// END
 };

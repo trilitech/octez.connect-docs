@@ -5,6 +5,8 @@ title: Network
 The Network configuration in octez.connect SDK allows developers to specify the blockchain network their application will interact with.
 This includes using predefined networks like Mainnet or Testnet, as well as defining custom networks and RPC endpoints.
 
+Set the network when you create the `DAppClient` (or Taquito's `BeaconWallet`). Since v5, `DAppClient.requestPermissions()` no longer accepts a `network` option and throws if one is passed.
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -24,15 +26,16 @@ import TabItem from "@theme/TabItem";
 // beacon mainnet network
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
-
 // Mainnet with different rpcUrl
-const result = await dAppClient.requestPermissions({
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
   network: {
     type: NetworkType.MAINNET,
-    rpcUrl: "https://mainnet.api.tez.ie",
+    rpcUrl: "https://rpc.tzbeta.net",
   },
 });
+
+const result = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
@@ -45,18 +48,19 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const Tezos = new TezosToolkit("https://rpc.tzbeta.net");
+// Mainnet with different rpcUrl
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: {
+    type: NetworkType.MAINNET,
+    rpcUrl: "https://rpc.tzbeta.net",
+  },
+});
 
 Tezos.setWalletProvider(wallet);
 
-// Mainnet with different rpcUrl
-const result = await wallet.client.requestPermissions({
-  network: {
-    type: NetworkType.MAINNET,
-    rpcUrl: "https://mainnet.api.tez.ie",
-  },
-});
+const result = await wallet.client.requestPermissions();
 ```
 
 </TabItem>
@@ -75,20 +79,16 @@ const result = await wallet.client.requestPermissions({
   <TabItem value="octez.connect">
 
 ```ts live
-// beacon seoulnet network
+// beacon shadownet network
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
+// Shadownet with default rpcUrl
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
-  network: { type: NetworkType.SEOULNET },
+  network: { type: NetworkType.SHADOWNET },
 });
 
-// Seoulnet with default rpcUrl
-const result = await dAppClient.requestPermissions({
-  network: {
-    type: NetworkType.SEOULNET,
-  },
-});
+const result = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
@@ -96,25 +96,21 @@ const result = await dAppClient.requestPermissions({
 <TabItem value="taquito">
 
 ```ts live
-// taquito seoulnet network
+// taquito shadownet network
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+// Shadownet with default rpcUrl
 const wallet = new BeaconWallet({
-  name: "Beacon Docs",
-  network: { type: NetworkType.SEOULNET },
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
 });
 
 Tezos.setWalletProvider(wallet);
 
-// Seoulnet with default rpcUrl
-const result = await wallet.client.requestPermissions({
-  network: {
-    type: NetworkType.SEOULNET,
-  },
-});
+const result = await wallet.client.requestPermissions();
 ```
 
 </TabItem>
@@ -133,21 +129,19 @@ const result = await wallet.client.requestPermissions({
   <TabItem value="octez.connect">
 
 ```ts live
-// beacon seoulnet network with RPC
+// beacon shadownet network with RPC
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
+// Shadownet with different rpcUrl
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
-  network: { type: NetworkType.SEOULNET },
-});
-
-// Seoulnet with different rpcUrl
-const result = await dAppClient.requestPermissions({
   network: {
-    type: NetworkType.SEOULNET,
-    rpcUrl: "https://testnet-tezos.giganode.io/",
+    type: NetworkType.SHADOWNET,
+    rpcUrl: "https://rpc.tzkt.io/shadownet",
   },
 });
+
+const result = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
@@ -155,26 +149,24 @@ const result = await dAppClient.requestPermissions({
 <TabItem value="taquito">
 
 ```ts live
-// taquito seoulnet network with RPC
+// taquito shadownet network with RPC
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.tzkt.io/shadownet");
+// Shadownet with different rpcUrl
 const wallet = new BeaconWallet({
-  name: "Beacon Docs",
-  network: { type: NetworkType.SEOULNET },
+  name: "Beacon Docs Taquito",
+  network: {
+    type: NetworkType.SHADOWNET,
+    rpcUrl: "https://rpc.tzkt.io/shadownet",
+  },
 });
 
 Tezos.setWalletProvider(wallet);
 
-// Seoulnet with different rpcUrl
-const result = await wallet.client.requestPermissions({
-  network: {
-    type: NetworkType.SEOULNET,
-    rpcUrl: "https://testnet-tezos.giganode.io/",
-  },
-});
+const result = await wallet.client.requestPermissions();
 ```
 
 </TabItem>
@@ -196,19 +188,20 @@ const result = await wallet.client.requestPermissions({
 // beacon custom network
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
+// Custom network (eg. local development or latest testnet).
+// Not every wallet supports custom networks.
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
-  network: { type: NetworkType.CUSTOM },
-});
-
-// Custom network (eg. local development or latest testnet)
-const result = await dAppClient.requestPermissions({
   network: {
     type: NetworkType.CUSTOM,
-    name: "Local Node",
-    rpcUrl: "http://localhost:8732/",
+    // e.g. a local node at "http://localhost:8732". Here we point to a public
+    // Shadownet RPC so the example can be run as-is.
+    name: "Shadownet (custom)",
+    rpcUrl: "https://rpc.shadownet.teztnets.com",
   },
 });
+
+const result = await dAppClient.requestPermissions();
 ```
 
 </TabItem>
@@ -221,22 +214,23 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+// Custom network (eg. local development or latest testnet).
+// Not every wallet supports custom networks.
 const wallet = new BeaconWallet({
   name: "Beacon Docs Taquito",
-  network: { type: NetworkType.CUSTOM },
+  network: {
+    type: NetworkType.CUSTOM,
+    // e.g. a local node at "http://localhost:8732". Here we point to a public
+    // Shadownet RPC so the example can be run as-is.
+    name: "Shadownet (custom)",
+    rpcUrl: "https://rpc.shadownet.teztnets.com",
+  },
 });
 
 Tezos.setWalletProvider(wallet);
 
-// Custom network (eg. local development or latest testnet)
-const result = await wallet.client.requestPermissions({
-  network: {
-    type: NetworkType.CUSTOM,
-    name: "Local Node",
-    rpcUrl: "http://localhost:8732/",
-  },
-});
+const result = await wallet.client.requestPermissions();
 ```
 
 </TabItem>

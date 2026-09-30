@@ -32,8 +32,12 @@ The FA2 Transfer feature in the octez.connect SDK is designed for handling token
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs" });
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -45,7 +49,7 @@ if (!address) {
 // Connect to a specific contract on the tezos blockchain.
 // Make sure the contract is deployed on the network you requested permissions for.
 const contract = await Tezos.wallet.at(
-  "KT1CpeSQKdkhWi4pinYcseCFKmDhs5M74BkU", // For this example, we use the tzcolors contract on mainnet.
+  "KT1UhW3RdZ6qDMhkCbztVxFFY4eZ8uzfT5aN", // For this example, we use the USDt FA2 contract on Shadownet.
 );
 
 const TOKEN_ID = 0; // FA2 token id

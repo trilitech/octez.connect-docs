@@ -2,6 +2,7 @@
 import {
   BeaconEvent,
   defaultEventCallbacks,
+  NetworkType,
 } from "@tezos-x/octez.connect-dapp";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
@@ -11,9 +12,10 @@ import Logger from "../Logger";
 const disableUITaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
     disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
     eventHandlers: {
       // To keep the pairing alert, we have to add the following default event handlers back
@@ -33,7 +35,7 @@ const disableUITaquito = async (loggerFun: Function) => {
     const address = await wallet.getPKH();
     logger.log("Got permissions:", address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
 
   /// END

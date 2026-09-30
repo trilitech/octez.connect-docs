@@ -38,6 +38,11 @@ npm install --save @taquito/taquito @taquito/beacon-wallet
 You can then import the `octez.connect-sdk` package and create a `DAppClient` instance. This instance will be used throughout your dApp to interact with the users wallet.
 Once created, you can send a permission request to prompt the user to connect to his wallet.
 
+:::tip Try the examples on Shadownet
+The live examples in these docs connect to the Shadownet testnet, so you can run them with test tez from the [Shadownet faucet](https://faucet.shadownet.teztnets.com). For your own dApp, set `network` to the network you target (Mainnet is the default).
+If you paired a wallet on Mainnet before, disconnect it first so the next permission request pairs on Shadownet.
+:::
+
 <Tabs
   groupId="octezConnectOrTaquito2"
   defaultValue="octez.connect"
@@ -50,9 +55,16 @@ Once created, you can send a permission request to prompt the user to connect to
 
 ```ts live
 // beacon permission request
-import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  DAppClient,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // Listen for all the active account changes
 dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -77,10 +89,13 @@ try {
 // taquito permission request
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
+import { BeaconEvent, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -126,9 +141,12 @@ If the following code returns an address, there is no need to send another permi
 
 ```ts live
 // beacon get active account
-import { DAppClient } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // The following code should always be run during pageload if you want to show if the user is connected.
 const activeAccount = await dAppClient.getActiveAccount();
@@ -152,8 +170,12 @@ if (activeAccount) {
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -195,10 +217,14 @@ Remember, each operation request should be constructed carefully, considering th
 import {
   BeaconEvent,
   DAppClient,
+  NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // Listen for all the active account changes
 dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
@@ -238,11 +264,15 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   BeaconEvent,
   DAppClient,
+  NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -303,9 +333,11 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
 
     ```ts live
     // beacon destroy
-    import { DAppClient } from "@tezos-x/octez.connect-sdk";
+    import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-    const dAppClient = new DAppClient({ name: "Beacon Docs" });
+    const dAppClient = new DAppClient({ name: "Beacon Docs",
+
+network: { type: NetworkType.SHADOWNET } });
 
     dAppClient
       .destroy()
@@ -319,12 +351,14 @@ Once this function is executed, the current instance of `dAppClient` becomes unu
   <TabItem value="taquito">
   
     ```ts live
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
     // taquito destroy
     import { TezosToolkit } from "@taquito/taquito";
     import { BeaconWallet }  from "@taquito/beacon-wallet";;
     
-    const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-    const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+    const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+    const wallet = new BeaconWallet({ name: "Beacon Docs Taquito",
+network: { type: NetworkType.SHADOWNET } });
 
     Tezos.setWalletProvider(wallet);
 

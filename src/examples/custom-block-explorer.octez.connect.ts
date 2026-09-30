@@ -59,6 +59,7 @@ const customBlockExplorerBeacon = async (loggerFun: Function) => {
 
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
     blockExplorer: new TzStatsBlockExplorer(),
   });
 
@@ -67,7 +68,7 @@ const customBlockExplorerBeacon = async (loggerFun: Function) => {
     const permissions = await dAppClient.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
   /// END
 };

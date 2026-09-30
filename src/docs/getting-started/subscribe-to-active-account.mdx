@@ -37,6 +37,7 @@ After initializing your `dAppClient` instance, you need to subscribe to `ACTIVE_
 ```ts
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
 });
 
 dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -48,8 +49,11 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
 <TabItem value="taquito">
 
 ```ts
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
   console.log(`${BeaconEvent.ACTIVE_ACCOUNT_SET} triggered: `, account);
@@ -360,7 +364,7 @@ dAppClient.requestPermissions();
 ```ts
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
+import { BeaconEvent, NetworkType } from "@tezos-x/octez.connect-sdk";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
 const channel = new BroadcastChannel("beacon-test");
@@ -387,8 +391,11 @@ channel.onmessage = async (message: any) => {
   }
 };
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

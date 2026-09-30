@@ -5,24 +5,24 @@ import { NetworkType } from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 
-const networkSeoulnetTaquito = async (loggerFun: Function) => {
+const networkShadownetTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://rpc.seoulnet.teztnets.com");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs",
-    network: { type: NetworkType.SEOULNET },
+    network: { type: NetworkType.SHADOWNET },
   });
 
   Tezos.setWalletProvider(wallet);
 
-  // Seoulnet with default rpcUrl
+  // Shadownet with default rpcUrl
   try {
     const result = await wallet.client.requestPermissions();
     logger.log("Permissions: ", result);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
   /// END
 };
-export default networkSeoulnetTaquito;
+export default networkShadownetTaquito;

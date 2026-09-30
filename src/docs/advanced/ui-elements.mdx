@@ -115,10 +115,12 @@ import {
   BeaconEvent,
   DAppClient,
   defaultEventCallbacks,
+  NetworkType,
 } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
   disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
   eventHandlers: {
     // To keep the pairing alert, we have to add the following default event handlers back
@@ -146,13 +148,18 @@ try {
 
 ```ts live
 // taquito disable ui
-import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  defaultEventCallbacks,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
   disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
   eventHandlers: {
     // To keep the pairing alert, we have to add the following default event handlers back
@@ -208,6 +215,7 @@ import {
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
   eventHandlers: {
     [BeaconEvent.PAIR_INIT]: {
       // Every BeaconEvent can be overriden by passing a handler here.
@@ -261,9 +269,10 @@ import {
   AnalyticsInterface,
 } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
   eventHandlers: {
     [BeaconEvent.PAIR_INIT]: {
       // Every BeaconEvent can be overriden by passing a handler here.
@@ -334,6 +343,7 @@ import {
 
 const dAppClient = new DAppClient({
     name: "Beacon Docs",
+network: { type: NetworkType.SHADOWNET },
     eventHandlers: {
       [BeaconEvent.PAIR_INIT]: {
         // Every BeaconEvent can be overriden by passing a handler here.
@@ -397,9 +407,10 @@ import {
   AnalyticsInterface,
 } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+network: { type: NetworkType.SHADOWNET },
     eventHandlers: {
       [BeaconEvent.PAIR_INIT]: {
         // Every BeaconEvent can be overriden by passing a handler here.

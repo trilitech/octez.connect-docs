@@ -32,8 +32,12 @@ groupId="octezConnectOrTaquitoFA1"
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs" });
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -45,7 +49,7 @@ if (!address) {
 // Connect to a specific contract on the tezos blockchain.
 // Make sure the contract is deployed on the network you requested permissions for.
 const contract = await Tezos.wallet.at(
-  "KT1PWx2mnDueood7fEmfbBDKx1D9BAnnXitn", // For this example, we use the TZBTC contract on mainnet.
+  "KT18xKQ3jqtAyK2ycqoYm44e8ckjNi2WUY2C", // For this example, we use the tzBTC contract on Shadownet.
 );
 
 // Call a method on the contract. In this case, we use the transfer entrypoint.

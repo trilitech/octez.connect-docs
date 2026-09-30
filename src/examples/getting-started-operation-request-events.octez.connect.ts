@@ -3,6 +3,7 @@ import Logger from "../Logger";
 import {
   BeaconEvent,
   DAppClient,
+  NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 /// END
@@ -10,7 +11,10 @@ import {
 const getOperationRequestBeaconWithEvents = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   // Listen for all the active account changes
   dAppClient.subscribeToEvent(
@@ -34,7 +38,7 @@ const getOperationRequestBeaconWithEvents = async (loggerFun: Function) => {
 
         logger.log("Response: ", response);
       } catch (error) {
-        logger.log("Error: ", error.message);
+        logger.log("Error: ", error?.message ?? error);
       }
     },
   );

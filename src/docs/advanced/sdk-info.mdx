@@ -52,9 +52,12 @@ console.log("Beacon Version", BEACON_VERSION);
 
 ```ts live
 // beacon sdk client
-import { DAppClient } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 console.log(`Connected Accounts:`, await dAppClient.getAccounts());
 console.log(`Connected Peers:`, await dAppClient.getPeers());
@@ -69,8 +72,12 @@ console.log(`Connected Peers:`, await dAppClient.getPeers());
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -95,17 +102,20 @@ console.log(`Connected Peers:`, await wallet.client.getPeers());
 // beacon sdk connection
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const addressLink = await dAppClient.blockExplorer.getAddressLink(
   "tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ",
-  { type: NetworkType.MAINNET },
+  { type: NetworkType.SHADOWNET },
 );
 console.log("Address Link", addressLink);
 
 const txLink = await dAppClient.blockExplorer.getTransactionLink(
   "onzCRJhQ9zPC38TLGhBTghCW7WAJpfUJ2NpwbbQKbW6LeEL8RfK",
-  { type: NetworkType.MAINNET },
+  { type: NetworkType.SHADOWNET },
 );
 console.log("Transaction Link", txLink);
 
@@ -133,20 +143,23 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
 const addressLink = await wallet.client.blockExplorer.getAddressLink(
   "tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ",
-  { type: NetworkType.MAINNET },
+  { type: NetworkType.SHADOWNET },
 );
 console.log("Address Link", addressLink);
 
 const txLink = await wallet.client.blockExplorer.getTransactionLink(
   "onzCRJhQ9zPC38TLGhBTghCW7WAJpfUJ2NpwbbQKbW6LeEL8RfK",
-  { type: NetworkType.MAINNET },
+  { type: NetworkType.SHADOWNET },
 );
 console.log("Transaction Link", txLink);
 
