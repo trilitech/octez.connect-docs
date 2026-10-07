@@ -26,10 +26,14 @@ The following example will show:
 import {
   BeaconEvent,
   DAppClient,
+  NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // Listen for all the active account changes
 dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
@@ -75,10 +79,17 @@ console.log("Operation Hash: ", response.transactionHash);
 // taquito simple example
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent, TezosOperationType } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  NetworkType,
+  TezosOperationType,
+} from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" }); // Takes the same arguments as the DAppClient constructor
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+}); // Takes the same arguments as the DAppClient constructor
 
 Tezos.setWalletProvider(wallet);
 

@@ -8,20 +8,23 @@ import Logger from "../Logger";
 const infoConnectionTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-  const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   Tezos.setWalletProvider(wallet);
 
   const addressLink = await wallet.client.blockExplorer.getAddressLink(
     "tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ",
-    { type: NetworkType.MAINNET },
+    { type: NetworkType.SHADOWNET },
   );
   logger.log("Address Link", addressLink);
 
   const txLink = await wallet.client.blockExplorer.getTransactionLink(
     "onzCRJhQ9zPC38TLGhBTghCW7WAJpfUJ2NpwbbQKbW6LeEL8RfK",
-    { type: NetworkType.MAINNET },
+    { type: NetworkType.SHADOWNET },
   );
   logger.log("Transaction Link", txLink);
 

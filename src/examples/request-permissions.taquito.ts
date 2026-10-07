@@ -1,13 +1,16 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { PermissionScope } from "@tezos-x/octez.connect-dapp";
+import { NetworkType, PermissionScope } from "@tezos-x/octez.connect-dapp";
 /// END
 
 async () => {
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-  const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   Tezos.setWalletProvider(wallet);
 
@@ -21,7 +24,7 @@ async () => {
     const permissions = await wallet.client.requestPermissions({ scopes });
     console.log("Got permissions:", permissions.address);
   } catch (error) {
-    console.log("Got error:", error.message);
+    console.log("Got error:", error?.message ?? error);
   }
 
   /// END

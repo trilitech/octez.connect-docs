@@ -16,9 +16,10 @@ import Logger from "../Logger";
 const overrideDefaultEventTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
     eventHandlers: {
       [BeaconEvent.PAIR_INIT]: {
         // Every BeaconEvent can be overriden by passing a handler here.
@@ -52,7 +53,7 @@ const overrideDefaultEventTaquito = async (loggerFun: Function) => {
     const permissions = await wallet.client.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
   /// END
 };

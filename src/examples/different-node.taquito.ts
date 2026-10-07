@@ -1,16 +1,17 @@
 /// START
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { Regions } from "@tezos-x/octez.connect-dapp";
+import { NetworkType, Regions } from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 
 const differentNodeTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
     matrixNodes: {
       [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
     },
@@ -22,7 +23,7 @@ const differentNodeTaquito = async (loggerFun: Function) => {
     const permissions = await wallet.client.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
 
   /// END

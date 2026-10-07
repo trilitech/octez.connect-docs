@@ -2,13 +2,17 @@
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import Logger from "../Logger";
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
 /// END
 
 const fa12TransferTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-  const wallet = new BeaconWallet({ name: "Beacon Docs" });
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   Tezos.setWalletProvider(wallet);
 
@@ -20,7 +24,7 @@ const fa12TransferTaquito = async (loggerFun: Function) => {
   // Connect to a specific contract on the tezos blockchain.
   // Make sure the contract is deployed on the network you requested permissions for.
   const contract = await Tezos.wallet.at(
-    "KT1PWx2mnDueood7fEmfbBDKx1D9BAnnXitn", // For this example, we use the TZBTC contract on mainnet.
+    "KT18xKQ3jqtAyK2ycqoYm44e8ckjNi2WUY2C", // For this example, we use the tzBTC contract on Shadownet.
   );
 
   // Call a method on the contract. In this case, we use the transfer entrypoint.
@@ -39,7 +43,7 @@ const fa12TransferTaquito = async (loggerFun: Function) => {
     // As soon as the operation is broadcasted, you will receive the operation hash
     logger.log("Operation hash: ", result.opHash);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
 
   /// END

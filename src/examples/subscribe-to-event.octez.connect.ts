@@ -1,5 +1,9 @@
 /// START
-import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  DAppClient,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 
@@ -8,6 +12,7 @@ const subscribeToEventBeacon = async (loggerFun: Function) => {
   /// START
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
   });
 
   await dAppClient.clearActiveAccount();

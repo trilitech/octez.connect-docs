@@ -13,10 +13,10 @@ import Logger from "../Logger";
 const exampleAdvancedTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  // Set the network (Mainnet is default)
-  const network: Network = { type: NetworkType.MAINNET };
+  // Set the network (Mainnet is the default; these docs use Shadownet)
+  const network: Network = { type: NetworkType.SHADOWNET };
 
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs",
     network: network,
@@ -55,7 +55,7 @@ const exampleAdvancedTaquito = async (loggerFun: Function) => {
       myAddress = await wallet.getPKH();
       logger.log("New connection: ", myAddress);
     } catch (error) {
-      logger.log("Error: ", error.message);
+      logger.log("Error: ", error?.message ?? error);
       return;
     }
   }
@@ -81,7 +81,7 @@ const exampleAdvancedTaquito = async (loggerFun: Function) => {
 
     logger.log("Block Explorer:", explorerLink);
   } catch (error) {
-    logger.log("Result: ", error.message);
+    logger.log("Result: ", error?.message ?? error);
     return;
   }
 

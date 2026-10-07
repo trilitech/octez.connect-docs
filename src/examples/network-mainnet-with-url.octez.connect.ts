@@ -10,7 +10,7 @@ const networkMainnetWithUrlBeacon = async (loggerFun: Function) => {
     name: "Beacon Docs",
     network: {
       type: NetworkType.MAINNET,
-      rpcUrl: "https://mainnet.api.tez.ie",
+      rpcUrl: "https://rpc.tzbeta.net",
     },
   });
 
@@ -19,7 +19,7 @@ const networkMainnetWithUrlBeacon = async (loggerFun: Function) => {
     const result = await dAppClient.requestPermissions();
     logger.log("Permissions: ", result);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
   /// END
 };

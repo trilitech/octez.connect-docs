@@ -1,12 +1,15 @@
 /// START
 import Logger from "../Logger";
-import { DAppClient } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 /// END
 
 const broadcastRequestBeacon = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   try {
     const response = await dAppClient.requestBroadcast({
@@ -17,7 +20,7 @@ const broadcastRequestBeacon = async (loggerFun: Function) => {
 
     logger.log("transaction hash", response.transactionHash);
   } catch (error) {
-    logger.log("Result: ", error.message);
+    logger.log("Result: ", error?.message ?? error);
   }
   /// END
 };

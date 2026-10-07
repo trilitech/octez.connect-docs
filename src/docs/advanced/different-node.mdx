@@ -20,10 +20,11 @@ Make sure the servers you use are whitelisted in the octez.connect network and f
 
 ```ts live
 // beacon different node
-import { DAppClient, Regions } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType, Regions } from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
   matrixNodes: {
     [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
   },
@@ -45,11 +46,12 @@ try {
 // taquito different node
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { Regions } from "@tezos-x/octez.connect-sdk";
+import { NetworkType, Regions } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
   matrixNodes: {
     [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
   },

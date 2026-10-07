@@ -55,10 +55,15 @@ The list below showcases all the events that are currently available for subscri
 
 ```ts live
 // beacon subscribe to event
-import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  DAppClient,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 
 const dAppClient = new DAppClient({
   name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
 });
 
 await dAppClient.clearActiveAccount();
@@ -80,10 +85,13 @@ await dAppClient.requestPermissions();
 // taquito subscribe to event
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-sdk";
+import { BeaconEvent, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs Taquito",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

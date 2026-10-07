@@ -8,12 +8,12 @@ import Logger from "../Logger";
 const networkMainnetWithUrlTaquito = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.tzbeta.net");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
     network: {
       type: NetworkType.MAINNET,
-      rpcUrl: "https://mainnet.api.tez.ie",
+      rpcUrl: "https://rpc.tzbeta.net",
     },
   });
 
@@ -24,7 +24,7 @@ const networkMainnetWithUrlTaquito = async (loggerFun: Function) => {
     const result = await wallet.client.requestPermissions();
     logger.log("Permissions: ", result);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
   /// END
 };

@@ -62,9 +62,10 @@ const customBlockExplorerTaquito = async (loggerFun: Function) => {
     }
   }
 
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs Taquito",
+    network: { type: NetworkType.SHADOWNET },
     // NOTE: Taquito's BeaconWallet is typed against @airgap/beacon-dapp.
     // We avoid importing @airgap/* directly in docs/examples.
     blockExplorer: new TzStatsBlockExplorer(),
@@ -75,7 +76,7 @@ const customBlockExplorerTaquito = async (loggerFun: Function) => {
     const permissions = await wallet.client.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
   Tezos.setWalletProvider(wallet);
   /// END

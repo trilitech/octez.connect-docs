@@ -1,12 +1,15 @@
 /// START
 import Logger from "../Logger";
-import { DAppClient } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 /// END
 
 const disconnectWalletBeacon2 = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   dAppClient
     .disconnect()
