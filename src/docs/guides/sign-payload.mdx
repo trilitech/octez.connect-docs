@@ -22,9 +22,16 @@ This page provides some examples for signing payloads in different formats: HEX 
 
 ```ts live
 // beacon sign payload micheline
-import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const response = await dAppClient.requestSignPayload({
   signingType: SigningType.MICHELINE,
@@ -44,10 +51,13 @@ console.log(`Signature: ${response.signature}`);
 // octez.js sign payload micheline
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { SigningType } from "@tezos-x/octez.connect-sdk";
+import { NetworkType, SigningType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -78,9 +88,16 @@ console.log(`Signature: ${response.signature}`);
 
 ```ts live
 // beacon sign payload operation
-import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const response = await dAppClient.requestSignPayload({
   signingType: SigningType.OPERATION,
@@ -98,10 +115,13 @@ console.log(`Signature: ${response.signature}`);
 // octez.js sign payload operation
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { SigningType } from "@tezos-x/octez.connect-sdk";
+import { NetworkType, SigningType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 
@@ -134,9 +154,16 @@ Not all wallets support the `RAW` signing type. Additionally, the signatures can
 
 ```ts live
 // beacon sign payload raw
-import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const response = await dAppClient.requestSignPayload({
   signingType: SigningType.RAW,
@@ -154,10 +181,13 @@ console.log(`Signature: ${response.signature}`);
 // octez.js sign payload raw
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { SigningType } from "@tezos-x/octez.connect-sdk";
+import { NetworkType, SigningType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

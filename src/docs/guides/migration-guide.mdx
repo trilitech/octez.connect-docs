@@ -99,9 +99,16 @@ The end result should look something like this:
 
 ```ts live
 // beacon get active account with events
-import { BeaconEvent, DAppClient } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  DAppClient,
+  NetworkType,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // Listen for all the active account changes
 dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, (account) => {
@@ -119,9 +126,13 @@ const permissions = await dAppClient.requestPermissions();
 // octez.js permission request
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

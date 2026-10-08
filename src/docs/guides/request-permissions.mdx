@@ -19,9 +19,16 @@ RequestPermissions helps dApps connect with users' wallets. This involves asking
 
 ```ts live
 // beacon permission request
-import { DAppClient, PermissionScope } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  PermissionScope,
+} from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 // You can request specific permissions if you want
 const scopes: PermissionScope[] = [
@@ -46,10 +53,13 @@ try {
 // octez.js permission request
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { PermissionScope } from "@tezos-x/octez.connect-sdk";
+import { NetworkType, PermissionScope } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

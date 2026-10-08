@@ -8,8 +8,11 @@ import Logger from "../Logger";
 const signPayloadRawOctezJs = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-  const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs octez.js",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   Tezos.setWalletProvider(wallet);
 
@@ -21,7 +24,7 @@ const signPayloadRawOctezJs = async (loggerFun: Function) => {
 
     logger.log(`Signature: ${response.signature}`);
   } catch (error) {
-    logger.log("Result: ", error.message);
+    logger.log("Result: ", error?.message ?? error);
   }
   /// END
 };

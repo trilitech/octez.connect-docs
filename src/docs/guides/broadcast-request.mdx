@@ -19,9 +19,12 @@ Broadcast Request is a feature in octez.connect SDK that enables applications to
 
 ```ts live
 // beacon broadcast request
-import { DAppClient } from "@tezos-x/octez.connect-sdk";
+import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const dAppClient = new DAppClient({ name: "Beacon Docs" });
+const dAppClient = new DAppClient({
+  name: "Beacon Docs",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 const response = await dAppClient.requestBroadcast({
   // a valid, forged and signed transaction
@@ -39,9 +42,13 @@ console.log("transaction hash", response.transactionHash);
 // octez.js broadcast request
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
-const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
+const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+const wallet = new BeaconWallet({
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
+});
 
 Tezos.setWalletProvider(wallet);
 

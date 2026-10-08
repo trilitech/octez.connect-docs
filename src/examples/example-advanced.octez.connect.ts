@@ -12,8 +12,8 @@ import {
 const exampleAdvancedBeacon = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  // Set the network (Mainnet is default)
-  const network: Network = { type: NetworkType.MAINNET };
+  // Set the network (Mainnet is the default; these docs use Shadownet)
+  const network: Network = { type: NetworkType.SHADOWNET };
 
   // Create a new DAppClient instance
   const dAppClient = new DAppClient({
@@ -52,7 +52,7 @@ const exampleAdvancedBeacon = async (loggerFun: Function) => {
       logger.log("New connection: ", permissions.address);
       myAddress = permissions.address;
     } catch (error) {
-      logger.log("Error: ", error.message);
+      logger.log("Error: ", error?.message ?? error);
       return;
     }
   }
@@ -80,7 +80,7 @@ const exampleAdvancedBeacon = async (loggerFun: Function) => {
 
     logger.log("Block Explorer:", explorerLink);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
     return;
   }
 

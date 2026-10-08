@@ -1,10 +1,17 @@
 /// START
-import { DAppClient, PermissionScope } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  PermissionScope,
+} from "@tezos-x/octez.connect-sdk";
 /// END
 
 async () => {
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   // You can request specific permissions if you want
   const scopes: PermissionScope[] = [
@@ -17,7 +24,7 @@ async () => {
     const permissions = await dAppClient.requestPermissions({ scopes });
     console.log("Got permissions:", permissions.address);
   } catch (error) {
-    console.log("Got error:", error.message);
+    console.log("Got error:", error?.message ?? error);
   }
   /// END
 };

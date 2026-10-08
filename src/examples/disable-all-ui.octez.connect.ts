@@ -3,6 +3,7 @@ import {
   BeaconEvent,
   DAppClient,
   defaultEventCallbacks,
+  NetworkType,
 } from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
@@ -12,6 +13,7 @@ const disableUIBeacon = async (loggerFun: Function) => {
   /// START
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
     disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
     eventHandlers: {
       // To keep the pairing alert, we have to add the following default event handlers back
@@ -29,7 +31,7 @@ const disableUIBeacon = async (loggerFun: Function) => {
     const permissions = await dAppClient.requestPermissions();
     logger.log("Got permissions:", permissions.address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
   /// END
 };

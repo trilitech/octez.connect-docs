@@ -1,12 +1,19 @@
 /// START
 import Logger from "../Logger";
-import { DAppClient, TezosOperationType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  TezosOperationType,
+} from "@tezos-x/octez.connect-sdk";
 /// END
 
 const requestOperationBeacon = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   let myAddress: string | undefined;
 
@@ -34,7 +41,7 @@ const requestOperationBeacon = async (loggerFun: Function) => {
     });
     logger.log("Response: ", response);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
   /// END
 };

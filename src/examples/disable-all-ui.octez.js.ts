@@ -2,6 +2,7 @@
 import {
   BeaconEvent,
   defaultEventCallbacks,
+  NetworkType,
 } from "@tezos-x/octez.connect-dapp";
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
@@ -11,7 +12,7 @@ import Logger from "../Logger";
 const disableUIOctezJs = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs octez.js",
     disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
@@ -33,7 +34,7 @@ const disableUIOctezJs = async (loggerFun: Function) => {
     const address = await wallet.getPKH();
     logger.log("Got permissions:", address);
   } catch (error) {
-    logger.log("Got error:", error.message);
+    logger.log("Got error:", error?.message ?? error);
   }
 
   /// END

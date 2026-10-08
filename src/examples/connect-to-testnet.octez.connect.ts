@@ -4,13 +4,13 @@ import { DAppClient, NetworkType } from "@tezos-x/octez.connect-sdk";
 
 async () => {
   /// START
-  // We set the network to "SEOULNET"
+  // We set the network to "SHADOWNET"
   // The network configuration will make the connection is sent to the correct URL
   const dAppClient = new DAppClient({
     name: "Beacon Docs",
     network: {
-      type: NetworkType.SEOULNET,
-      rpcUrl: "https://rpc.seoulnet.teztnets.com",
+      type: NetworkType.SHADOWNET,
+      rpcUrl: "https://rpc.shadownet.teztnets.com",
     },
   });
 

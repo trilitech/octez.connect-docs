@@ -1,10 +1,17 @@
 /// START
-import { DAppClient, TezosOperationType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  TezosOperationType,
+} from "@tezos-x/octez.connect-sdk";
 /// END
 
 async () => {
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
 
   const activeAccount = await dAppClient.getActiveAccount();
   if (activeAccount) {

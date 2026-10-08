@@ -1,12 +1,19 @@
 /// START
-import { DAppClient, SigningType } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  NetworkType,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 import Logger from "../Logger";
 /// END
 
 const signPayloadRawBeacon = async (loggerFun: Function) => {
   const logger = new Logger(loggerFun);
   /// START
-  const dAppClient = new DAppClient({ name: "Beacon Docs" });
+  const dAppClient = new DAppClient({
+    name: "Beacon Docs",
+    network: { type: NetworkType.SHADOWNET },
+  });
   try {
     const response = await dAppClient.requestSignPayload({
       signingType: SigningType.RAW,
@@ -15,7 +22,7 @@ const signPayloadRawBeacon = async (loggerFun: Function) => {
 
     logger.log(`Signature: ${response.signature}`);
   } catch (error) {
-    logger.log("Error: ", error.message);
+    logger.log("Error: ", error?.message ?? error);
   }
   /// END
 };

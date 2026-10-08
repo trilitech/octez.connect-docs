@@ -32,10 +32,10 @@ import infoVersionBeacon from "./examples/info-version.octez.connect";
 import infoVersionOctezJs from "./examples/info-version.octez.js";
 import networkCustomBeacon from "./examples/network-custom-network.octez.connect";
 import networkCustomOctezJs from "./examples/network-custom-network.octez.js";
-import networkSeoulnetWithRpcBeacon from "./examples/network-seoulnet-with-url.octez.connect";
-import networkSeoulnetWithRpcOctezJs from "./examples/network-seoulnet-with-url.octez.js";
-import networkSeoulnetBeacon from "./examples/network-seoulnet.octez.connect";
-import networkSeoulnetOctezJs from "./examples/network-seoulnet.octez.js";
+import networkShadownetWithRpcBeacon from "./examples/network-shadownet-with-url.octez.connect";
+import networkShadownetWithRpcOctezJs from "./examples/network-shadownet-with-url.octez.js";
+import networkShadownetBeacon from "./examples/network-shadownet.octez.connect";
+import networkShadownetOctezJs from "./examples/network-shadownet.octez.js";
 import networkMainnetWithUrlBeacon from "./examples/network-mainnet-with-url.octez.connect";
 import networkMainnetWithUrlOctezJs from "./examples/network-mainnet-with-url.octez.js";
 import overrideAlertAbortedBeacon from "./examples/override-alert-aborted-handler.octez.connect";
@@ -60,7 +60,7 @@ export class ExecuteExample {
     try {
       await this.executeExample(code, updateLogs);
     } catch (error) {
-      updateLogs(error.message);
+      updateLogs(error?.message ?? error);
     }
   }
 
@@ -175,17 +175,17 @@ export class ExecuteExample {
       case "octez.js mainnet network":
         await networkMainnetWithUrlOctezJs(updateLogs);
         break;
-      case "beacon seoulnet network":
-        await networkSeoulnetBeacon(updateLogs);
+      case "beacon shadownet network":
+        await networkShadownetBeacon(updateLogs);
         break;
-      case "octez.js seoulnet network":
-        await networkSeoulnetOctezJs(updateLogs);
+      case "octez.js shadownet network":
+        await networkShadownetOctezJs(updateLogs);
         break;
-      case "beacon seoulnet network with RPC":
-        await networkSeoulnetWithRpcBeacon(updateLogs);
+      case "beacon shadownet network with RPC":
+        await networkShadownetWithRpcBeacon(updateLogs);
         break;
-      case "octez.js seoulnet network with RPC":
-        await networkSeoulnetWithRpcOctezJs(updateLogs);
+      case "octez.js shadownet network with RPC":
+        await networkShadownetWithRpcOctezJs(updateLogs);
         break;
       case "beacon custom network":
         await networkCustomBeacon(updateLogs);

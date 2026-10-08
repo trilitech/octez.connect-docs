@@ -6,14 +6,14 @@ import { NetworkType } from "@tezos-x/octez.connect-dapp";
 
 async () => {
   /// START
-  // We set the network to "SEOULNET"
+  // We set the network to "SHADOWNET"
   // The network configuration will make the connection is sent to the correct URL
-  const Tezos = new TezosToolkit("https://rpc.seoulnet.teztnets.com");
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs octez.js",
     network: {
-      type: NetworkType.SEOULNET,
-      rpcUrl: "https://rpc.seoulnet.teztnets.com",
+      type: NetworkType.SHADOWNET,
+      rpcUrl: "https://rpc.shadownet.teztnets.com",
     },
   });
 
