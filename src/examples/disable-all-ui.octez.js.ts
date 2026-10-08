@@ -1,0 +1,41 @@
+/// START
+import {
+  BeaconEvent,
+  defaultEventCallbacks,
+} from "@tezos-x/octez.connect-dapp";
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import Logger from "../Logger";
+/// END
+
+const disableUIOctezJs = async (loggerFun: Function) => {
+  const logger = new Logger(loggerFun);
+  /// START
+  const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs octez.js",
+    disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
+    eventHandlers: {
+      // To keep the pairing alert, we have to add the following default event handlers back
+      [BeaconEvent.PAIR_INIT]: {
+        handler: defaultEventCallbacks.PAIR_INIT,
+      },
+      [BeaconEvent.PAIR_SUCCESS]: {
+        handler: defaultEventCallbacks.PAIR_SUCCESS,
+      },
+    },
+  });
+
+  Tezos.setWalletProvider(wallet);
+
+  try {
+    await wallet.requestPermissions();
+    const address = await wallet.getPKH();
+    logger.log("Got permissions:", address);
+  } catch (error) {
+    logger.log("Got error:", error.message);
+  }
+
+  /// END
+};
+export default disableUIOctezJs;

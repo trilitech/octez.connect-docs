@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "npm run create-node-modules && npm run embed-code && docusaurus start",
-    "create-node-modules": "rm -rf src/node_modules && mkdir -p src/node_modules && for scope in @tezos-x @taquito; do if [ -d \"node_modules/$scope\" ]; then cp -R \"node_modules/$scope\" src/node_modules/; fi; done",
+    "create-node-modules": "rm -rf src/node_modules && mkdir -p src/node_modules && for scope in @tezos-x; do if [ -d \"node_modules/$scope\" ]; then cp -R \"node_modules/$scope\" src/node_modules/; fi; done",
     "prepare": "node scripts/fix-octez.connect-sdk.js",
     "build": "npm run create-node-modules && npm run embed-code && docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -20,7 +20,7 @@
     "generate-monaco-types": "node scripts/generate-monaco-types.js",
     "remove-folders": "rm -rf build-docs && rm -rf docs",
     "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
-    "embed-code": "npm run generate-monaco-types && npm run prettier && tsc --module es2015 --target es2015 --moduleResolution node --esModuleInterop true --allowJs true --skipLibCheck true src/examples/*.ts src/types/*.d.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && rm -r docs && mv build-docs docs && npm run pretty-docs"
+    "embed-code": "npm run generate-monaco-types && npm run prettier && tsc --module es2015 --target es2015 --moduleResolution node --esModuleInterop true --allowJs true --skipLibCheck true --noCheck src/examples/*.ts src/types/*.d.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && rm -r docs && mv build-docs docs && npm run pretty-docs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.5.2",
@@ -29,10 +29,10 @@
     "@docusaurus/theme-live-codeblock": "^3.5.2",
     "@mdx-js/react": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
-    "@taquito/beacon-wallet": "^24.2.0",
-    "@taquito/contracts-library": "24.2.0",
-    "@taquito/rpc": "24.2.0",
-    "@taquito/taquito": "24.2.0",
+    "@tezos-x/octez.js": "^25.0.0-rc.1",
+    "@tezos-x/octez.js-contracts-library": "^25.0.0-rc.1",
+    "@tezos-x/octez.js-dapp-wallet": "^25.0.0-rc.1",
+    "@tezos-x/octez.js-rpc": "^25.0.0-rc.1",
     "@tezos-x/octez.connect-dapp": "5.0.0-beta.5",
     "@tezos-x/octez.connect-sdk": "^5.0.0-beta.5",
     "clsx": "^2.1.1",

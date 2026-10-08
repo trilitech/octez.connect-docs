@@ -12,11 +12,11 @@ The following example will show:
 3. How to send an operation request
 
 <Tabs
-  groupId="octezConnectOrTaquitoSE"
+  groupId="octezConnectOrOctezJsSE"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -69,16 +69,16 @@ console.log("Operation Hash: ", response.transactionHash);
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito simple example
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js simple example
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { BeaconEvent, TezosOperationType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" }); // Takes the same arguments as the DAppClient constructor
+const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" }); // Takes the same arguments as the DAppClient constructor
 
 Tezos.setWalletProvider(wallet);
 

@@ -8,11 +8,11 @@ import TabItem from "@theme/TabItem";
 Broadcast Request is a feature in octez.connect SDK that enables applications to send transaction requests. This is primarily used for broadcasting signed transactions to the network.
 
 <Tabs
-  groupId="octezConnectOrTaquitoBR"
+  groupId="octezConnectOrOctezJsBR"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -33,15 +33,15 @@ console.log("transaction hash", response.transactionHash);
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito broadcast request
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js broadcast request
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 
 const Tezos = new TezosToolkit("https://mainnet.api.tez.ie");
-const wallet = new BeaconWallet({ name: "Beacon Docs Taquito" });
+const wallet = new BeaconWallet({ name: "Beacon Docs octez.js" });
 
 Tezos.setWalletProvider(wallet);
 

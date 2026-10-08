@@ -1,57 +1,57 @@
 import broadcastRequestBeacon from "./examples/broadcast-request.octez.connect";
-import broadcastRequestTaquito from "./examples/broadcast-request.taquito";
+import broadcastRequestOctezJs from "./examples/broadcast-request.octez.js";
 import destroyBeacon from "./examples/destroy.octez.connect";
-import destroyTaquito from "./examples/destroy.taquito";
+import destroyOctezJs from "./examples/destroy.octez.js";
 import differentNodeBeacon from "./examples/different-node.octez.connect";
-import differentNodeTaquito from "./examples/different-node.taquito";
+import differentNodeOctezJs from "./examples/different-node.octez.js";
 import disableUIBeacon from "./examples/disable-all-ui.octez.connect";
-import disableUITaquito from "./examples/disable-all-ui.taquito";
+import disableUIOctezJs from "./examples/disable-all-ui.octez.js";
 import disconnectWalletBeacon2 from "./examples/disconnect-wallet-2.octez.connect";
-import disconnectWalletTaquito2 from "./examples/disconnect-wallet-2.taquito";
+import disconnectWalletOctezJs2 from "./examples/disconnect-wallet-2.octez.js";
 import disconnectWalletBeacon from "./examples/disconnect-wallet.octez.connect";
-import disconnectWalletTaquito from "./examples/disconnect-wallet.taquito";
+import disconnectWalletOctezJs from "./examples/disconnect-wallet.octez.js";
 import exampleAdvancedBeacon from "./examples/example-advanced.octez.connect";
-import exampleAdvancedTaquito from "./examples/example-advanced.taquito";
+import exampleAdvancedOctezJs from "./examples/example-advanced.octez.js";
 import exampleSimpleBeacon from "./examples/example-simple.octez.connect";
-import exampleSimpleTaquito from "./examples/example-simple.taquito";
-import fa12TransferTaquito from "./examples/fa1.2-transfer.taquito";
-import fa2TransferTaquito from "./examples/fa2-transfer.taquito";
+import exampleSimpleOctezJs from "./examples/example-simple.octez.js";
+import fa12TransferOctezJs from "./examples/fa1.2-transfer.octez.js";
+import fa2TransferOctezJs from "./examples/fa2-transfer.octez.js";
 import getActiveAccountBeaconWithEvents from "./examples/getting-started-active-account-events.octez.connect";
-import getActiveAccountTaquitoWithEvents from "./examples/getting-started-active-account-events.taquito";
+import getActiveAccountOctezJsWithEvents from "./examples/getting-started-active-account-events.octez.js";
 import getActiveAccountBeacon from "./examples/getting-started-active-account.octez.connect";
-import getActiveAccountTaquito from "./examples/getting-started-active-account.taquito";
+import getActiveAccountOctezJs from "./examples/getting-started-active-account.octez.js";
 import getOperationRequestBeaconWithEvents from "./examples/getting-started-operation-request-events.octez.connect";
-import getOperationRequestTaquitoWithEvents from "./examples/getting-started-operation-request-events.taquito";
+import getOperationRequestOctezJsWithEvents from "./examples/getting-started-operation-request-events.octez.js";
 import requestOperationBeacon from "./examples/getting-started-operation-request.octez.connect";
-import requestOperationTaquito from "./examples/getting-started-operation-request.taquito";
+import requestOperationOctezJs from "./examples/getting-started-operation-request.octez.js";
 import requestPermissionsBeacon from "./examples/getting-started-permission-request.octez.connect";
-import requestPermissionsTaquito from "./examples/getting-started-permission-request.taquito";
+import requestPermissionsOctezJs from "./examples/getting-started-permission-request.octez.js";
 import infoConnectionBeacon from "./examples/info-connection.octez.connect";
-import infoConnectionTaquito from "./examples/info-connection.taquito";
+import infoConnectionOctezJs from "./examples/info-connection.octez.js";
 import infoVersionBeacon from "./examples/info-version.octez.connect";
-import infoVersionTaquito from "./examples/info-version.taquito";
+import infoVersionOctezJs from "./examples/info-version.octez.js";
 import networkCustomBeacon from "./examples/network-custom-network.octez.connect";
-import networkCustomTaquito from "./examples/network-custom-network.taquito";
+import networkCustomOctezJs from "./examples/network-custom-network.octez.js";
 import networkSeoulnetWithRpcBeacon from "./examples/network-seoulnet-with-url.octez.connect";
-import networkSeoulnetWithRpcTaquito from "./examples/network-seoulnet-with-url.taquito";
+import networkSeoulnetWithRpcOctezJs from "./examples/network-seoulnet-with-url.octez.js";
 import networkSeoulnetBeacon from "./examples/network-seoulnet.octez.connect";
-import networkSeoulnetTaquito from "./examples/network-seoulnet.taquito";
+import networkSeoulnetOctezJs from "./examples/network-seoulnet.octez.js";
 import networkMainnetWithUrlBeacon from "./examples/network-mainnet-with-url.octez.connect";
-import networkMainnetWithUrlTaquito from "./examples/network-mainnet-with-url.taquito";
+import networkMainnetWithUrlOctezJs from "./examples/network-mainnet-with-url.octez.js";
 import overrideAlertAbortedBeacon from "./examples/override-alert-aborted-handler.octez.connect";
-import overrideAlertAbortedTaquito from "./examples/override-alert-aborted-handler.taquito";
+import overrideAlertAbortedOctezJs from "./examples/override-alert-aborted-handler.octez.js";
 import overrideDefaultEventBeacon from "./examples/override-default-event.octez.connect";
-import overrideDefaultEventTaquito from "./examples/override-default-event.taquito";
+import overrideDefaultEventOctezJs from "./examples/override-default-event.octez.js";
 import signPayloadMichelineBeacon from "./examples/sign-payload-micheline.octez.connect";
-import signPayloadMichelineTaquito from "./examples/sign-payload-micheline.taquito";
+import signPayloadMichelineOctezJs from "./examples/sign-payload-micheline.octez.js";
 import signPayloadOperationBeacon from "./examples/sign-payload-operation.octez.connect";
-import signPayloadOperationTaquito from "./examples/sign-payload-operation.taquito";
+import signPayloadOperationOctezJs from "./examples/sign-payload-operation.octez.js";
 import signPayloadRawBeacon from "./examples/sign-payload-raw.octez.connect";
-import signPayloadRawTaquito from "./examples/sign-payload-raw.taquito";
+import signPayloadRawOctezJs from "./examples/sign-payload-raw.octez.js";
 import simpleContractCallBeacon from "./examples/simple-contract-call.octez.connect";
-import simpleContractCallTaquito from "./examples/simple-contract-call.taquito";
+import simpleContractCallOctezJs from "./examples/simple-contract-call.octez.js";
 import subscribeToEventBeacon from "./examples/subscribe-to-event.octez.connect";
-import subscribeToEventTaquito from "./examples/subscribe-to-event.taquito";
+import subscribeToEventOctezJs from "./examples/subscribe-to-event.octez.js";
 
 export class ExecuteExample {
   private static wasHandlerInitialized = false;
@@ -88,170 +88,170 @@ export class ExecuteExample {
       case "beacon permission request":
         await requestPermissionsBeacon(updateLogs);
         break;
-      case "taquito permission request":
-        await requestPermissionsTaquito(updateLogs);
+      case "octez.js permission request":
+        await requestPermissionsOctezJs(updateLogs);
         break;
       case "beacon get active account":
         await getActiveAccountBeacon(updateLogs);
         break;
-      case "taquito get active account":
-        await getActiveAccountTaquito(updateLogs);
+      case "octez.js get active account":
+        await getActiveAccountOctezJs(updateLogs);
         break;
       case "beacon get active account with events":
         await getActiveAccountBeaconWithEvents(updateLogs);
         break;
-      case "taquito get active account with events":
-        await getActiveAccountTaquitoWithEvents(updateLogs);
+      case "octez.js get active account with events":
+        await getActiveAccountOctezJsWithEvents(updateLogs);
         break;
       case "beacon request operation":
         await requestOperationBeacon(updateLogs);
         break;
-      case "taquito request operation":
-        await requestOperationTaquito(updateLogs);
+      case "octez.js request operation":
+        await requestOperationOctezJs(updateLogs);
         break;
       case "beacon request operation with events":
         await getOperationRequestBeaconWithEvents(updateLogs);
         break;
-      case "taquito request operation with events":
-        await getOperationRequestTaquitoWithEvents(updateLogs);
+      case "octez.js request operation with events":
+        await getOperationRequestOctezJsWithEvents(updateLogs);
         break;
       case "beacon advanced example":
         await exampleAdvancedBeacon(updateLogs);
         break;
-      case "taquito advanced example":
-        await exampleAdvancedTaquito(updateLogs);
+      case "octez.js advanced example":
+        await exampleAdvancedOctezJs(updateLogs);
         break;
       case "beacon simple example":
         await exampleSimpleBeacon(updateLogs);
         break;
-      case "taquito simple example":
-        await exampleSimpleTaquito(updateLogs);
+      case "octez.js simple example":
+        await exampleSimpleOctezJs(updateLogs);
         break;
       case "beacon disconnect wallet":
         await disconnectWalletBeacon(updateLogs);
         break;
-      case "taquito disconnect wallet":
-        await disconnectWalletTaquito(updateLogs);
+      case "octez.js disconnect wallet":
+        await disconnectWalletOctezJs(updateLogs);
         break;
       case "beacon destroy":
         await destroyBeacon(updateLogs);
         break;
-      case "taquito destroy":
-        await destroyTaquito(updateLogs);
+      case "octez.js destroy":
+        await destroyOctezJs(updateLogs);
         break;
       case "beacon disconnect wallet 2":
         await disconnectWalletBeacon2(updateLogs);
         break;
-      case "taquito disconnect wallet 2":
-        await disconnectWalletTaquito2(updateLogs);
+      case "octez.js disconnect wallet 2":
+        await disconnectWalletOctezJs2(updateLogs);
         break;
       case "beacon broadcast request":
         await broadcastRequestBeacon(updateLogs);
         break;
-      case "taquito broadcast request":
-        await broadcastRequestTaquito(updateLogs);
+      case "octez.js broadcast request":
+        await broadcastRequestOctezJs(updateLogs);
         break;
       case "beacon simple contract call":
         await simpleContractCallBeacon(updateLogs);
         break;
-      case "taquito simple contract call":
-        await simpleContractCallTaquito(updateLogs);
+      case "octez.js simple contract call":
+        await simpleContractCallOctezJs(updateLogs);
         break;
-      case "taquito fa1.2 transfer":
-        await fa12TransferTaquito(updateLogs);
+      case "octez.js fa1.2 transfer":
+        await fa12TransferOctezJs(updateLogs);
         break;
-      case "taquito fa2 transfer":
-        await fa2TransferTaquito(updateLogs);
+      case "octez.js fa2 transfer":
+        await fa2TransferOctezJs(updateLogs);
         break;
       case "beacon subscribe to event":
         await subscribeToEventBeacon(updateLogs);
         break;
-      case "taquito subscribe to event":
-        await subscribeToEventTaquito(updateLogs);
+      case "octez.js subscribe to event":
+        await subscribeToEventOctezJs(updateLogs);
         break;
       case "beacon mainnet network":
         await networkMainnetWithUrlBeacon(updateLogs);
         break;
-      case "taquito mainnet network":
-        await networkMainnetWithUrlTaquito(updateLogs);
+      case "octez.js mainnet network":
+        await networkMainnetWithUrlOctezJs(updateLogs);
         break;
       case "beacon seoulnet network":
         await networkSeoulnetBeacon(updateLogs);
         break;
-      case "taquito seoulnet network":
-        await networkSeoulnetTaquito(updateLogs);
+      case "octez.js seoulnet network":
+        await networkSeoulnetOctezJs(updateLogs);
         break;
       case "beacon seoulnet network with RPC":
         await networkSeoulnetWithRpcBeacon(updateLogs);
         break;
-      case "taquito seoulnet network with RPC":
-        await networkSeoulnetWithRpcTaquito(updateLogs);
+      case "octez.js seoulnet network with RPC":
+        await networkSeoulnetWithRpcOctezJs(updateLogs);
         break;
       case "beacon custom network":
         await networkCustomBeacon(updateLogs);
         break;
-      case "taquito custom network":
-        await networkCustomTaquito(updateLogs);
+      case "octez.js custom network":
+        await networkCustomOctezJs(updateLogs);
         break;
       case "beacon sign payload micheline":
         await signPayloadMichelineBeacon(updateLogs);
         break;
-      case "taquito sign payload micheline":
-        await signPayloadMichelineTaquito(updateLogs);
+      case "octez.js sign payload micheline":
+        await signPayloadMichelineOctezJs(updateLogs);
         break;
       case "beacon sign payload operation":
         await signPayloadOperationBeacon(updateLogs);
         break;
-      case "taquito sign payload operation":
-        await signPayloadOperationTaquito(updateLogs);
+      case "octez.js sign payload operation":
+        await signPayloadOperationOctezJs(updateLogs);
         break;
       case "beacon sign payload raw":
         await signPayloadRawBeacon(updateLogs);
         break;
-      case "taquito sign payload raw":
-        await signPayloadRawTaquito(updateLogs);
+      case "octez.js sign payload raw":
+        await signPayloadRawOctezJs(updateLogs);
         break;
       case "beacon disable ui":
         await disableUIBeacon(updateLogs);
         break;
-      case "taquito disable ui":
-        await disableUITaquito(updateLogs);
+      case "octez.js disable ui":
+        await disableUIOctezJs(updateLogs);
         break;
       case "beacon request permission events":
         await overrideDefaultEventBeacon(updateLogs);
         break;
-      case "taquito request permission events":
-        await overrideDefaultEventTaquito(updateLogs);
+      case "octez.js request permission events":
+        await overrideDefaultEventOctezJs(updateLogs);
         break;
       case "beacon request permission alert":
         await overrideAlertAbortedBeacon(updateLogs);
         break;
-      case "taquito request permission alert":
-        await overrideAlertAbortedTaquito(updateLogs);
+      case "octez.js request permission alert":
+        await overrideAlertAbortedOctezJs(updateLogs);
         break;
       case "beacon different node":
         await differentNodeBeacon(updateLogs);
         break;
-      case "taquito different node":
-        await differentNodeTaquito(updateLogs);
+      case "octez.js different node":
+        await differentNodeOctezJs(updateLogs);
         break;
       case "beacon sdk version":
         await infoVersionBeacon(updateLogs);
         break;
-      case "taquito sdk version":
-        await infoVersionTaquito(updateLogs);
+      case "octez.js sdk version":
+        await infoVersionOctezJs(updateLogs);
         break;
       case "beacon sdk client":
         await infoVersionBeacon(updateLogs);
         break;
-      case "taquito sdk client":
-        await infoVersionTaquito(updateLogs);
+      case "octez.js sdk client":
+        await infoVersionOctezJs(updateLogs);
         break;
       case "beacon sdk connection":
         await infoConnectionBeacon(updateLogs);
         break;
-      case "taquito sdk connection":
-        await infoConnectionTaquito(updateLogs);
+      case "octez.js sdk connection":
+        await infoConnectionOctezJs(updateLogs);
         break;
       default:
         break;
