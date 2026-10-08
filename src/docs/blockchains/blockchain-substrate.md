@@ -9,9 +9,9 @@ The following permission scopes are available in the Substrate package.
 
 ```ts
 export enum SubstratePermissionScope {
-  "transfer" = "transfer",
-  "sign_payload_json" = "sign_payload_json",
-  "sign_payload_raw" = "sign_payload_raw",
+  transfer = "transfer",
+  sign_payload_json = "sign_payload_json",
+  sign_payload_raw = "sign_payload_raw",
 }
 ```
 
@@ -21,8 +21,8 @@ The supported message types.
 
 ```ts
 export enum SubstrateMessageType {
-  "transfer_request" = "transfer_request",
-  "sign_payload_request" = "sign_payload_request",
+  transfer_request = "transfer_request",
+  sign_payload_request = "sign_payload_request",
 }
 ```
 
