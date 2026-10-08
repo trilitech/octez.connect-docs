@@ -1,0 +1,33 @@
+/// START
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
+import { BeaconEvent } from "@tezos-x/octez.connect-dapp";
+import Logger from "../Logger";
+/// END
+
+const subscribeToEventOctezJs = async (loggerFun: Function) => {
+  const logger = new Logger(loggerFun);
+  /// START
+  const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
+  const wallet = new BeaconWallet({
+    name: "Beacon Docs octez.js",
+    network: { type: NetworkType.SHADOWNET },
+  });
+
+  Tezos.setWalletProvider(wallet);
+
+  await wallet.clearActiveAccount();
+
+  logger.log("Active account: ", await wallet.client.getActiveAccount());
+
+  wallet.client.subscribeToEvent(BeaconEvent.PAIR_SUCCESS as any, (data) => {
+    logger.log(`${BeaconEvent.PAIR_SUCCESS} triggered: `, data);
+  });
+  try {
+    await wallet.client.requestPermissions();
+  } catch (error) {
+    logger.log("Error: ", error?.message ?? error);
+  }
+  /// END
+};
+export default subscribeToEventOctezJs;

@@ -1,8 +1,8 @@
 import * as beacon from "@tezos-x/octez.connect-sdk";
 import * as ts from "typescript";
 
-import * as taquito from "@taquito/taquito";
-import * as taquitoWallet from "@taquito/beacon-wallet";
+import * as octezJs from "@tezos-x/octez.js";
+import * as octezJsWallet from "@tezos-x/octez.js-dapp-wallet";
 
 function replaceAll(string: string, search: string, replace: string) {
   return string.split(search).join(replace);
@@ -35,18 +35,18 @@ const rewriteImportsForRunner = (code: string) => {
     }
 
     match = trimmed.match(
-      /^import\s+\{([^}]+)\}\s+from\s+["']@taquito\/taquito["'];?\s*$/,
+      /^import\s+\{([^}]+)\}\s+from\s+["']@tezos-x\/octez\.js["'];?\s*$/,
     );
     if (match) {
-      rewritten.push(`const { ${match[1].trim()} } = taquito;`);
+      rewritten.push(`const { ${match[1].trim()} } = octezJs;`);
       continue;
     }
 
     match = trimmed.match(
-      /^import\s+\{([^}]+)\}\s+from\s+["']@taquito\/beacon-wallet["'];?\s*$/,
+      /^import\s+\{([^}]+)\}\s+from\s+["']@tezos-x\/octez\.js-dapp-wallet["'];?\s*$/,
     );
     if (match) {
-      rewritten.push(`const { ${match[1].trim()} } = taquitoWallet;`);
+      rewritten.push(`const { ${match[1].trim()} } = octezJsWallet;`);
       continue;
     }
 
@@ -187,15 +187,15 @@ export const runBeaconCode = (
   code = replaceAll(code, "console.log(", "progress(");
   code = rewriteImportsForRunner(code);
   code = ts.transpile(`({
-      run: async (beacon: any, taquito: any, taquitoWallet: any, progress: any): string => {
+      run: async (beacon: any, octezJs: any, octezJsWallet: any, progress: any): string => {
         Object.keys(beacon).forEach(key => {
           window[key] = beacon[key]
         })
-        Object.keys(taquito).forEach(key => {
-          window[key] = taquito[key]
+        Object.keys(octezJs).forEach(key => {
+          window[key] = octezJs[key]
         })
-        Object.keys(taquitoWallet).forEach(key => {
-          window[key] = taquitoWallet[key]
+        Object.keys(octezJsWallet).forEach(key => {
+          window[key] = octezJsWallet[key]
         })
         return (async () => {
           ${code};
@@ -218,7 +218,7 @@ export const runBeaconCode = (
         try {
           runnable = eval(code);
           runnable
-            .run(beacon, taquito, taquitoWallet, myLog)
+            .run(beacon, octezJs, octezJsWallet, myLog)
             .then((result: string) => {
               if (result) {
                 appendOutput("Returned:\n" + JSON.stringify(result, null, 2));

@@ -145,22 +145,22 @@ const Child = ({ code }) => {
   );
 };
 
-export const RunnableCode = ({ children, color, beacon, taquito }) => {
+export const RunnableCode = ({ children, color, beacon, octezJs }) => {
   return (
     <BrowserOnly fallback={<></>}>
       {() => (
         <Tabs
-          groupId="beaconOrTaquito"
+          groupId="beaconOrOctezJs"
           defaultValue="beacon"
           values={[
             { label: "Beacon", value: "beacon" },
-            { label: "Taquito", value: "taquito" },
+            { label: "octez.js", value: "octez.js" },
           ]}
         >
           <TabItem value="beacon">
             <Child code={children[0]} />
           </TabItem>
-          <TabItem value="taquito">
+          <TabItem value="octez.js">
             <Child code={children[1]} />
           </TabItem>
         </Tabs>

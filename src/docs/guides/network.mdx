@@ -13,11 +13,11 @@ import TabItem from "@theme/TabItem";
 ## Mainnet With Custom RPC
 
 <Tabs
-  groupId="octezConnectOrTaquitoN1"
+  groupId="octezConnectOrOctezJsN1"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -40,18 +40,17 @@ const result = await dAppClient.requestPermissions();
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito mainnet network
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js mainnet network
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://rpc.tzbeta.net");
-// Mainnet with different rpcUrl
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
+  name: "Beacon Docs octez.js",
   network: {
     type: NetworkType.MAINNET,
     rpcUrl: "https://rpc.tzbeta.net",
@@ -69,11 +68,11 @@ const result = await wallet.client.requestPermissions();
 ## Testnet
 
 <Tabs
-  groupId="octezConnectOrTaquitoN2"
+  groupId="octezConnectOrOctezJsN2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -93,18 +92,18 @@ const result = await dAppClient.requestPermissions();
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito shadownet network
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js shadownet network
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 // Shadownet with default rpcUrl
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
+  name: "Beacon Docs octez.js",
   network: { type: NetworkType.SHADOWNET },
 });
 
@@ -119,11 +118,11 @@ const result = await wallet.client.requestPermissions();
 ## Testnet With Custom RPC
 
 <Tabs
-  groupId="octezConnectOrTaquitoN3"
+  groupId="octezConnectOrOctezJsN3"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -146,18 +145,18 @@ const result = await dAppClient.requestPermissions();
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito shadownet network with RPC
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js shadownet network with RPC
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://rpc.tzkt.io/shadownet");
 // Shadownet with different rpcUrl
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
+  name: "Beacon Docs octez.js",
   network: {
     type: NetworkType.SHADOWNET,
     rpcUrl: "https://rpc.tzkt.io/shadownet",
@@ -175,11 +174,11 @@ const result = await wallet.client.requestPermissions();
 ## Custom Network
 
 <Tabs
-  groupId="octezConnectOrTaquitoN4"
+  groupId="octezConnectOrOctezJsN4"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
   <TabItem value="octez.connect">
@@ -206,26 +205,20 @@ const result = await dAppClient.requestPermissions();
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito custom network
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js custom network
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 // Custom network (eg. local development or latest testnet).
 // Not every wallet supports custom networks.
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
-  network: {
-    type: NetworkType.CUSTOM,
-    // e.g. a local node at "http://localhost:8732". Here we point to a public
-    // Shadownet RPC so the example can be run as-is.
-    name: "Shadownet (custom)",
-    rpcUrl: "https://rpc.shadownet.teztnets.com",
-  },
+  name: "Beacon Docs octez.js",
+  network: { type: NetworkType.CUSTOM },
 });
 
 Tezos.setWalletProvider(wallet);

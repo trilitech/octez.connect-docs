@@ -21,11 +21,11 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-  groupId="octezConnectOrTaquitoDAW2"
+  groupId="octezConnectOrOctezJsDAW2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
 <TabItem value="octez.connect">
@@ -43,21 +43,21 @@ dAppClient
   .then(() => {
     console.log("Disconnected.");
   })
-  .catch((err) => console.error(err.message));
+  .catch((err) => console.error(err?.message ?? err));
 ```
 
 </TabItem>
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito disconnect wallet 2
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
+// octez.js disconnect wallet 2
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import Logger from "../Logger";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
+  name: "Beacon Docs octez.js",
   network: { type: NetworkType.SHADOWNET },
 });
 
@@ -66,7 +66,7 @@ Tezos.setWalletProvider(wallet);
 try {
   await wallet.client.disconnect();
 } catch (err: any) {
-  logger.log("Error: ", err.message);
+  logger.log("Error: ", err?.message ?? err);
 }
 ```
 
@@ -86,11 +86,11 @@ This method ensures that all data linked to the active account is removed, and t
 > Note: Only for WalletConnect, `clearActiveAccount` will also resets all transport references behaving similarly to `disconnect`
 
 <Tabs
-  groupId="octezConnectOrTaquitoDAW2"
+  groupId="octezConnectOrOctezJsDAW2"
   defaultValue="octez.connect"
   values={[
     { label: "octez.connect", value: "octez.connect" },
-    { label: "taquito", value: "taquito" },
+    { label: "octez.js", value: "octez.js" },
   ]}
 >
 <TabItem value="octez.connect">
@@ -109,22 +109,22 @@ dAppClient
     const account = await dAppClient.getActiveAccount();
     console.log("Active Account", account);
   })
-  .catch((err) => console.error(err.message));
+  .catch((err) => console.error(err?.message ?? err));
 ```
 
 </TabItem>
 
-<TabItem value="taquito">
+<TabItem value="octez.js">
 
 ```ts live
-// taquito disconnect wallet
-import { TezosToolkit } from "@taquito/taquito";
-import { BeaconWallet } from "@taquito/beacon-wallet";
-
+// octez.js disconnect wallet
+import { TezosToolkit } from "@tezos-x/octez.js";
+import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
+
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
-  name: "Beacon Docs Taquito",
+  name: "Beacon Docs octez.js",
   network: { type: NetworkType.SHADOWNET },
 });
 
