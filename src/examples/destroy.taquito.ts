@@ -18,6 +18,8 @@ const destroyTaquito = async (loggerFun: Function) => {
 
   try {
     await wallet.disconnect();
+    await wallet.clearActiveAccount();
+    logger.log("Instance destroyed.");
   } catch (err: any) {
     logger.log("Error: ", err.message);
   }
