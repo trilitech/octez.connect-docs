@@ -3,7 +3,6 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   BeaconEvent,
-  DAppClient,
   NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-dapp";
@@ -55,6 +54,9 @@ const getOperationRequestTaquitoWithEvents = async (loggerFun: Function) => {
   const activeAccount = await wallet.client.getActiveAccount();
   if (!activeAccount) {
     await wallet.client.requestPermissions();
+  } else {
+    // set account again to trigger the handler above
+    await wallet.client.setActiveAccount(activeAccount);
   }
 
   /// END
