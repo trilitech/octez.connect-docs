@@ -29,8 +29,8 @@
     "@docusaurus/theme-live-codeblock": "^3.5.2",
     "@mdx-js/react": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
-    "@tezos-x/octez.connect-dapp": "5.0.0-beta.5",
-    "@tezos-x/octez.connect-sdk": "^5.0.0-beta.5",
+    "@tezos-x/octez.connect-dapp": "5.0.4",
+    "@tezos-x/octez.connect-sdk": "^5.0.4",
     "@tezos-x/octez.js": "^25.0.0",
     "@tezos-x/octez.js-contracts-library": "^25.0.0",
     "@tezos-x/octez.js-dapp-wallet": "^25.0.0",
@@ -66,7 +66,7 @@
     "node": ">=22"
   },
   "overrides": {
-    "@tezos-x/octez.connect-transport-postmessage": "5.0.0-beta.5",
-    "@tezos-x/octez.connect-wallet": "5.0.0-beta.5"
+    "@tezos-x/octez.connect-transport-postmessage": "5.0.4",
+    "@tezos-x/octez.connect-wallet": "5.0.4"
   }
 }
