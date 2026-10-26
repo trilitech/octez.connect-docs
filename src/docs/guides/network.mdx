@@ -49,6 +49,7 @@ import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
 import { NetworkType } from "@tezos-x/octez.connect-sdk";
 
 const Tezos = new TezosToolkit("https://rpc.tzbeta.net");
+// Mainnet with different rpcUrl
 const wallet = new BeaconWallet({
   name: "Beacon Docs octez.js",
   network: {
@@ -218,7 +219,13 @@ const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 // Not every wallet supports custom networks.
 const wallet = new BeaconWallet({
   name: "Beacon Docs octez.js",
-  network: { type: NetworkType.CUSTOM },
+  network: {
+    type: NetworkType.CUSTOM,
+    // e.g. a local node at "http://localhost:8732". Here we point to a public
+    // Shadownet RPC so the example can be run as-is.
+    name: "Shadownet (custom)",
+    rpcUrl: "https://rpc.shadownet.teztnets.com",
+  },
 });
 
 Tezos.setWalletProvider(wallet);
