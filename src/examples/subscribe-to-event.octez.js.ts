@@ -1,7 +1,7 @@
 /// START
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { BeaconEvent } from "@tezos-x/octez.connect-dapp";
+import { BeaconEvent, NetworkType } from "@tezos-x/octez.connect-dapp";
 import Logger from "../Logger";
 /// END
 
