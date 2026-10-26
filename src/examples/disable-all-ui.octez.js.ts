@@ -15,6 +15,7 @@ const disableUIOctezJs = async (loggerFun: Function) => {
   const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs octez.js",
+    network: { type: NetworkType.SHADOWNET },
     disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
     eventHandlers: {
       // To keep the pairing alert, we have to add the following default event handlers back

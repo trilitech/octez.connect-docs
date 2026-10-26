@@ -19,6 +19,7 @@ const overrideAlertAbortedOctezJs = async (loggerFun: Function) => {
   const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
   const wallet = new BeaconWallet({
     name: "Beacon Docs octez.js",
+    network: { type: NetworkType.SHADOWNET },
     eventHandlers: {
       [BeaconEvent.PAIR_INIT]: {
         // Every BeaconEvent can be overriden by passing a handler here.
