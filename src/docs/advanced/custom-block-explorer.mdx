@@ -117,6 +117,7 @@ class TzStatsBlockExplorer extends BlockExplorer {
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
   blockExplorer: new TzStatsBlockExplorer(),
 });
 

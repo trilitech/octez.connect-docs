@@ -51,10 +51,8 @@ const customBlockExplorerOctezJs = async (loggerFun: Function) => {
   const wallet = new BeaconWallet({
     name: "Beacon Docs octez.js",
     network: { type: NetworkType.SHADOWNET },
-    // NOTE: OctezJs's BeaconWallet is typed against @airgap/beacon-dapp.
-    // We avoid importing @airgap/* directly in docs/examples.
     blockExplorer: new TzStatsBlockExplorer(),
-  } as any);
+  });
 
   try {
     logger.log("Requesting permissions...");
