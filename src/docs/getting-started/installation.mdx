@@ -36,9 +36,8 @@ yarn add @tezos-x/octez.connect-sdk
 
 ## dApp with Contract Interaction
 
-If you plan to interact with contracts, you will most likely instead want to
-install `octez.js`. octez.js installs the `octez.connect` SDK as a dependency, so it
-doesn't have to be installed manually.
+If you plan to interact with contracts, you will most likely want to also
+install `octez.js`.
 
 <Tabs
   groupId="packet-manager"
@@ -51,15 +50,18 @@ doesn't have to be installed manually.
 <TabItem value="npm">
 
 ```bash
-npm install --save @tezos-x/octez.js @tezos-x/octez.js-dapp-wallet
+npm install --save @tezos-x/octez.js
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add @tezos-x/octez.js @tezos-x/octez.js-dapp-wallet
+yarn add @tezos-x/octez.js
 ```
 
 </TabItem>
 </Tabs>
+
+Note however that if you ever install
+`@tezos-x/octez.js-dapp-wallet`, it will automatically install `@tezos-x/octez.connect-dapp` as a dependency.
