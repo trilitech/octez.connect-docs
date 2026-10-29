@@ -20,9 +20,13 @@ const customBlockExplorerOctezJs = async (loggerFun: Function) => {
         [NetworkType.SHADOWNET]: "https://shadownet.tzkt.io/",
         [NetworkType.SEOULNET]: "https://seoulnet.tzkt.io/",
         [NetworkType.TALLINNNET]: "https://tallinnnet.tzkt.io/",
+        [NetworkType.USHUAIANET]: "https://ushuaianet.tzkt.io/",
         [NetworkType.WEEKLYNET]: "https://tzkt.io",
         [NetworkType.DAILYNET]: "https://tzkt.io",
         [NetworkType.TEZLINK_SHADOWNET]: "https://tzkt.io",
+        [NetworkType.TEZOSX_PREVIEWNET]: "https://previewnet.tezosx.tzkt.io",
+        [NetworkType.TEZOSX_MAINNET]: "https://etherlink.tzkt.io",
+        [NetworkType.TEZOSX_SHADOWNET]: "https://shadownet.etherlink.tzkt.io",
         [NetworkType.CUSTOM]: "https://tzkt.io",
       },
     ) {
