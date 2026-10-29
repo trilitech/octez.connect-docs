@@ -51,6 +51,7 @@ import { Regions } from "@tezos-x/octez.connect-sdk";
 const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
 const wallet = new BeaconWallet({
   name: "Beacon Docs octez.js",
+  network: { type: NetworkType.SHADOWNET },
   matrixNodes: {
     [Regions.EUROPE_WEST]: ["beacon-node-1.octez.io:8448"],
   },
