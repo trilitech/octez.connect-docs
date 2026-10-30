@@ -263,7 +263,6 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import {
   BeaconEvent,
-  DAppClient,
   NetworkType,
   TezosOperationType,
 } from "@tezos-x/octez.connect-sdk";
@@ -301,6 +300,9 @@ wallet.client.subscribeToEvent(
 const activeAccount = await wallet.client.getActiveAccount();
 if (!activeAccount) {
   await wallet.client.requestPermissions();
+} else {
+  // set account again to trigger the handler above
+  await wallet.client.setActiveAccount(activeAccount);
 }
 ```
 
@@ -349,21 +351,22 @@ network: { type: NetworkType.SHADOWNET } });
 
   </TabItem>
   <TabItem value="taquito">
-  
+
     ```ts live
-import { NetworkType } from "@tezos-x/octez.connect-sdk";
     // taquito destroy
+    import { NetworkType } from "@tezos-x/octez.connect-sdk";
     import { TezosToolkit } from "@taquito/taquito";
     import { BeaconWallet }  from "@taquito/beacon-wallet";;
-    
+
     const Tezos = new TezosToolkit("https://rpc.shadownet.teztnets.com");
     const wallet = new BeaconWallet({ name: "Beacon Docs Taquito",
-network: { type: NetworkType.SHADOWNET } });
+                                      network: { type: NetworkType.SHADOWNET } });
 
     Tezos.setWalletProvider(wallet);
 
     try {
       await wallet.disconnect();
+      logger.log("Wallet disconnected");
     } catch (err: any) {
       logger.log("Error: ", err.message);
     }

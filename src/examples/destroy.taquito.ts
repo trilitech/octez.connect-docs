@@ -18,6 +18,7 @@ const destroyTaquito = async (loggerFun: Function) => {
 
   try {
     await wallet.disconnect();
+    logger.log("Wallet disconnected");
   } catch (err: any) {
     logger.log("Error: ", err.message);
   }
