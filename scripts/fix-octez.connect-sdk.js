@@ -2,7 +2,7 @@ const fs = require("fs");
 
 function patchIndexedDBStorageInitAwait() {
   const storagePath =
-    "./node_modules/@tezos-x/octez.connect-core/dist/cjs/storage/IndexedDBStorage.js";
+    "./node_modules/@tezos-x/octez.connect-core/dist/cjs/src/storage/IndexedDBStorage.js";
 
   try {
     let source = fs.readFileSync(storagePath, { encoding: "utf8" });
@@ -29,54 +29,5 @@ function patchIndexedDBStorageInitAwait() {
     // Best-effort: docs should still work even if patching fails.
   }
 }
-
-// const content = fs.readFileSync(
-//     "./node_modules/@tezos-x/octez.connect-sdk/package.json",
-//     { encoding: "utf8" }
-//   );
-
-//   const newContent = content
-//     .split("dist/cjs/index.js")
-//     .join("./dist/walletbeacon.min.js");
-
-//   fs.writeFileSync("./node_modules/@tezos-x/octez.connect-sdk/package.json", newContent, {
-//     encoding: "utf8",
-//   });
-
-const content = fs.readFileSync(
-  "./node_modules/@tezos-x/octez.connect-sdk/dist/walletbeacon.min.js",
-  { encoding: "utf8" }
-);
-
-// Keep the published entrypoints working for both webpack (ESM) and CJS consumers.
-// Some bundlers (like Docusaurus/webpack) prefer the ESM export and will fail hard
-// if `dist/esm/index.js` is missing.
-fs.writeFileSync(
-  "./node_modules/@tezos-x/octez.connect-sdk/dist/cjs/index.js",
-  content,
-  { encoding: "utf8" }
-);
-
-fs.mkdirSync("./node_modules/@tezos-x/octez.connect-sdk/dist/esm", {
-  recursive: true,
-});
-fs.writeFileSync(
-  "./node_modules/@tezos-x/octez.connect-sdk/dist/esm/index.js",
-  content,
-  { encoding: "utf8" }
-);
-
-// Ensure types can still be resolved via `types: dist/esm/index.d.ts`.
-try {
-  const cjsTypes = fs.readFileSync(
-    "./node_modules/@tezos-x/octez.connect-sdk/dist/cjs/index.d.ts",
-    { encoding: "utf8" }
-  );
-  fs.writeFileSync(
-    "./node_modules/@tezos-x/octez.connect-sdk/dist/esm/index.d.ts",
-    cjsTypes,
-    { encoding: "utf8" }
-  );
-} catch (_) {}
 
 patchIndexedDBStorageInitAwait();

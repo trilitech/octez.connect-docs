@@ -1,0 +1,13 @@
+/// START
+import { BEACON_VERSION, SDK_VERSION } from "@tezos-x/octez.connect-dapp";
+import Logger from "../Logger";
+/// END
+
+const infoVersionOctezJs = async (loggerFun: Function) => {
+  const logger = new Logger(loggerFun);
+  /// START
+  logger.log("SDK Version", SDK_VERSION);
+  logger.log("Beacon Version", BEACON_VERSION);
+  /// END
+};
+export default infoVersionOctezJs;
