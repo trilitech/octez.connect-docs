@@ -93,6 +93,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
 
   try {
     await dAppClient.requestSignPayload({
+      signingType: SigningType.MICHELINE,
       payload:
         "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6c6f20576f726c64",
     });
@@ -121,6 +122,7 @@ wallet.client.subscribeToEvent(
 
     try {
       await wallet.client.requestSignPayload({
+        signingType: SigningType.MICHELINE,
         payload:
           "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6c6f20576f726c64",
       });
@@ -242,6 +244,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
 
   try {
     await dAppClient.requestSignPayload({
+      signingType: SigningType.MICHELINE,
       payload:
         "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6c6f20576f726c64",
     });
@@ -270,6 +273,7 @@ wallet.client.subscribeToEvent(
 
     try {
       await wallet.client.requestSignPayload({
+        signingType: SigningType.MICHELINE,
         payload:
           "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6c6f20576f726c64",
       });
@@ -299,7 +303,11 @@ The end result should look like this:
 <TabItem value="octez.connect">
 
 ```ts
-import { DAppClient, BeaconEvent } from "@tezos-x/octez.connect-sdk";
+import {
+  DAppClient,
+  BeaconEvent,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 import { NetworkType } from "@tezos-x/octez.connect-types";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
@@ -346,6 +354,7 @@ dAppClient.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
 
   try {
     await dAppClient.requestSignPayload({
+      signingType: SigningType.MICHELINE,
       payload:
         "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6f20576f726c64",
     });
@@ -364,7 +373,11 @@ dAppClient.requestPermissions();
 ```ts
 import { TezosToolkit } from "@tezos-x/octez.js";
 import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet";
-import { BeaconEvent, NetworkType } from "@tezos-x/octez.connect-sdk";
+import {
+  BeaconEvent,
+  NetworkType,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
 import { BroadcastChannel, createLeaderElection } from "broadcast-channel";
 
 const channel = new BroadcastChannel("beacon-test");
@@ -413,6 +426,7 @@ wallet.client.subscribeToEvent(
 
     try {
       await wallet.client.requestSignPayload({
+        signingType: SigningType.MICHELINE,
         payload:
           "05010000004254657a6f73205369676e6564204d6573736167653a207465737455726c20323032332d30322d30385431303a33363a31382e3435345a2048656c6f20576f726c64",
       });

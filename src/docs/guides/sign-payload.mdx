@@ -8,6 +8,22 @@ import TabItem from "@theme/TabItem";
 The `SignPayload` functionality in octez.connect allows developers to sign various types of payloads.
 This page provides some examples for signing payloads in different formats: HEX Prefixed with 05, HEX Prefixed with 03, and RAW.
 
+## Payload validation
+
+Since version 5.0.6, octez.connect checks that the payload of a sign request matches its signing type, both in the dApp (`requestSignPayload` throws) and in wallets built on `WalletClient` (the request is answered with an error and never reaches the wallet application):
+
+| Signing type            | Accepted payload                                                                                                                                                                                                                    |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SigningType.MICHELINE` | Hex string starting with `05`                                                                                                                                                                                                       |
+| `SigningType.OPERATION` | Hex string starting with `03`                                                                                                                                                                                                       |
+| `SigningType.RAW`       | Any non-empty string, **except** one starting with `03` followed by two hex digits, whatever comes after (for example `03ab`, `03abcd ` or `03abzz`). Such a payload is an operation and must be sent with `SigningType.OPERATION`. |
+
+- An optional `0x` prefix is accepted. For `MICHELINE` and `OPERATION` it is removed before the request is sent to the wallet.
+- If `signingType` is omitted, it defaults to `SigningType.RAW`. A value that is not one of the three signing types is an error.
+- A `RAW` payload starting with `01`, `02`, `11`, `12` or `13` followed by two hex digits (Tezos consensus watermarks) is accepted, but a warning is logged.
+
+A wallet built on `WalletClient` answers a request that fails these checks with `BeaconErrorType.SIGNATURE_TYPE_NOT_SUPPORTED` (missing or unknown signing type) or `BeaconErrorType.PARAMETERS_INVALID_ERROR` (payload does not match the signing type).
+
 ## HEX Prefixed With 05
 
 <Tabs
@@ -73,6 +89,30 @@ console.log(`Signature: ${response.signature}`);
 
 </TabItem>
 </Tabs>
+
+### Building a signed message from text
+
+The payload above is a framed text message: `05` + `01` + the 4-byte big-endian **byte** length of the UTF-8 text + the UTF-8 bytes, all in hex. By convention the text starts with `Tezos Signed Message: `, followed by the dApp's domain, a timestamp and the message.
+
+Since version 5.0.6, you can build this payload with `encodeTezosSignedMessage` instead of encoding it by hand:
+
+```ts
+import {
+  encodeTezosSignedMessage,
+  SigningType,
+} from "@tezos-x/octez.connect-sdk";
+
+const payload = encodeTezosSignedMessage(
+  `Tezos Signed Message: mydapp.com ${new Date().toISOString()} Hello world!`,
+);
+
+const response = await dAppClient.requestSignPayload({
+  signingType: SigningType.MICHELINE,
+  payload,
+});
+```
+
+Because the payload starts with `05`, the resulting signature can never be replayed as a Tezos operation (which starts with `03`).
 
 ## HEX Prefixed With 03
 
@@ -140,6 +180,8 @@ console.log(`Signature: ${response.signature}`);
 
 :::warning
 Not all wallets support the `RAW` signing type. Additionally, the signatures can be different depending on the wallet that was used. For the preferred way of signing arbitrary data, please check the docs here: https://octez-js.tezos.com/docs/signing/#generating-a-signature-with-beacon-sdk
+
+To sign text, prefer a `MICHELINE` payload built with `encodeTezosSignedMessage` (see [above](#building-a-signed-message-from-text)). A `RAW` payload that starts with `03` followed by two hex digits is refused (see [Payload validation](#payload-validation)).
 :::
 
 <Tabs
