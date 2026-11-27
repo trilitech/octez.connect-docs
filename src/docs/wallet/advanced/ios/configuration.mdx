@@ -8,11 +8,11 @@ import TOCInline from "@theme/TOCInline";
 
 ## Custom storage
 
-octez.connect iOS SDK is not a stateless library and bases part of its functionality on preserved data. By default the SDK stores its data in [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults). However, it is possible to override the default storage and provide your own implementation. The `BeaconCore` package ships with 3 public protocols that can be satisfied and provided externally during the `Beacon.WalletClient` setup: `Storage`, `ExtendedStorage` (an extended version of `Storage`) and `SecureStorage`.
+octez.connect iOS SDK is not a stateless library and bases part of its functionality on preserved data. By default the SDK stores its data in [`UserDefaults`](https://developer.apple.com/documentation/foundation/userdefaults). However, it is possible to override the default storage and provide your own implementation. The `OctezConnectCore` package ships with 3 public protocols that can be satisfied and provided externally during the `Beacon.WalletClient` setup: `Storage`, `ExtendedStorage` (an extended version of `Storage`) and `SecureStorage`.
 
 ```swift
-import BeaconCore
-import BeaconClientWallet
+import OctezConnectCore
+import OctezConnectClientWallet
 
 Beacon.WalletClient.create(
     with: .init(
@@ -39,13 +39,13 @@ struct MySecureStorage: SecureStorage {
 
 Some packages may require additional data to store. Those packages usually come with their own storage plugin protocols which can be satisfied and provided externally.
 
-#### `BeaconTransportP2PMatrix`
+#### `OctezConnectTransportP2PMatrix`
 
-The `BeaconTransportP2PMatrix` package defines `P2PMatrixStoragePlugin` and `ExtendedP2PMatrixStoragePlugin` protocols.
+The `OctezConnectTransportP2PMatrix` package defines `P2PMatrixStoragePlugin` and `ExtendedP2PMatrixStoragePlugin` protocols.
 
 ```swift
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 Beacon.WalletClient.create(
     with: .init(
@@ -67,11 +67,11 @@ struct MyExtendedP2PMatrixStoragePlugin: ExtendedP2pMatrixStoragePlugin {
 
 ## Custom Matrix nodes
 
-You can provide your own Matrix node URLs while setting `Beacon.WalletClient` up with the `BeaconTransportP2PMatrix` transport layer. Use the `Transport.P2P.Matrix.connection` factory arguments to set your values.
+You can provide your own Matrix node URLs while setting `Beacon.WalletClient` up with the `OctezConnectTransportP2PMatrix` transport layer. Use the `Transport.P2P.Matrix.connection` factory arguments to set your values.
 
 ```swift
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 Beacon.WalletClient.create(
     ...,
@@ -81,12 +81,12 @@ Beacon.WalletClient.create(
 
 ## Custom URLSession
 
-You can use your own [`URLSession`](https://developer.apple.com/documentation/foundation/urlsession) implementation while setting `Beacon.WalletClient` up with `BeaconTransportP2PMatrix` transport layer. Use the `Transport.P2P.Matrix.connection` factory arguments to provide an instance.
+You can use your own [`URLSession`](https://developer.apple.com/documentation/foundation/urlsession) implementation while setting `Beacon.WalletClient` up with `OctezConnectTransportP2PMatrix` transport layer. Use the `Transport.P2P.Matrix.connection` factory arguments to provide an instance.
 
 ```swift
 import Foundation
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 Beacon.WalletClient.create(
     ...,

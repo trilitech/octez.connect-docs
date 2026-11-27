@@ -5,7 +5,7 @@ sidebar_label: Migrating from beacon-sdk
 
 # Migrating from beacon-sdk to octez.connect-sdk
 
-During February 2026, the `beacon-sdk` packages have been renamed and moved to the `@tezos-x` namespace under `octez.connect`. This guide will help you migrate your project to the new package names.
+During February 2026, the `beacon-sdk` packages have been renamed and moved to the `@tezos-x` namespace under `octez.connect`. This guide will help you migrate your project to the new package names. If you use the Beacon Android or iOS SDK, see [Mobile SDKs (Android and iOS)](#mobile-sdks-android-and-ios).
 
 ## Overview
 
@@ -120,3 +120,10 @@ If you encounter issues:
 
 - **Clean install**: Delete `node_modules` and your lockfile (`package-lock.json` or `yarn.lock`) and reinstall.
 - **Check peer dependencies**: Ensure all related packages are updated to compatible versions.
+
+## Mobile SDKs (Android and iOS)
+
+The Beacon Android and iOS SDKs have also been replaced by the octez.connect Android and iOS SDKs, maintained by Trilitech. To migrate, follow the upstream guides:
+
+- [Migrating from the Beacon Android SDK](https://github.com/trilitech/octez.connect-android-sdk/blob/develop/docs/migration-android.md)
+- [Migrating from the Beacon iOS SDK](https://github.com/trilitech/octez.connect-ios-sdk/blob/develop/docs/migration-ios.md)

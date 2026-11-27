@@ -12,8 +12,8 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 The octez.connect SDK consists of multiple repositories:
 
 - **[octez.connect](https://github.com/trilitech/octez.connect)** - The main TypeScript SDK for web developers
-- **[beacon-android-sdk](https://github.com/airgap-it/beacon-android-sdk)** - SDK for Android developers
-- **[beacon-ios-sdk](https://github.com/airgap-it/beacon-ios-sdk)** - SDK for iOS developers
+- **[octez.connect-android-sdk](https://github.com/trilitech/octez.connect-android-sdk)** - SDK for Android developers
+- **[octez.connect-ios-sdk](https://github.com/trilitech/octez.connect-ios-sdk)** - SDK for iOS developers
 - **[octez.connect-docs](https://github.com/trilitech/octez.connect-docs)** - Documentation website
 
 ## Prerequisites
@@ -122,8 +122,8 @@ git checkout -b fix/your-bug-fix-name
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/airgap-it/beacon-android-sdk.git
-   cd beacon-android-sdk
+   git clone https://github.com/trilitech/octez.connect-android-sdk.git
+   cd octez.connect-android-sdk
    ```
 
 2. **Open in Android Studio**
@@ -141,8 +141,8 @@ git checkout -b fix/your-bug-fix-name
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/airgap-it/beacon-ios-sdk.git
-   cd beacon-ios-sdk
+   git clone https://github.com/trilitech/octez.connect-ios-sdk.git
+   cd octez.connect-ios-sdk
    ```
 
 2. **Open in Xcode**
@@ -207,11 +207,12 @@ See our [wallet integration guide](/wallet/getting-started/web/getting-started) 
 **Android:**
 
 ```groovy
-implementation "com.github.airgap-it:beacon-android-sdk:$beacon_version"
+implementation "com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion"
+implementation "com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion"
 ```
 
 **iOS:**
-Add the Beacon iOS SDK to your project via Swift Package Manager or CocoaPods.
+Add the octez.connect iOS SDK to your project via Swift Package Manager or CocoaPods.
 
 #### Custom URL Scheme (iOS Wallets)
 

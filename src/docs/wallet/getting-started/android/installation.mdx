@@ -53,8 +53,8 @@ allprojects {
 
 2. Add the dependencies:
 
-[![stable](https://img.shields.io/github/v/tag/airgap-it/beacon-android-sdk?label=stable&sort=semver)](https://github.com/airgap-it/beacon-android-sdk)
-[![latest](https://img.shields.io/github/v/tag/airgap-it/beacon-android-sdk?color=orange&include_prereleases&label=latest)](https://github.com/airgap-it/beacon-android-sdk)
+[![stable](https://img.shields.io/github/v/tag/trilitech/octez.connect-android-sdk?label=stable&sort=semver)](https://github.com/trilitech/octez.connect-android-sdk)
+[![latest](https://img.shields.io/github/v/tag/trilitech/octez.connect-android-sdk?color=orange&include_prereleases&label=latest)](https://github.com/trilitech/octez.connect-android-sdk)
 
 <Tabs
   groupId="language"
@@ -69,28 +69,28 @@ allprojects {
 
 ```groovy
 dependencies {
-    def beacon_version = "x.y.z"
+    def octezConnectVersion = "x.y.z"
 
     // REQUIRED, :core
-    implementation "com.github.airgap-it.beacon-android-sdk:core:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion"
 
     // optional, :client-wallet
-    implementation "com.github.airgap-it.beacon-android-sdk:client-wallet:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion"
     // optional, :client-wallet-compat
-    implementation "com.github.airgap-it.beacon-android-sdk:client-wallet-compat:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:client-wallet-compat:$octezConnectVersion"
 
     // optional, :blockchain-substrate
-    implementation "com.github.airgap-it.beacon-android-sdk:blockchain-substrate:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:blockchain-substrate:$octezConnectVersion"
     // optional, :blockchain-tezos
-    implementation "com.github.airgap-it.beacon-android-sdk:blockchain-tezos:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:blockchain-tezos:$octezConnectVersion"
 
     // optional, :transport-p2p-matrix
-    implementation "com.github.airgap-it.beacon-android-sdk:transport-p2p-matrix:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:transport-p2p-matrix:$octezConnectVersion"
 
     ---
 
     // alternatively, all modules
-    implementation "com.github.airgap-it:beacon-android-sdk:$beacon_version"
+    implementation "com.github.trilitech:octez.connect-android-sdk:$octezConnectVersion"
 }
 ```
 
@@ -100,28 +100,28 @@ dependencies {
 
 ```kotlin
 dependencies {
-    val beaconVersion = "x.y.z"
+    val octezConnectVersion = "x.y.z"
 
     // REQUIRED, core
-    implementation("com.github.airgap-it.beacon-android-sdk:core:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion")
 
     // optional, client-wallet
-    implementation("com.github.airgap-it.beacon-android-sdk:client-wallet:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion")
     // optional, client-wallet-compat
-    implementation("com.github.airgap-it.beacon-android-sdk:client-wallet-compat:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:client-wallet-compat:$octezConnectVersion")
 
     // optional, blockchain-substrate
-    implementation("com.github.airgap-it.beacon-android-sdk:blockchain-substrate:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:blockchain-substrate:$octezConnectVersion")
     // optional, blockchain-tezos
-    implementation("com.github.airgap-it.beacon-android-sdk:blockchain-tezos:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:blockchain-tezos:$octezConnectVersion")
 
     // optional, transport-p2p-matrix
-    implementation("com.github.airgap-it.beacon-android-sdk:transport-p2p-matrix:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:transport-p2p-matrix:$octezConnectVersion")
 
     ---
 
     // alternatively, all modules
-    implementation("com.github.airgap-it:beacon-android-sdk:$beaconVersion")
+    implementation("com.github.trilitech:octez.connect-android-sdk:$octezConnectVersion")
 }
 ```
 
@@ -196,8 +196,8 @@ See the list of known issues and how to fix them if you run into problems after 
 ```groovy
 def withoutJna = { exclude group: "net.java.dev.jna" }
 
-implementation "com.github.airgap-it.beacon-android-sdk:core:$beacon_version", withoutJna
-implementation "com.github.airgap-it.beacon-android-sdk:client-wallet:$beacon_version", withoutJna
+implementation "com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion", withoutJna
+implementation "com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion", withoutJna
 ...
 
 def jna_version = "x.y.z"
@@ -214,8 +214,8 @@ fun ModuleDependency.excludeJna(): ModuleDependency = apply {
     exclude(group = "net.java.dev.jna")
 }
 
-implementation("com.github.airgap-it.beacon-android-sdk:core:$beaconVersion") { withoutJna() }
-implementation("com.github.airgap-it.beacon-android-sdk:client-wallet:$beaconVersion") { withoutJna() }
+implementation("com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion") { withoutJna() }
+implementation("com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion") { withoutJna() }
 ...
 
 val jnaVersion = "x.y.z"
