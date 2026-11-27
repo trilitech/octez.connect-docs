@@ -229,7 +229,7 @@ func substrateAccount(network: Substrate.Network) throws -> Substrate.Account {
 }
 
 func tezosAccount(network: Tezos.Network) throws -> Tezos.Account {
-    try Tezos.Network(
+    try Tezos.Account(
         publicKey: "tezosPublicKey",
         address: "tezosAddress",
         network: network
@@ -299,7 +299,7 @@ class BeaconExample {
     var beaconWallet: Beacon.WalletClient!
 
     let dApp = Beacon.P2PPeer(
-        id: "0b02d44c-de33-b5ab-7730-ff8e62f61869" /* TODO: change me */,,
+        id: "0b02d44c-de33-b5ab-7730-ff8e62f61869" /* TODO: change me */,
         name: "My dApp",
         publicKey: "6c7870aa1e42477fd7c2baaf4763bd826971e470772f71a0a388c1763de3ea1e" /* TODO: change me */,
         relayServer: "beacon-node-1.octez.io" /* TODO: change me */,
@@ -315,7 +315,7 @@ class BeaconExample {
     }
 
     func tezosAccount(network: Tezos.Network) throws -> Tezos.Account {
-        try Tezos.Network(
+        try Tezos.Account(
             publicKey: "9ae0875d510904b0b15d251d8def1f5f3353e9799841c0ed6d7ac718f04459a0" /* TODO: change me */,
             address: "tz1SkbBZg15BXPRkYCrSzhY6rq4tKGtpUSWv" /* TODO: change me */,
             network: network
