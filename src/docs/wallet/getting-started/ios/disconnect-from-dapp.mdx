@@ -52,8 +52,8 @@ beaconWallet.removeAllPeers { result in
 
 The following example extends the code presented in the [Connect to a dApp](connect-to-dapp#example-code) guide. The example class listens for incoming requests from a dApp, waits 1s and cancels connection.
 
-[![stable](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?label=stable&sort=semver)](https://github.com/airgap-it/beacon-ios-sdk)
-[![latest](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?color=orange&include_prereleases&label=latest)](https://github.com/airgap-it/beacon-ios-sdk)
+[![stable](https://img.shields.io/github/v/tag/trilitech/octez.connect-ios-sdk?label=stable&sort=semver)](https://github.com/trilitech/octez.connect-ios-sdk)
+[![latest](https://img.shields.io/github/v/tag/trilitech/octez.connect-ios-sdk?color=orange&include_prereleases&label=latest)](https://github.com/trilitech/octez.connect-ios-sdk)
 
 <Tabs
   groupId="package-manager"
@@ -68,14 +68,14 @@ The following example extends the code presented in the [Connect to a dApp](conn
 
 ```swift title="Package.swift"
 dependencies: [
-    .package(url: "https://github.com/airgap-it/beacon-ios-sdk", from: "x.y.z")
+    .package(url: "https://github.com/trilitech/octez.connect-ios-sdk", from: "x.y.z")
 ],
 ```
 
 Or in Xcode open the `Add Package Dependency` window (as described in [the official guide](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)) and enter the `Beacon iOS SDK` GitHub repository URL
 
 ```
-https://github.com/airgap-it/beacon-ios-sdk
+https://github.com/trilitech/octez.connect-ios-sdk
 ```
 
 </TabItem>
@@ -86,11 +86,11 @@ https://github.com/airgap-it/beacon-ios-sdk
 target 'MyTarget' do
     use_frameworks!
 
-    pod 'BeaconCore', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconClientWallet', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconBlockchainSubstrate', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconBlockchainTezos', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconTransportP2PMatrix', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectCore', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectClientWallet', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectBlockchainSubstrate', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectBlockchainTezos', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectTransportP2PMatrix', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
 end
 ```
 
@@ -100,11 +100,11 @@ end
 
 ```swift title="BeaconExample.swift"
 import Foundation
-import BeaconCore
-import BeaconBlockchainSubstrate
-import BeaconBlockchainTezos
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectCore
+import OctezConnectBlockchainSubstrate
+import OctezConnectBlockchainTezos
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 class BeaconExample {
     var beaconWallet: Beacon.WalletClient!

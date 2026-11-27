@@ -87,8 +87,8 @@ allprojects {
 
 </Tabs>
 
-[![stable](https://img.shields.io/github/v/tag/airgap-it/beacon-android-sdk?label=stable&sort=semver)](https://github.com/airgap-it/beacon-android-sdk)
-[![latest](https://img.shields.io/github/v/tag/airgap-it/beacon-android-sdk?color=orange&include_prereleases&label=latest)](https://github.com/airgap-it/beacon-android-sdk)
+[![stable](https://img.shields.io/github/v/tag/trilitech/octez.connect-android-sdk?label=stable&sort=semver)](https://github.com/trilitech/octez.connect-android-sdk)
+[![latest](https://img.shields.io/github/v/tag/trilitech/octez.connect-android-sdk?color=orange&include_prereleases&label=latest)](https://github.com/trilitech/octez.connect-android-sdk)
 
 <Tabs
   groupId="language"
@@ -104,13 +104,13 @@ allprojects {
 ```groovy title="app/build.gradle"
 dependencies {
     // Beacon
-    def beacon_version = "x.y.z"
+    def octezConnectVersion = "x.y.z"
 
-    implementation "com.github.airgap-it.beacon-android-sdk:core:$beacon_version"
-    implementation "com.github.airgap-it.beacon-android-sdk:client-wallet:$beacon_version"
-    implementation "com.github.airgap-it.beacon-android-sdk:blockchain-substrate:$beacon_version"
-    implementation "com.github.airgap-it.beacon-android-sdk:blockchain-tezos:$beacon_version"
-    implementation "com.github.airgap-it.beacon-android-sdk:transport-p2p-matrix:$beacon_version"
+    implementation "com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion"
+    implementation "com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion"
+    implementation "com.github.trilitech.octez.connect-android-sdk:blockchain-substrate:$octezConnectVersion"
+    implementation "com.github.trilitech.octez.connect-android-sdk:blockchain-tezos:$octezConnectVersion"
+    implementation "com.github.trilitech.octez.connect-android-sdk:transport-p2p-matrix:$octezConnectVersion"
 
     // Android
     def android_activity_version = "x.y.z"
@@ -128,13 +128,13 @@ dependencies {
 ```kotlin title="app/build.gradle.kts"
 dependencies {
     // Beacon
-    val beaconVersion = "x.y.z"
+    val octezConnectVersion = "x.y.z"
 
-    implementation("com.github.airgap-it.beacon-android-sdk:core:$beaconVersion")
-    implementation("com.github.airgap-it.beacon-android-sdk:client-wallet:$beaconVersion")
-    implementation("com.github.airgap-it.beacon-android-sdk:blockchain-substrate:$beaconVersion")
-    implementation("com.github.airgap-it.beacon-android-sdk:blockchain-tezos:$beaconVersion")
-    implementation("com.github.airgap-it.beacon-android-sdk:transport-p2p-matrix:$beaconVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:core:$octezConnectVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:client-wallet:$octezConnectVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:blockchain-substrate:$octezConnectVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:blockchain-tezos:$octezConnectVersion")
+    implementation("com.github.trilitech.octez.connect-android-sdk:transport-p2p-matrix:$octezConnectVersion")
 
     // Android
     val androidActivityVersion = "x.y.z"
@@ -156,22 +156,22 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
-import it.airgap.beaconsdk.blockchain.substrate.data.SubstrateAccount
-import it.airgap.beaconsdk.blockchain.substrate.data.SubstrateNetwork
-import it.airgap.beaconsdk.blockchain.substrate.message.request.PermissionSubstrateRequest
-import it.airgap.beaconsdk.blockchain.substrate.message.response.PermissionSubstrateResponse
-import it.airgap.beaconsdk.blockchain.substrate.substrate
-import it.airgap.beaconsdk.blockchain.tezos.data.TezosAccount
-import it.airgap.beaconsdk.blockchain.tezos.data.TezosNetwork
-import it.airgap.beaconsdk.blockchain.tezos.message.request.PermissionTezosRequest
-import it.airgap.beaconsdk.blockchain.tezos.message.response.PermissionTezosResponse
-import it.airgap.beaconsdk.blockchain.tezos.tezos
-import it.airgap.beaconsdk.client.wallet.BeaconWalletClient
-import it.airgap.beaconsdk.core.data.BeaconError
-import it.airgap.beaconsdk.core.data.P2pPeer
-import it.airgap.beaconsdk.core.message.BeaconRequest
-import it.airgap.beaconsdk.core.message.ErrorBeaconResponse
-import it.airgap.beaconsdk.transport.p2p.matrix.p2pMatrix
+import io.tezos.octezconnect.blockchain.substrate.data.SubstrateAccount
+import io.tezos.octezconnect.blockchain.substrate.data.SubstrateNetwork
+import io.tezos.octezconnect.blockchain.substrate.message.request.PermissionSubstrateRequest
+import io.tezos.octezconnect.blockchain.substrate.message.response.PermissionSubstrateResponse
+import io.tezos.octezconnect.blockchain.substrate.substrate
+import io.tezos.octezconnect.blockchain.tezos.data.TezosAccount
+import io.tezos.octezconnect.blockchain.tezos.data.TezosNetwork
+import io.tezos.octezconnect.blockchain.tezos.message.request.PermissionTezosRequest
+import io.tezos.octezconnect.blockchain.tezos.message.response.PermissionTezosResponse
+import io.tezos.octezconnect.blockchain.tezos.tezos
+import io.tezos.octezconnect.client.wallet.BeaconWalletClient
+import io.tezos.octezconnect.core.data.BeaconError
+import io.tezos.octezconnect.core.data.P2pPeer
+import io.tezos.octezconnect.core.message.BeaconRequest
+import io.tezos.octezconnect.core.message.ErrorBeaconResponse
+import io.tezos.octezconnect.transport.p2p.matrix.p2pMatrix
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

@@ -34,9 +34,9 @@ See the [Installation](/wallet/getting-started/android/installation) page for mo
 <TabItem value="compat">
 
 ```kotlin
-import it.airgap.beaconsdk.client.wallet.BeaconWalletClient
-import it.airgap.beaconsdk.client.wallet.compat.BuildCallback
-import it.airgap.beaconsdk.client.wallet.compat.build
+import io.tezos.octezconnect.client.wallet.BeaconWalletClient
+import io.tezos.octezconnect.client.wallet.compat.BuildCallback
+import io.tezos.octezconnect.client.wallet.compat.build
 
 lateinit var beaconWallet: BeaconWalletClient
 
@@ -63,7 +63,7 @@ BeaconWalletClient.Builder("My App").apply {
 <TabItem value="coroutines">
 
 ```kotlin
-import it.airgap.beaconsdk.client.wallet.BeaconWalletClient
+import io.tezos.octezconnect.client.wallet.BeaconWalletClient
 
 myCoroutineScope.launch {
     val beaconWallet = BeaconWalletClient("My App") {
@@ -91,8 +91,8 @@ myCoroutineScope.launch {
 <TabItem value="compat">
 
 ```kotlin
-import it.airgap.beaconsdk.client.wallet.compat.OnNewMessageListener
-import it.airgap.beaconsdk.client.wallet.compat.connect
+import io.tezos.octezconnect.client.wallet.compat.OnNewMessageListener
+import io.tezos.octezconnect.client.wallet.compat.connect
 
 beaconWallet.connect(object : OnNewMessageListener {
     override fun onNewMessage(message: BeaconMessage) {
@@ -135,9 +135,9 @@ myCoroutineScope.launch {
 <TabItem value="compat">
 
 ```kotlin
-import it.airgap.beaconsdk.client.wallet.compat.SetCallback
-import it.airgap.beaconsdk.client.wallet.compat.addPeers
-import it.airgap.beaconsdk.core.data.P2pPeer
+import io.tezos.octezconnect.client.wallet.compat.SetCallback
+import io.tezos.octezconnect.client.wallet.compat.addPeers
+import io.tezos.octezconnect.core.data.P2pPeer
 
 val dApp = P2pPeer(
     id = "id",
@@ -163,7 +163,7 @@ beaconWallet.addPeers(dApp, callback = object : SetCallback {
 <TabItem value="coroutines">
 
 ```kotlin
-import it.airgap.beaconsdk.core.data.P2pPeer
+import io.tezos.octezconnect.core.data.P2pPeer
 
 val dApp = P2pPeer(
     id = "id",
@@ -200,8 +200,8 @@ myCoroutineScope.launch {
 <TabItem value="compat">
 
 ```kotlin
-import it.airgap.beaconsdk.client.wallet.compat.ResponseCallback
-import it.airgap.beaconsdk.client.wallet.compat.respond
+import io.tezos.octezconnect.client.wallet.compat.ResponseCallback
+import io.tezos.octezconnect.client.wallet.compat.respond
 
  beaconWallet.respond(response, object : ResponseCallback {
     override fun onSuccess() {

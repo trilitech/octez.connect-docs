@@ -13,8 +13,8 @@ import TOCInline from "@theme/TOCInline";
 Make sure you have added the following packages as your dependencies:
 
 ```
-BeaconCore
-BeaconClientWallet
+OctezConnectCore
+OctezConnectClientWallet
 ```
 
 You should have also decided which blockchains will be supported in your application and what transport layers to use to establish the communication. Make sure you have added the appropriate [Blockchain](installation#blockchain) and [Transport](installation#transport) packages as your dependencies as well.
@@ -36,11 +36,11 @@ Create a `Beacon.WalletClient` instance by providing your app's name, registerin
 The example below creates a new `Beacon.WalletClient` instance with default settings. See the [Configuration](/wallet/advanced/ios/configuration) guide to learn about more advanced setups.
 
 ```swift
-import BeaconCore
-import BeaconBlockchainSubstrate
-import BeaconBlockchainTezos
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectCore
+import OctezConnectBlockchainSubstrate
+import OctezConnectBlockchainTezos
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 ...
 
@@ -79,10 +79,10 @@ Currently only one instance of `Beacon.WalletClient` should be created per appli
 Subscribe to requests from the dApp by connecting to the Beacon network and listening to incoming requests.
 
 ```swift
-import BeaconCore
-import BeaconBlockchainSubstrate
-import BeaconBlockchainTezos
-import BeaconClientWallet
+import OctezConnectCore
+import OctezConnectBlockchainSubstrate
+import OctezConnectBlockchainTezos
+import OctezConnectClientWallet
 
 ...
 
@@ -116,8 +116,8 @@ func onTezosRequest(_ request: Result<BeaconRequest<Tezos>, Beacon.Error>) {
 To connect to a new dApp take the pairing request (obtained from, for example, a paring QR code) and transform it to `Beacon.P2PPeer`. Next, register the new instance of `Beacon.P2PPeer` in your wallet client.
 
 ```swift
-import BeaconCore
-import BeaconClientWallet
+import OctezConnectCore
+import OctezConnectClientWallet
 
 // highlight-start
 // replace placeholder values with data provided in the dApp's pairing request
@@ -150,10 +150,10 @@ Having received a request, you can create a response and send it back to the dAp
 The first request your app receives from a dApp is a permission request. The example below shows how to respond to it in the most basic way. To get more information about other kinds of requests or learn more advanced use cases see the Blockchain <!-- [Blockchains](blockchains) TODO: set proper link --> guides.
 
 ```swift
-import BeaconCore
-import BeaconBlockchainSubstrate
-import BeaconBlockchainTezos
-import BeaconClientWallet
+import OctezConnectCore
+import OctezConnectBlockchainSubstrate
+import OctezConnectBlockchainTezos
+import OctezConnectClientWallet
 
 func onSubstrateRequest(_ request: Result<BeaconRequest<Substrate>, Beacon.Error>) {
     do {
@@ -241,8 +241,8 @@ func tezosAccount(network: Tezos.Network) throws -> Tezos.Account {
 
 The following example shows how to create a simple class which connects to a dApp using [Matrix](https://matrix.org/) and handles [Substrate](https://substrate.io/) and [Tezos](https://tezos.com/) messages based on the steps described earlier.
 
-[![stable](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?label=stable&sort=semver)](https://github.com/airgap-it/beacon-ios-sdk)
-[![latest](https://img.shields.io/github/v/tag/airgap-it/beacon-ios-sdk?color=orange&include_prereleases&label=latest)](https://github.com/airgap-it/beacon-ios-sdk)
+[![stable](https://img.shields.io/github/v/tag/trilitech/octez.connect-ios-sdk?label=stable&sort=semver)](https://github.com/trilitech/octez.connect-ios-sdk)
+[![latest](https://img.shields.io/github/v/tag/trilitech/octez.connect-ios-sdk?color=orange&include_prereleases&label=latest)](https://github.com/trilitech/octez.connect-ios-sdk)
 
 <Tabs
   groupId="package-manager"
@@ -257,14 +257,14 @@ The following example shows how to create a simple class which connects to a dAp
 
 ```swift title="Package.swift"
 dependencies: [
-    .package(url: "https://github.com/airgap-it/beacon-ios-sdk", from: "x.y.z")
+    .package(url: "https://github.com/trilitech/octez.connect-ios-sdk", from: "x.y.z")
 ],
 ```
 
 Or in Xcode open the `Add Package Dependency` window (as described in [the official guide](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)) and enter the `Beacon iOS SDK` GitHub repository URL
 
 ```
-https://github.com/airgap-it/beacon-ios-sdk
+https://github.com/trilitech/octez.connect-ios-sdk
 ```
 
 </TabItem>
@@ -275,11 +275,11 @@ https://github.com/airgap-it/beacon-ios-sdk
 target 'MyTarget' do
     use_frameworks!
 
-    pod 'BeaconCore', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconClientWallet', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconBlockchainSubstrate', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconBlockchainTezos', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
-    pod 'BeaconTransportP2PMatrix', :git => 'https://github.com/airgap-it/beacon-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectCore', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectClientWallet', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectBlockchainSubstrate', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectBlockchainTezos', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
+    pod 'OctezConnectTransportP2PMatrix', :git => 'https://github.com/trilitech/octez.connect-ios-sdk', :tag => 'x.y.z'
 end
 ```
 
@@ -289,11 +289,11 @@ end
 
 ```swift title="BeaconExample.swift"
 import Foundation
-import BeaconCore
-import BeaconBlockchainSubstrate
-import BeaconBlockchainTezos
-import BeaconClientWallet
-import BeaconTransportP2PMatrix
+import OctezConnectCore
+import OctezConnectBlockchainSubstrate
+import OctezConnectBlockchainTezos
+import OctezConnectClientWallet
+import OctezConnectTransportP2PMatrix
 
 class BeaconExample {
     var beaconWallet: Beacon.WalletClient!
